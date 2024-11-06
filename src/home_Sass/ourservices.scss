@@ -1,0 +1,53 @@
+:root {
+  --color1: #a2c2e4;
+  --color2: #1f2b6c;
+  --color3: #a8e6cf;
+  --color4: #2e7d32;
+  --color5: #ffffff;
+  --color6: #d3d3d3;
+  --color7: #7d7d7d;
+  --color8: #f5f5dc;
+  --color9: #fffdd0;
+  --color10: #159eec;
+}
+.ourServices {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 80%;
+  &_OlderChild-1 {
+    min-width:150px;
+    height:480px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    overflow: hidden;
+    a:not(a:last-child) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 100%;
+      height: 140px;
+    }
+    a.active {
+      background-color: var(--color2);
+    }
+    a:last-child {
+      width: 100%;
+      text-decoration: none;
+      padding: 10px;
+      background-color: var(--color2);
+      color: var(--color1);
+      text-align: center;
+    }
+    a:last-child:hover {
+      text-decoration: underline 1px solid var(--color1);
+    }
+  }
+  &_OlderChild-2 {
+    display: flex;
+    justify-content: center;
+  }
+}

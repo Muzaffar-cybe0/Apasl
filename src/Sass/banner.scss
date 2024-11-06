@@ -1,0 +1,94 @@
+:root {
+     --color1: #a2c2e4;
+     --color2: #1f2b6c;
+     --color3: #a8e6cf;
+     --color4: #2e7d32;
+     --color5: #ffffff;
+     --color6: #d3d3d3;
+     --color7: #7d7d7d;
+     --color8: #f5f5dc;
+     --color9: #fffdd0;
+     --color10:#159eec;
+}
+.banner_container{
+     width: 100%;
+     padding: 170px 90px;
+     background-image: url("../assets/banner_bg-img.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     position: relative;
+     .banner_OlderChild-1{
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          p{
+               color: var(--color10);
+               text-transform: uppercase;
+               font-weight: 600;
+               font-size: 14px;
+          }
+          h1{
+               word-spacing: 8px;
+               font-size: 45px;
+               color: var(--color2);
+               font-family:serif;
+          }
+          button{
+               width: 37%;
+               background-color: var(--color1);
+               border: none;
+               padding: 10px 0px;
+               border-radius: 50px;
+          }
+     }
+     .banner_OlderChild-2{
+          display: flex;
+          justify-content:center;
+          align-items: center;
+          gap: 90px;
+          position: absolute;
+          bottom: -50px;
+          left: 8%;
+          &_child-1{
+               height: 90px;
+               display: flex;
+               justify-content:center;
+               align-items: center;
+               gap: 50px;
+               background-color: var(--color2); 
+               padding: 0px 25px;
+               border-radius: 5px;
+               p{
+                    color: white;
+               }
+          }
+          &_child-2{
+               height: 90px;
+               display: flex;
+               justify-content:center;
+               align-items: center;
+               gap: 50px;
+               background-color: var(--color1); 
+               padding: 0px 25px;
+               border-radius: 5px;
+               p{
+                    color: white;
+               }
+          }
+          &_child-3{
+               height: 90px;
+               display: flex;
+               justify-content:center;
+               align-items: center;
+               gap: 50px;
+               background-color: var(--color10); 
+               padding: 0px 25px;
+               border-radius: 5px;
+               p{
+                    color: white;
+               }
+          }
+     }
+}

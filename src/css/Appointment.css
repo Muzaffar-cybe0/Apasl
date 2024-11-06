@@ -1,0 +1,124 @@
+.appoint_h2{
+    font-size: 32px;
+    font-weight: 400;
+    color: #1F2B6C;
+    margin-bottom: 20px;
+}
+.container{
+    width: 1240px;
+    margin: auto;
+}
+.appoint_p{
+    font-size: 16px;
+    color: #212124;
+    font-weight: 400;
+    width: 90%;
+    margin-bottom: 10px;
+}
+.appoint_text{
+    width: 50%;
+    min-height: 100px;
+}
+.flex{
+    display: flex;
+}
+.hours{
+    width: 481px;
+    height: 650;
+    border-radius: 7px;
+    background-color: #1F2B6C;
+    padding: 30px 20px;
+    color: #BFD2F8;
+    margin-left: 100px;
+}
+.hours_h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 45px;
+    font-weight: 400;
+}
+.hours_flex{
+    width: 100%;
+    margin-bottom:30px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+.hours_hr{
+    width: 30px;
+    border-radius: 10px;
+}
+.hours_h2{
+    font-size: 18px;
+}
+.hours_time{
+    font-size: 16px;
+}
+.hr{
+    width: 300px;
+    height: 3px;
+    background-color: #BFD2F8;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.mini_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mini_flex_icon{
+    background-color: #BFD2F8;
+    margin-right: 10px;
+}
+.mini_h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+.table{
+    display: flex;
+    width: 80%;
+    /* background-color: #1F2B6C; */
+    min-height: 100px;
+}
+.left_div{
+    width: 50%;
+}
+.right_div{
+    width: 50%;
+}
+.input_name{
+    width: 100%;
+    height: 45px;
+    background-color: #1F2B6C;
+    border: 1px solid #fff;
+    outline: none;
+    padding-left: 10px;
+    color: #fff;
+}
+.input_name::placeholder{
+    color: #adadad;
+}
+.message{
+    width: 80%;
+    background-color: #1F2B6C;
+    height: 200px;
+    padding-left: 10px;
+    color: #fff;
+    border: none    ;
+    outline: none;
+}
+.message::placeholder{
+    color: #adadad;
+}
+.submit{
+    width: 80%;
+    height: 45px;
+    background-color: #BFD2F8;
+    color: #1F2B6C;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}

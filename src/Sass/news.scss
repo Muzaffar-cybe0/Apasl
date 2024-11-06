@@ -1,0 +1,199 @@
+:root {
+  --color1: #a2c2e4;
+  --color2: #1f2b6c;
+  --color10: #159eec;
+  --color3: #a8e6cf;
+  --color4: #2e7d32;
+  --color5: #ffffff;
+  --color6: #d3d3d3;
+  --color7: #7d7d7d;
+  --color8: #f5f5dc;
+  --color9: #fffdd0;
+  --color11: #bfd2f8;
+}
+
+.news_father_container {
+  
+  .news_child_container_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 80px;
+    p:nth-child(1) {
+      font-size: 16px;
+      color: var(--color10);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    p:nth-child(2) {
+      font-size: 30px;
+      color: var(--color2);
+      font-family: sans;
+      font-weight: 600;
+    }
+  }
+}
+
+.mySwiper1 {
+  .swiper-pagination-bullet {
+    display: none;
+  }
+}
+.mySwiper2 {
+  padding-bottom: 50px;
+}
+.swiper {
+  width: 90%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-prev {
+  display: none;
+}
+.swiper-button-next {
+  display: none;
+}
+.news_swiper-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: transparent;
+  padding: 10px 0px;
+  .news_OlderChild-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 10px;
+    gap: 20px;
+    .news_child-2 {
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      flex-direction: column;
+      gap: 20px;
+      .news_child-2-div-1 {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        gap: 10px;
+        .date-author {
+          font-size: 15px;
+          text-align: left;
+          font-weight: 100;
+          color: var(--color10);
+        }
+        .article {
+          text-align: left;
+          font-size: 20px;
+          font-weight: 100;
+        }
+      }
+      .news_child-2-div-2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        div:nth-child(1) {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            color: #526ae9;
+          }
+        }
+        div:nth-child(2) {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            color: #e2315c;
+            transition: all 0.5s ease-in-out;
+          }
+          i:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  .news_OlderChild-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 10px;
+    gap: 20px;
+    .news_child-2 {
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      flex-direction: column;
+      gap: 20px;
+      .news_child-2-div-1 {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        gap: 10px;
+        .date-author {
+          font-size: 15px;
+          text-align: left;
+          font-weight: 100;
+          color: var(--color10);
+        }
+        .article {
+          text-align: left;
+          font-size: 20px;
+          font-weight: 100;
+        }
+      }
+      .news_child-2-div-2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        div:nth-child(1) {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            color: #526ae9;
+          }
+        }
+        div:nth-child(2) {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            color: #e2315c;
+            transition: all 0.5s ease-in-out;
+          }
+          i:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

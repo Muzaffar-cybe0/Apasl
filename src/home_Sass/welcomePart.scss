@@ -1,0 +1,58 @@
+:root {
+  --color1: #a2c2e4;
+  --color2: #1f2b6c;
+  --color3: #a8e6cf;
+  --color4: #2e7d32;
+  --color5: #ffffff;
+  --color6: #d3d3d3;
+  --color7: #7d7d7d;
+  --color8: #f5f5dc;
+  --color9: #fffdd0;
+  --color10: #159eec;
+}
+.welcomePart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  p:nth-child(1) {
+    color: var(--color10);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+  }
+  h1:nth-child(2) {
+     color: var(--color2);
+     font-size: 37px;
+     text-transform: capitalize;
+     font-weight: 600;
+     word-spacing: 6px;
+     font-family: sans;
+  }
+  p:nth-child(3) {
+     width: 55%;
+     color:black;
+     font-size: 16px;
+     font-weight: 100;
+     text-align: center;
+  }
+  a:nth-child(4) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     color: var(--color10);
+     font-size: 18px;
+     text-transform: capitalize;
+     font-weight: 100;
+     text-decoration: none;
+     transition: all 0.5s ease-in-out;
+     margin-top: 30px;
+  }
+  a:nth-child(4):hover{
+     text-decoration:underline 1px solid;
+  }
+}

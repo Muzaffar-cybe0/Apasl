@@ -1,0 +1,57 @@
+.checkUp {
+  display: flex;
+  justify-content: center;
+  &_OlderChild-1 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 10px;
+    &_younger-child-1 {
+      p {
+        font-size: 25px;
+      }
+    }
+    &_younger-child-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 40px;
+      .row1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+      .row2 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+    &_younger-child-3 {
+    }
+  }
+  &_OlderChild-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

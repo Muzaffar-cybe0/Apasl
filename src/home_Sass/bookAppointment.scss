@@ -1,0 +1,40 @@
+:root {
+  --color1: #a2c2e4;
+  --color2: #1f2b6c;
+  --color3: #a8e6cf;
+  --color4: #2e7d32;
+  --color5: #ffffff;
+  --color6: #d3d3d3;
+  --color7: #7d7d7d;
+  --color8: #f5f5dc;
+  --color9: #fffdd0;
+  --color10: #159eec;
+}
+.BookAppointment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-image: url("../assets/bg_white_doctor_home.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  padding: 0px 130px;
+  &_child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    h1 {
+     font-family: sans;
+     color: var(--color10);
+     font-size: 40px;
+    }
+    p{
+     width: 75%;
+     font-weight: 100;
+     font-size: 18px;
+    }
+  }
+}
