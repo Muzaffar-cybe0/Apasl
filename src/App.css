@@ -1,0 +1,47 @@
+:root {
+  --color1: #161363;
+  --color2: #1a1831;
+  --color3: #ff017a;
+}
+.app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+}
+.loader-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: slideDown 2.4s ease-in-out;
+  background-color: var(--color3);
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  40% {
+     opacity: 1;
+     transform: translate(-50%, -50%);
+   }
+   80% {
+     opacity: 1;
+     transform: translate(-50%, -50%);
+   }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -150%);
+  }
+}

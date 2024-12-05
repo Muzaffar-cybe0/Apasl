@@ -1,0 +1,16 @@
+
+:root {
+  --color1: #e60013;
+  --color2:#ECF9Fc;
+  --color3:#1E1E1E;
+  --color4:#FFF6E9;
+}
+.rootLayout {
+  width: 100%;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  background-color:white;
+}

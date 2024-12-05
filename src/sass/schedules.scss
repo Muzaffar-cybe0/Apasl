@@ -1,0 +1,139 @@
+:root {
+  --color1: #e60013;
+  --color2: #ecf9fc;
+  --color3: #1e1e1e;
+  --color4: #fff6e9;
+}
+.schedules {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  &-child1 {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    p{
+     color: var(--color3);
+     font-size: 14px;
+     font-weight: 300;
+     text-transform: uppercase;
+    }
+    h1{
+     color: var(--color3);
+     font-size: 40px;
+     text-transform: uppercase;
+    }
+  }
+  &-child2{
+    width: 100%;
+    opacity: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .schedules {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    &-child1 {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+      p{
+       color: var(--color3);
+       font-size: 14px;
+       font-weight: 300;
+       text-transform: uppercase;
+      }
+      h1{
+       color: var(--color3);
+       font-size: 40px;
+       text-transform: uppercase;
+      }
+    }
+    &-child2{
+      width: 100%;
+      opacity: 0;
+    }
+  }
+}
+@media (max-width: 810px) {
+  .schedules {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    &-child1 {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+      p{
+       color: var(--color3);
+       font-size: 14px;
+       font-weight: 300;
+       text-transform: uppercase;
+      }
+      h1{
+       color: var(--color3);
+       font-size: 40px;
+       text-transform: uppercase;
+      }
+    }
+    &-child2{
+      width: 100%;
+      opacity: 0;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .schedules {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    &-child1 {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+      p{
+       color: var(--color3);
+       font-size: 14px;
+       font-weight: 300;
+       text-transform: uppercase;
+      }
+      h1{
+       color: var(--color3);
+       font-size: 40px;
+       text-transform: uppercase;
+      }
+    }
+    &-child2{
+      width: 100%;
+      opacity: 0;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}

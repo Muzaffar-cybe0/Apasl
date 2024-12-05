@@ -1,0 +1,397 @@
+{
+  "information": [
+    {
+      "id": "1",
+      "image": "https://i.postimg.cc/ZRsrQ58k/speaker1.png",
+      "name": "Henri Robert",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate2": "Saturday 17th Feb",
+      "plannedDate3": "Friday 18th Feb",
+      "speakingTitle": "Marketing Matters!",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "2",
+      "image": "https://i.postimg.cc/GtZvcggq/speaker2.png",
+      "name": "Heery Jon",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate2": "Saturday 17th Feb",
+      "plannedDate3": "Friday 18th Feb",
+      "speakingTitle": "Cultures of Creativity",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "3",
+      "image": "https://i.postimg.cc/CLqjvYdt/speaker3.png",
+      "name": "Heek Alien",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate2": "Saturday 17th Feb",
+      "plannedDate3": "Friday 18th Feb",
+      "speakingTitle": "Human Centered Design",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "4",
+      "image": "https://i.postimg.cc/T3vnFSDP/speaker4.png",
+      "name": "Arone Ronald",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate2": "Saturday 17th Feb",
+      "plannedDate3": "Friday 18th Feb",
+      "speakingTitle": "Human Centered Design",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "5",
+      "image": "https://i.postimg.cc/RZ1wBR7L/speaker5.png",
+      "name": "Arnold Russel",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate3": "Saturday 17th Feb",
+      "plannedDate2": "Friday 18th Feb",
+      "speakingTitle": "Human Centered Design",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "6",
+      "image": "https://i.postimg.cc/252vqSXq/speaker6.png",
+      "name": "Robert Henri",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate3": "Saturday 17th Feb",
+      "plannedDate2": "Friday 18th Feb",
+      "speakingTitle": "Human Centered Design",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "7",
+      "image": "https://i.postimg.cc/c1VD1Fnp/speaker7.png",
+      "name": "Kelly Jonson",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate3": "Saturday 17th Feb",
+      "plannedDate2": "Friday 18th Feb",
+      "speakingTitle": "Human Centered Design",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    },
+    {
+      "id": "8",
+      "image": "https://i.postimg.cc/GtZvcggq/speaker2.png",
+      "name": "Heery Jon",
+      "role": "Founder, Cards",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate3": "Saturday 17th Feb",
+      "plannedDate2": "Friday 18th Feb",
+      "speakingTitle": "Cultures of Creativity",
+      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "image": "https://demo-themewinter.com/exhibz/one-page/wp-content/uploads/sites/2/2019/03/Blog-3.jpg",
+      "title": "New Digital Man beast one won’t may kind rule",
+      "date": "March 10, 2019",
+      "info1": "There’s such a thing as “too much information”, especially for the companies scaling out their sales operations. That’s why Attentive was born in 2015 help sales teams make their increasing pipelines simpler to manage. Indeed, the small, Portugal-based team is itself focused on scaling, having much participated in accelerator",
+      "title2": "Check upcoming Events",
+      "info2": "In this episode, Attentive founder and CTO Pedro Araújo talks about what it takes to build a tech new product from the ground up. Discover their approach to running an engineering team, from adopting new open source technologies, to onboarding junior developers and learning ."
+    },
+    {
+      "id": 2,
+      "image": "https://demo-themewinter.com/exhibz/one-page/wp-content/uploads/sites/2/2019/03/Blog-1.jpg",
+      "title": "West Elm Exhibz light behold likeness midst Meat",
+      "date": "March 10, 2019",
+      "info1": "There’s such a thing as “too much information”, especially for the companies scaling out their sales operations. That’s why Attentive was born in 2015 help sales teams make their increasing pipelines simpler to manage. Indeed, the small, Portugal-based team is itself focused on scaling, having much participated in accelerator",
+      "title2": "Check upcoming Events",
+      "info2": "In this episode, Attentive founder and CTO Pedro Araújo talks about what it takes to build a tech new product from the ground up. Discover their approach to running an engineering team, from adopting new open source technologies, to onboarding junior developers and learning ."
+    },
+    {
+      "id": 3,
+      "image": "https://demo-themewinter.com/exhibz/one-page/wp-content/uploads/sites/2/2019/03/Blog-2.jpg",
+      "title": "Met Gala planner to the oversee inauguration events why virtual reality",
+      "date": "March 10, 2019",
+      "info1": "There’s such a thing as “too much information”, especially for the companies scaling out their sales operations. That’s why Attentive was born in 2015 help sales teams make their increasing pipelines simpler to manage. Indeed, the small, Portugal-based team is itself focused on scaling, having much participated in accelerator",
+      "title2": "Check upcoming Events",
+      "info2": "In this episode, Attentive founder and CTO Pedro Araújo talks about what it takes to build a tech new product from the ground up. Discover their approach to running an engineering team, from adopting new open source technologies, to onboarding junior developers and learning ."
+    }
+  ],
+  "schedules": [
+    {
+      "date": "16th Feb",
+      "day": "Sunday",
+      "events": [
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "https://i.postimg.cc/ZRsrQ58k/speaker1.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker2.png"
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker3.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker4.png"
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker5.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker6.png"
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker7.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker1.png"
+        }
+      ]
+    },
+    {
+      "date": "17th Feb",
+      "day": "Saturday",
+      "events": [
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "https://i.postimg.cc/GtZvcggq/speaker2.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker2.png"
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker3.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker4.png"
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker5.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker6.png"
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker7.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker1.png"
+        }
+      ]
+    },
+    {
+      "date": "18th Feb",
+      "day": "Friday",
+      "events": [
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker1.png" 
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker2.png" 
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker3.png"
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker4.png" 
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker5.png" 
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker6.png" 
+        },
+        {
+          "time": "09.00 - 11.30 AM",
+          "type": "Workshop",
+          "title": "Marketing Matters!",
+          "speaker": "Henri Robert",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker7.png" 
+        },
+        {
+          "time": "9.30 - 10.30 AM",
+          "type": "Seminar",
+          "title": "Reinventing Experiences",
+          "speaker": "Robert Henri",
+          "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
+          "avatar": "../assets/speaker1.png" 
+        }
+      ]
+    }
+  ]
+}
