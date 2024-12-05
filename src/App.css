@@ -1,7 +1,8 @@
 :root {
-  --color1: #161363;
-  --color2: #1a1831;
-  --color3: #ff017a;
+  --color1: #e60013;
+  --color2: #ecf9fc;
+  --color3: #1e1e1e;
+  --color4: #fff6e9;
 }
 .app {
   width: 100%;
@@ -24,7 +25,7 @@
   justify-content: center;
   z-index: 100;
   animation: slideDown 2.4s ease-in-out;
-  background-color: var(--color3);
+  background-color: var(--color1);
 }
 
 @keyframes slideDown {
@@ -33,13 +34,13 @@
     transform: translate(-50%, -50%);
   }
   40% {
-     opacity: 1;
-     transform: translate(-50%, -50%);
-   }
-   80% {
-     opacity: 1;
-     transform: translate(-50%, -50%);
-   }
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
   100% {
     opacity: 0;
     transform: translate(-50%, -150%);
