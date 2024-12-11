@@ -13,6 +13,9 @@
   align-items: center;
   background: white;
   box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
   padding: 5px 70px;
   transition: all 0.5s ease-in-out;
   z-index: 99;
@@ -60,6 +63,9 @@
     transition: all 0.5s ease-in-out;
     background: white;
     box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
     z-index: 99;
     &_child-1 {
       a {
@@ -125,6 +131,9 @@
     transition: all 0.5s ease-in-out;
     background: white;
     box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
     z-index: 99;
     &_child-1 {
       a {
@@ -183,6 +192,9 @@
     transition: all 0.5s ease-in-out;
     background: white;
     box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
     z-index: 99;
     &_child-1 {
       a {
@@ -255,6 +267,9 @@
   animation-iteration-count: 1;
   background: white;
   box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
 }
 .menuShow {
   opacity: 1;
@@ -262,6 +277,9 @@
   height: 300px;
   background: white;
   box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
   z-index: 99;
 }
 .navbar_child-2,
