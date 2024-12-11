@@ -86,7 +86,7 @@ export default function EventGallery() {
             key={slide.id}
           >
             <img
-              width="640"
+              width="780"
               height="480"
               alt={`Slide ${slide.id}`}
               src={slide.image} // Use 'src' instead of 'data-lazy-src' for better browser compatibility

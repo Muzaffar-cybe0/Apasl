@@ -60,6 +60,75 @@
   font-size: 30px;
   color: var(--color3);
 }
+@media (max-width: 1900px) {
+  #myCarousel {
+    max-width: 90%; /* Make it more flexible on smaller screens */
+    margin: 0 auto;
+
+    .f-carousel__slide {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  /* Styling for carousel thumbs */
+  .f-carousel__thumbs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    img {
+      width: 60px;
+      height: 45px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .eventGallery::before{
+    content: "Event Gallery";
+    position: absolute;
+    top: -60px;
+    right: 50%;
+    transform: translate(50%,50%);
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--color3);
+  }
+}
+@media (max-width: 1600px) {
+  #myCarousel {
+    max-width: 80%;
+  }
+  .eventGallery::before{
+    content: "Event Gallery";
+    position: absolute;
+    top: -60px;
+    right: 50%;
+    transform: translate(50%,50%);
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--color3);
+  }
+}
 
 @media (max-width: 1024px) {
   #myCarousel {

@@ -55,7 +55,7 @@ export default function Schedules() {
         <Box
           sx={{
             width: "95%",
-            maxWidth: "1200px",
+            maxWidth: "100%",
             bgcolor: "#1e1e1e",
             color: "#fff",
             p: { xs: 2, md: 3 },
