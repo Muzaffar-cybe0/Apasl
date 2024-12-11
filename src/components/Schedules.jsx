@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Tabs, Tab, Box, Typography, Avatar } from "@mui/material";
 import "animate.css";
 import "../sass/schedules.scss";
+import dataJson from '../data/speakersData.json'
 
 export default function Schedules() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -72,7 +73,7 @@ export default function Schedules() {
               style: { backgroundColor: "#e60013", height: "4px" },
             }}
           >
-            {schedules.map((schedule, index) => (
+            {dataJson.schedules.map((schedule, index) => (
               <Tab
                 key={index}
                 label={
@@ -94,7 +95,7 @@ export default function Schedules() {
             ))}
           </Tabs>
 
-          {schedules.map((schedule, index) => (
+          {dataJson.schedules.map((schedule, index) => (
             <Box
               key={index}
               hidden={currentTab !== index}

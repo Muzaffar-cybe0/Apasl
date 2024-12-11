@@ -72,7 +72,7 @@ export default function Banner() {
           <p>
             Uzbekistan and Azerbaijan Association of Gastroenterology and
             Hepatalogy
-            <span>june 6-7, 2025</span>
+            <span>june 4-5, 2025</span>
           </p>
           <button type="button">buy ticket</button>
         </div>

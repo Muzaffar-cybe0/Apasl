@@ -1,6 +1,6 @@
 import "../sass/speakers.scss";
 import "animate.css";
-
+import dataJson from "../data/speakersData.json"
 import CirclePlus from "../assets/circle_plus.svg";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ export default function Speakers() {
   const [data, setData] = useState([]);
   const [animate, setAnimate] = useState(false);
   const scrollSpeakerRef = useRef(null);
+
   useEffect(() => {
     fetch("http://localhost:3000/information")
       .then((res) => res.json())
@@ -41,7 +42,7 @@ export default function Speakers() {
       </div>
 
       <div className="speakers_OlderCh-2">
-        {data.map((item) => {
+        {dataJson.information.map((item) => {
           const modalId = `speakerModal-${item.id}`;
           return (
             <div

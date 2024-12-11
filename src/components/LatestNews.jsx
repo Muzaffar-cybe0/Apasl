@@ -2,6 +2,7 @@ import "../sass/latestNews.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import 'animate.css';
+import dataJson from '../data/speakersData.json'
 export default function LatestNews() {
   const [data, setData] = useState([]);
   const [animate, setAnimate] = useState(false);
@@ -35,7 +36,7 @@ export default function LatestNews() {
        </div>
 
       <div className="latestNews_wrapper-2">
-      {data.map((item) => {
+      {dataJson.blog.map((item) => {
         const title = item.title;
         const truncatedTitle =
           title.length > 3 ? `${title.slice(0, 16)}` : title;
