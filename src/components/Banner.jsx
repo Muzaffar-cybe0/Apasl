@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import "../sass/banner.scss";
-import Partner1 from "../assets/ministry_associate.png";
-import Partner2 from "../assets/virusologiya_associate.png";
-import Partner3 from "../assets/ahu_associate.png";
-import Partner4 from "../assets/AGHA.png";
 const COUNTDOWN_TARGET = new Date("2024-10-31T23:59:59");
 
 const getTimeLeft = () => {
@@ -76,25 +72,8 @@ export default function Banner() {
           </p>
           <button type="button">buy ticket</button>
         </div>
-      </div>
 
-      <div className="banner_wrapper-2">
-        <div>
-          <img src={Partner1} alt="partners" />
-          <p>Ministry of Health of the Republican Uzbekistan</p>
-        </div>
-        <div>
-          <img src={Partner2} alt="partners" />
-          <p>Research Insitute of Virology of the Republican specialized scientific and practical medical center of the epidemiology, microbiology, infectious and parasitic diseases.</p>
-        </div>
-        <div>
-          <img src={Partner3} alt="partners" />
-          <p>Association of hepatologists of uzbekistan</p>
-        </div>
-        <div>
-        <img src={Partner4} alt="partners" />
-        <p>Azerbaijan gastroentrology and hepatology association</p>
-        </div>
+       
       </div>
     </div>
   );

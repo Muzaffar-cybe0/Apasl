@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Carousel } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/carousel/carousel.css";
 import "../sass/eventGallery.scss";
