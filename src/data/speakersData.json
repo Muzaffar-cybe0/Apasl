@@ -116,9 +116,9 @@
     },
     {
       "id": "7",
-      "image": "https://i.postimg.cc/1zZ5Lqdt/user.png",
-      "name": "Kelly Jonson",
-      "role": "Founder, Cards",
+      "image": "https://i.postimg.cc/5tCqkKWC/speaker7.jpg",
+      "name": "Prof.Yogesh.K.Chawla",
+      "role": " M.B.B.S.,M.D, D.M.(Gastroenterology) AIIMS, New Delhi,FAMS",
       "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
       "facebook": "https://facebook.com/",
       "twitter": "https://twitter.com/?lang=ru",
@@ -131,7 +131,7 @@
       "plannedDate3": "Saturday 17th Feb",
       "plannedDate2": "Friday 18th Feb",
       "speakingTitle": "Human Centered Design",
-      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+      "speakingAbout": " Padma Shri B C Roy Award recipient DSc ( Guru Nanak Dev University, Amritsar) Former Director & Emeritus Professor, PGIMER Former Prof. & Head, Department of Hepatology, PGIMER, Chandigarh (India) Chairman Academics and Professor Emeritus,,Kalinga Institute of Medical Science (KIMS), Bhubaneshwar Member, Institute Body AIIMS, Bhubaneswar Chairman, Scientific Advisory Committee, AIIMS Bibinagar, Hyderabad. Member, Board of Management, JSS Academy of Higher Education and Research, Mysuru"
     },
     {
       "id": "8",
@@ -333,7 +333,7 @@
           "title": "Marketing Matters!",
           "speaker": "Henri Robert",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker1.png" 
+          "avatar": "../assets/speaker1.png"
         },
         {
           "time": "9.30 - 10.30 AM",
@@ -341,7 +341,7 @@
           "title": "Reinventing Experiences",
           "speaker": "Robert Henri",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker2.png" 
+          "avatar": "../assets/speaker2.png"
         },
         {
           "time": "09.00 - 11.30 AM",
@@ -357,7 +357,7 @@
           "title": "Reinventing Experiences",
           "speaker": "Robert Henri",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker4.png" 
+          "avatar": "../assets/speaker4.png"
         },
         {
           "time": "09.00 - 11.30 AM",
@@ -365,7 +365,7 @@
           "title": "Marketing Matters!",
           "speaker": "Henri Robert",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker5.png" 
+          "avatar": "../assets/speaker5.png"
         },
         {
           "time": "9.30 - 10.30 AM",
@@ -373,7 +373,7 @@
           "title": "Reinventing Experiences",
           "speaker": "Robert Henri",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker6.png" 
+          "avatar": "../assets/speaker6.png"
         },
         {
           "time": "09.00 - 11.30 AM",
@@ -381,7 +381,7 @@
           "title": "Marketing Matters!",
           "speaker": "Henri Robert",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker7.png" 
+          "avatar": "../assets/speaker7.png"
         },
         {
           "time": "9.30 - 10.30 AM",
@@ -389,7 +389,7 @@
           "title": "Reinventing Experiences",
           "speaker": "Robert Henri",
           "description": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge.",
-          "avatar": "../assets/speaker1.png" 
+          "avatar": "../assets/speaker1.png"
         }
       ]
     }

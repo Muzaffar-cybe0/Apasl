@@ -77,20 +77,7 @@ export default function Speakers() {
                     </Link>
                     <p>{item.role}</p>
                     <p>{item.speakingAbout}</p>
-                    <div>
-                      <a href={`${item.facebook}`} target="_blank">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                      <a href={`${item.twitter}`} target="_blank">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                      <a href={`${item.github}`} target="_blank">
-                        <i className="fa-brands fa-github"></i>
-                      </a>
-                      <a href={`${item.linkedIn}`} target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </div>
+                   
                     <a href="#" rel="modal:close">
                       Close
                     </a>
