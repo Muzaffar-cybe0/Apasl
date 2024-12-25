@@ -135,9 +135,9 @@
     },
     {
       "id": "8",
-      "image": "https://i.postimg.cc/1zZ5Lqdt/user.png",
-      "name": "Heery Jon",
-      "role": "Founder, Cards",
+      "image": "https://i.postimg.cc/Kvf0wtq1/speaker8.jpg",
+      "name": "Francesco Negro",
+      "role": "Emeritus Professor",
       "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
       "facebook": "https://facebook.com/",
       "twitter": "https://twitter.com/?lang=ru",
@@ -150,7 +150,26 @@
       "plannedDate3": "Saturday 17th Feb",
       "plannedDate2": "Friday 18th Feb",
       "speakingTitle": "Cultures of Creativity",
-      "speakingAbout": "How you transform your business as technology, consumer, habits industry dynamics change? Find out from those leading the charge. How you transform"
+      "speakingAbout": "Francesco Negro is Emeritus Professor, formerly at the Departments of Medicine and of Pathology and Immunology, Faculty of Medicine University of Geneva,Switzerland. After obtaining his MD from the University of Turin, Italy, he was Assistant Professor at the Georgetown University School of Medicine, Rockville, MD, USA, before joining the National Institute of Allergy and Infectious Diseases of the NIH, where he worked on experimental animal models of Hepatitis D."
+    },
+    {
+      "id": "9",
+      "image": "https://i.postimg.cc/pdwCzCT6/speaker9.jpg",
+      "name": "Hala Zaid, MD",
+      "role": "Regional Director",
+      "aboutSelf": "World is committed to making participation in the event a harass ment free experience for everyone, regardless of level experience gender, gender identity and expression",
+      "facebook": "https://facebook.com/",
+      "twitter": "https://twitter.com/?lang=ru",
+      "github": "https://github.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "workTime1": "9.00 - 11.30 AM Workshop",
+      "workTime2": "9.00 - 11.30 AM Workshop",
+      "workTime3": "10.00 - 11.30 AM Workshop",
+      "plannedDate1": "Sunday 16th Feb",
+      "plannedDate3": "Saturday 17th Feb",
+      "plannedDate2": "Friday 18th Feb",
+      "speakingTitle": "Cultures of Creativity",
+      "speakingAbout": "ACCESS Health International, MENA Region"
     }
   ],
   "blog": [
