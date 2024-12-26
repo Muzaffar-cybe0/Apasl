@@ -35,7 +35,7 @@ export default function EventOutComes() {
   const scrollEventOutRef = useRef(null);
   useEffect(() => {
     scrollEventOutRef.current = () => {
-      if (window.scrollY > 650) {
+      if (window.scrollY > 770) {
         setAnimate(true);
       }
     };

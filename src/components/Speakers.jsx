@@ -20,7 +20,7 @@ export default function Speakers() {
 
 
       scrollSpeakerRef.current = () => {
-        if (window.scrollY > 1150) {
+        if (window.scrollY > 1250) {
           setAnimate(true);
         } 
       };

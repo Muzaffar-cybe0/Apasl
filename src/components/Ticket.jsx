@@ -37,7 +37,7 @@ export default function Ticket() {
 
   useEffect(() => {
     scrollTicketRef.current = () => {
-      if (window.scrollY > 1880) {
+      if (window.scrollY > 2680) {
         setAnimate(true);
       }
     };
@@ -63,6 +63,7 @@ export default function Ticket() {
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Grid container spacing={2} justifyContent="center">
             {cardData.map((card) => (
+              
               <Grid
                 key={card.id}
                 item

@@ -49,7 +49,7 @@ export default function EventGallery() {
 
   useEffect(() => {
     scrollGalleryRef.current = () => {
-      if (window.scrollY > 3590) {
+      if (window.scrollY > 4350) {
         setAnimate(true);
       }
     };

@@ -13,7 +13,7 @@ export default function Schedules() {
   const scrollScheduleRef = useRef(null);
   useEffect(() => {
     scrollScheduleRef.current = () => {
-      if (window.scrollY > 4100) {
+      if (window.scrollY > 4900) {
         setAnimate(true);
       }
     };

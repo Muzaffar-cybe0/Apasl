@@ -17,7 +17,7 @@ export default function LatestNews() {
 
 
       scrollNewsRef.current = () => {
-        if (window.scrollY > 2850) {
+        if (window.scrollY > 3480) {
           setAnimate(true);
         }
       };
