@@ -4,20 +4,19 @@ import Associates from '../components/Associates'
 import EventOutComes from '../components/EventOutComes'
 import { Outlet } from "react-router";
 import Ticket from "../components/Ticket";
-import Footer from "../components/Footer";
-import EventGallery from "../components/EventGallery";
-import LatestNews from "../components/LatestNews";
 import Schedules from "../components/Schedules";
+import WelcomeSpeech from "../components/WelcomeSpeech";
+
 export default function Home() {
   return (
     <div className="home" id="home">
       <Banner />
       <Associates />
+      <WelcomeSpeech />
       <EventOutComes />
       <Outlet/>
       <Ticket/>
-      <LatestNews/>
-      <EventGallery/>
+     
       <Schedules/>
       
     </div>

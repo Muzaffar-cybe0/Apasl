@@ -13,7 +13,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5% 2%;
+  padding: 8% 2%;
   border-radius: 5px;
   box-shadow: 0 0 10px 5px rgb(223, 223, 223);
   &_wrapper-1 {
@@ -128,7 +128,7 @@
       justify-content: flex-end;
       align-items: flex-end;
       flex-direction: column;
-      gap: 30px;
+      gap: 40px;
       h1 {
         font-size: 50px;
         color: var(--color1);
@@ -139,11 +139,11 @@
       }
       p {
         direction: rtl;
-        width: 60%;
+        width: 72%;
         word-break: break-all;
-        font-size: 20px;
+        font-size: 22px;
         font-family: "Roboto", sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         font-style: normal;
         color: var(--color3);
         filter: drop-shadow(0 0 1px white);
@@ -183,7 +183,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 6% 2%;
+    padding: 8% 2%;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px rgb(223, 223, 223);
     &_wrapper-1 {
@@ -309,11 +309,11 @@
         }
         p {
           direction: rtl;
-          width: 60%;
+          width: 71%;
           word-break: break-all;
-          font-size: 20px;
+          font-size: 22px;
           font-family: "Roboto", sans-serif;
-          font-weight: 500;
+          font-weight: 600;
           font-style: normal;
           color: var(--color3);
           filter: drop-shadow(0 0 1px white);
@@ -355,7 +355,7 @@
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 4% 2%;
+    padding: 8% 2%;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px rgb(223, 223, 223);
     &_wrapper-1 {
@@ -483,11 +483,11 @@
         }
         p {
           direction: rtl;
-          width: 70%;
+          width: 80%;
           word-break: break-all;
-          font-size: 18px;
+          font-size: 20px;
           font-family: "Roboto", sans-serif;
-          font-weight: 500;
+          font-weight: 600;
           font-style: normal;
           color: var(--color3);
           filter: drop-shadow(0 0 1px white);
@@ -503,7 +503,7 @@
           color: white;
           background-color: var(--color1);
           text-transform: uppercase;
-          padding: 12px 35px;
+          padding: 14px 35px;
           border-radius: 5px;
           font-size: 16px;
           font-family: "Roboto", sans-serif;
@@ -528,7 +528,7 @@
     background-position:left;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 6% 2%;
+    padding: 8% 2%;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px rgb(223, 223, 223);
     &_wrapper-1 {
@@ -547,8 +547,8 @@
           flex-wrap: wrap;
           gap: 20px;
           .box {
-            width: 80px;
-            height: 80px;
+            width:  70px;
+            height: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -569,7 +569,7 @@
               border-radius: 50%;
               .value {
                 color: var(--color3);
-                font-size: 20px;
+                font-size: 18px;
                 font-family: "Roboto", sans-serif;
                 font-weight: 500;
                 font-style: normal;
@@ -577,7 +577,7 @@
               }
               .label {
                 color: var(--color3);
-                font-size: 10px;
+                font-size: 8px;
                 font-family: "Roboto", sans-serif;
                 font-weight: 500;
                 font-style: normal;
@@ -656,20 +656,26 @@
         }
         p {
           direction: rtl;
-          width: 80%;
           word-break: break-all;
           font-size: 16px;
           font-family: "Roboto", sans-serif;
-          font-weight: 500;
+          font-weight: 600;
           font-style: normal;
           color: var(--color3);
           filter: drop-shadow(0 0 1px white);
           span {
+            display: block;
             color: var(--color1);
             margin-left: 5px;
             font-weight: 600;
             text-transform: uppercase;
           }
+        }
+        p:nth-child(2){
+          width: 96%;
+        }
+        p:nth-child(3){
+          width: 90%;
         }
         button {
           border: none;

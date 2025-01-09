@@ -15,6 +15,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding: 50px 0px;
   &_OlderCh-1 {
     text-align: center;
@@ -684,12 +685,12 @@
     flex-direction: column;
     gap: 90px;
     background-image: url(""),
-    linear-gradient(145deg, var(--color3) 40%, var(--color4));
+      linear-gradient(145deg, var(--color3) 40%, var(--color4));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0px;
-      &_OlderCh-1 {
+    &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
       opacity: 0;

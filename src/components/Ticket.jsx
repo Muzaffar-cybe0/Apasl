@@ -8,27 +8,8 @@ export default function Ticket() {
       id: 1,
       title: "EARLY BIRD",
       price: "$219",
-      sold: 500,
-      total: 500,
       bgColor: "#fff5e6", // light orange background
-    },
-    {
-      id: 2,
-      title: "REGULAR",
-      price: "$399",
-      sold: 350,
-      total: 500,
-      bgColor: "#ff0000", // red background
-      textColor: "#ffffff", // white text
-    },
-    {
-      id: 3,
-      title: "PLATINUM",
-      price: "$699",
-      sold: 250,
-      total: 500,
-      bgColor: "#e6f7ff", // light blue background
-    },
+    }
   ];
 
   const [animate, setAnimate] = useState(false);
@@ -63,7 +44,6 @@ export default function Ticket() {
         <Box sx={{ flexGrow: 1, p: 2 }}>
           <Grid container spacing={2} justifyContent="center">
             {cardData.map((card) => (
-              
               <Grid
                 key={card.id}
                 item
@@ -72,23 +52,25 @@ export default function Ticket() {
                 md={4}
                 lg={4}
                 opacity={0}
-                height={{lg:"70vh"}}
+                height={{ lg: "70vh" }}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                 }}
-                className={`${animate ? "animate__animated animate__backInUp": ""} `}
+                className={`${
+                  animate ? "animate__animated animate__backInUp" : ""
+                } `}
               >
                 <Box
                   sx={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    flexDirection:"column",
-                    gap:"15px",
+                    flexDirection: "column",
+                    gap: "40px",
                     height: "100%",
                     width: "100%",
-                    maxWidth:"100%",
+                    maxWidth: "100%",
                     p: 3,
                     backgroundColor: card.bgColor,
                     borderRadius: 2,
@@ -109,46 +91,15 @@ export default function Ticket() {
                     {card.price}
                   </Typography>
 
-                  <Box
-                    sx={{
-                      height: 12,
-                      width: "100%",
-                      background: "linear-gradient(to right, #1e1e1e, #ffffff)", // Correct gradient
-                      mb: 1,
-                      borderRadius: 2,
-                      position: "relative",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        height: "100%",
-                        width: `${(card.sold / card.total) * 100}%`,
-                        backgroundColor: "#1e1e1e",
-                        borderRadius: 2,
-                      }}
-                    ></Box>
-
-                  </Box>
-
-                  <Typography variant="body1" fontWeight="bold" sx={{ mb: 2 }}>
-                    {`${card.sold}/${card.total}`}
-                  </Typography>
-
-                  <Typography variant="body1" sx={{ mb: 2 }}>
-                    Enter Promotional Code
-                  </Typography>
-
                   <Button
-                  size="large"
                     variant="contained"
                     color="primary"
-                    padding="10px"
                     sx={{
+                      width:"60%",
+                      padding:"10px",
                       backgroundColor: "#000",
                       color: "#fff",
+                      fontSize:"16px",
                       "&:hover": {
                         backgroundColor: "#333",
                       },
@@ -156,14 +107,6 @@ export default function Ticket() {
                   >
                     BUY TICKET
                   </Button>
-
-                  <Typography
-                    variant="caption"
-                    display="block"
-                    sx={{ mt: 2, fontSize: "0.75rem" }}
-                  >
-                    All prices exclude 25% VAT
-                  </Typography>
                 </Box>
               </Grid>
             ))}
