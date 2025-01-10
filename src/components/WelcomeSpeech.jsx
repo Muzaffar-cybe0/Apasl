@@ -17,8 +17,6 @@ export default function WelcomeSpeech() {
           hepatitis B and C, hepatocellular carcinoma, as well as the widespread
           inclusion of patients with these conditions in national programs for
           antiviral treatment and early diagnosis of complications.
-        </p>
-        <p>
           It is noteworthy that some countries have taken a leading position in
           integrating hepatitis control programs into their healthcare systems,
           while in others, this process is just beginning. We hope that the
@@ -35,8 +33,6 @@ export default function WelcomeSpeech() {
           connected by a well-developed transport network and direct
           international flights, Tashkent ensures ease of access for
           participants from across the globe.
-        </p>
-        <p>
           We are confident that the APASL 2025 Conference in Tashkent will serve
           as a crucial milestone in fostering collaboration among leading
           experts in hepatology and will help define the steps we need to take

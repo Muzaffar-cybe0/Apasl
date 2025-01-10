@@ -7,7 +7,7 @@ export default function Ticket() {
     {
       id: 1,
       title: "EARLY BIRD",
-      price: "$219",
+      price: "$150",
       bgColor: "#fff5e6", // light orange background
     }
   ];

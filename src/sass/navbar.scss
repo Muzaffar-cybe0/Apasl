@@ -12,16 +12,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: var(--color3);
   border-radius: 0px;
-  box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-  -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-  -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-  -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
   padding: 5px 70px;
   transition: all 0.5s ease-in-out;
   z-index: 99;
-
+  border: unset;
   &_child-1 {
     a {
       text-decoration: none;
@@ -37,7 +33,7 @@
     gap: 30px;
     a {
       text-decoration: none;
-      color: var(--color3);
+      color: var(--color2);
       font-family: "Roboto", sans-serif;
       font-weight: 500;
       font-style: normal;
@@ -46,7 +42,7 @@
       transition: all 0.5s ease-in-out;
     }
     a:hover {
-      color: var(--color2);
+      color: #b8eaf6;
     }
   }
   &_child-3 {
@@ -245,19 +241,15 @@
   }
 }
 .sticky {
-  width: 100%;
+  width: 90%;
   position: sticky;
-  top: 0px;
-  border-radius: 0px;
+  top: 2%;
+  border-radius: 10px;
   animation-name: navbar;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
-  background: white;
-  box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-  -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-  -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-  -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+  border: 2px solid var(--color2);
 }
 .menuShow {
   opacity: 1;
@@ -279,22 +271,14 @@
     width: 100%;
     position: sticky;
     top: -150px;
-    background: white;
-    box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-    -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-    -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-    -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
     border-radius: 0px;
+    border: none;
   }
   100% {
     position: sticky;
-    top: 0px;
-    width: 100%;
-    border-radius: 0px;
-    background: white;
-    box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-    -webkit-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-    -moz-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
-    -o-box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+    top: 2%;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid var(--color2);
   }
 }
