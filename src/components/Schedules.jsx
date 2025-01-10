@@ -8,21 +8,7 @@ import dataJson from '../data/speakersData.json'
 export default function Schedules() {
   const [currentTab, setCurrentTab] = useState(0);
   const [schedules, setSchedules] = useState([]);
-  const [animate, setAnimate] = useState(false);
-
-  const scrollScheduleRef = useRef(null);
-  useEffect(() => {
-    scrollScheduleRef.current = () => {
-      if (window.scrollY > 4900) {
-        setAnimate(true);
-      }
-    };
-    window.addEventListener("scroll", scrollScheduleRef.current);
-
-    return () => {
-      window.removeEventListener("scroll", scrollScheduleRef.current);
-    };
-  }, []);
+  
 
   const handleTabChange = (event, newValue) => {
     setCurrentTab(newValue);
@@ -40,17 +26,13 @@ export default function Schedules() {
   return (
     <div className="schedules" id="schedules">
       <div
-        className={`schedules-child1 ${
-          animate ? "animate__animated animate__backInRight" : ""
-        }`}
+        className={`schedules-child1 `}
       >
         <p>schedule details</p>
         <h1>schedule</h1>
       </div>
       <div
-        className={`schedules-child2 ${
-          animate ? "animate__animated animate__backInUp" : ""
-        }`}
+        className={`schedules-child2 `}
       >
         <Box
           sx={{
