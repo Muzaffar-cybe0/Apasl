@@ -2,40 +2,16 @@ import "../sass/speakers.scss";
 import "animate.css";
 import dataJson from "../data/speakersData.json"
 import CirclePlus from "../assets/circle_plus.svg";
-import { useEffect, useRef, useState } from "react";
+// import {useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Speakers() {
-  const [data, setData] = useState([]);
-  const [animate, setAnimate] = useState(false);
-  const scrollSpeakerRef = useRef(null);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/information")
-      .then((res) => res.json())
-      .then((json) => {
-        setData(json);
-      })
-      .catch((err) => console.error("Failed to fetch speakers data:", err));
-
-
-      scrollSpeakerRef.current = () => {
-        if (window.scrollY > 1250) {
-          setAnimate(true);
-        } 
-      };
-      window.addEventListener("scroll", scrollSpeakerRef.current);
+  // const [data, setData] = useState([]);
   
-      return () => {
-        window.removeEventListener("scroll", scrollSpeakerRef.current);
-      };
-  }, []);
   return (
     <div className="speakers" id="speakers">
       <div
-        className={`speakers_OlderCh-1 ${
-          animate ? "animate__animated animate__backInRight" : ""
-        }`}
+        className={`speakers_OlderCh-1`}
       >
         <p>listen to the</p>
         <h1>event speakers</h1>
@@ -46,9 +22,7 @@ export default function Speakers() {
           const modalId = `speakerModal-${item.id}`;
           return (
             <div
-              className={`speakers_OlderCh-2_child ${
-                animate ? "animate__animated animate__backInUp" : ""
-              }`}
+              className={`speakers_OlderCh-2_child`}
               key={item.id}
             >
               <div className={`speakers_OlderCh-2_child_speakerImg-1`}>

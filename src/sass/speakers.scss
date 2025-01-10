@@ -10,7 +10,7 @@
   align-items: center;
   flex-direction: column;
   gap: 90px;
-  background-image: url("../assets/oooscillate.svg"),
+  background-image: url("../assets/oooscillate-gray.svg"),
     linear-gradient(145deg, var(--color3) 40%, var(--color4));
   background-position: center;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@
   &_OlderCh-1 {
     text-align: center;
     line-height: 35px;
-    opacity: 0;
+    
     p {
       color: var(--color2);
       font-family: "Roboto", sans-serif;
@@ -46,6 +46,7 @@
     gap: 50px 2%;
 
     &_child {
+      
       width: 20%;
       height: auto;
       display: flex;
@@ -54,7 +55,6 @@
       flex-direction: column;
       gap: 10px;
       transition: all 0.5s ease-in-out;
-      opacity: 0;
       background-color: rgba(255, 255, 255, 0.177);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(240, 240, 240, 0.154);
@@ -234,8 +234,8 @@
     align-items: center;
     flex-direction: column;
     gap: 90px;
-    background-image: url("../assets/oooscillate.svg"),
-      linear-gradient(145deg, var(--color3) 40%, var(--color4));
+    background-image: url("../assets/oooscillate-gray.svg"),
+    linear-gradient(145deg, var(--color3) 40%, var(--color4));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -244,7 +244,6 @@
     &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
-      opacity: 0;
       p {
         color: var(--color2);
         font-family: "Roboto", sans-serif;
@@ -278,7 +277,7 @@
         flex-direction: column;
         gap: 10px;
         transition: all 0.5s ease-in-out;
-        opacity: 0;
+       
         background-color: rgba(255, 255, 255, 0.177);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(240, 240, 240, 0.154);
@@ -458,8 +457,8 @@
     align-items: center;
     flex-direction: column;
     gap: 90px;
-    background-image: url("../assets/oooscillate2.svg"),
-      linear-gradient(145deg, var(--color3) 40%, var(--color4));
+    background-image: url("../assets/oooscillate-gray.svg"),
+    linear-gradient(145deg, var(--color3) 40%, var(--color4));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -468,7 +467,7 @@
     &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
-      opacity: 0;
+     
       p {
         color: var(--color2);
         font-family: "Roboto", sans-serif;
@@ -494,6 +493,7 @@
       gap: 50px 2%;
 
       &_child {
+        
         width: 30%;
         height: auto;
         display: flex;
@@ -502,7 +502,6 @@
         flex-direction: column;
         gap: 10px;
         transition: all 0.5s ease-in-out;
-        opacity: 0;
         background-color: rgba(255, 255, 255, 0.177);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(240, 240, 240, 0.154);
@@ -686,7 +685,7 @@
     align-items: center;
     flex-direction: column;
     gap: 90px;
-    background-image: url("../assets/oooscillate2.svg"),
+    background-image: url("../assets/oooscillate-gray.svg"),
       linear-gradient(145deg, var(--color3) 40%, var(--color4));
     background-position: center;
     background-repeat: no-repeat;
@@ -696,7 +695,6 @@
     &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
-      opacity: 0;
       p {
         color: var(--color2);
         font-family: "Roboto", sans-serif;
@@ -722,6 +720,7 @@
       gap: 50px 2%;
 
       &_child {
+        
         width: 80%;
         height: auto;
         display: flex;
@@ -730,7 +729,6 @@
         flex-direction: column;
         gap: 10px;
         transition: all 0.5s ease-in-out;
-        opacity: 0;
         background-color: rgba(255, 255, 255, 0.177);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(240, 240, 240, 0.154);

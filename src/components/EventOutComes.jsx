@@ -31,30 +31,12 @@ export default function EventOutComes() {
       delay: "2",
     },
   ]);
-  const [animate, setAnimate] = useState(false);
-  const scrollEventOutRef = useRef(null);
-  useEffect(() => {
-    scrollEventOutRef.current = () => {
-      if (window.scrollY > 770) {
-        setAnimate(true);
-      }
-    };
-    window.addEventListener("scroll", scrollEventOutRef.current);
-
-    return () => {
-      window.removeEventListener("scroll", scrollEventOutRef.current);
-    };
-  }, []);
+  
 
   return (
     <div className="eventOutComes" id="about">
       <div
-        className={`eventOutComes_OlderCh-1  ${
-          animate
-            ? `animate__animated animate__backInLeft
-                `
-            : ""
-        }`}
+        className={`eventOutComes_OlderCh-1 `}
       >
         <p>why join us</p>
         <h1>event outcomes</h1>
@@ -65,12 +47,6 @@ export default function EventOutComes() {
           return (
             <div
               className={`eventOutComes_OlderCh-2_child-${item.id}
-            ${
-              animate
-                ? `animate__animated animate__rollIn 
-                `
-                : ""
-            }
             `}
               key={item.id}
             >

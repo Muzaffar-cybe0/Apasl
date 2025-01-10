@@ -12,29 +12,11 @@ export default function Ticket() {
     }
   ];
 
-  const [animate, setAnimate] = useState(false);
-
-  const scrollTicketRef = useRef(null);
-
-  useEffect(() => {
-    scrollTicketRef.current = () => {
-      if (window.scrollY > 2680) {
-        setAnimate(true);
-      }
-    };
-    window.addEventListener("scroll", scrollTicketRef.current);
-
-    return () => {
-      window.removeEventListener("scroll", scrollTicketRef.current);
-    };
-  }, []);
 
   return (
     <div className="ticket">
       <div
-        className={`ticket_wrapper1 ${
-          animate ? "animate__animated animate__backInLeft" : ""
-        }`}
+        className={`ticket_wrapper1`}
       >
         <p>pricing plans</p>
         <h1>get your ticket</h1>
@@ -57,9 +39,7 @@ export default function Ticket() {
                   display: "flex",
                   justifyContent: "center",
                 }}
-                className={`${
-                  animate ? "animate__animated animate__backInUp" : ""
-                } `}
+                
               >
                 <Box
                   sx={{
