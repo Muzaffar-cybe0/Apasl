@@ -12,8 +12,134 @@
   flex-direction: column;
   gap: 100px;
   padding: 0% 5%;
+  .ticket_wrapper1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1%;
+    line-height: 40px;
+    p {
+      color: var(--color3);
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    h1 {
+      color: var(--color3);
+      text-transform: capitalize;
+      font-size: 35px;
+    }
+  }
   .card_wrapper2 {
     width: 100%;
   }
 }
+@media (max-width: 1024px) {
+  .ticket {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3% 2%;
+    .ticket_wrapper1 {
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1%;
+      line-height: 40px;
+      p {
+        color: var(--color3);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      h1 {
+        color: var(--color3);
+        text-transform: capitalize;
+        font-size: 35px;
+      }
+    }
+    .card_wrapper2 {
+      width: 100%;
+      
+    }
+  }
+}
+@media (max-width: 810px) {
+  .ticket {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3% 1%;
+    .ticket_wrapper1 {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
+      gap: 1%;
+      line-height: 40px;
+      p {
+        color: var(--color3);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      h1 {
+        color: var(--color3);
+        text-transform: capitalize;
+        font-size: 35px;
+      }
+    }
+    .card_wrapper2 {
+      width: 100%;
+      
+    }
+  }
+}
+@media (max-width: 480px) {
+  .ticket {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3% 1%;
+    .ticket_wrapper1 {
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      gap: 1%;
+      line-height: 40px;
+      p {
+        color: var(--color3);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      h1 {
+        color: var(--color3);
+        text-transform: capitalize;
+        font-size: 35px;
+      }
+    }
+    .card_wrapper2 {
+      width: 100%;
+    
+    }
+  }
+}
