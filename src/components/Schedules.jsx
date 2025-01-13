@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, Tab, Box, Typography, Avatar } from "@mui/material";
 import "animate.css";
@@ -63,14 +63,7 @@ export default function Schedules() {
                     <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>
                       {schedule.date}
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: "12px",
-                        color: "#aaa",
-                      }}
-                    >
-                      {schedule.day}
-                    </Typography>
+                   
                   </Box>
                 }
               />
@@ -110,16 +103,9 @@ export default function Schedules() {
                   }}
                 >
                   <Box sx={{ flex: 1 }}>
-                    <Typography
-                      sx={{
-                        fontSize: "12px",
-                        color: "#aaa",
-                      }}
-                    >
-                      {event.time}
-                    </Typography>
+                    
                     <Typography sx={{ fontWeight: "bold", color: "#fff" }}>
-                      {event.type}
+                    {event.time}
                     </Typography>
                   </Box>
 
@@ -154,6 +140,7 @@ export default function Schedules() {
                     >
                       {event.title}
                     </Typography>
+
                     <Typography
                       sx={{
                         fontSize: "12px",
@@ -162,14 +149,7 @@ export default function Schedules() {
                     >
                       {event.speaker}
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: "12px",
-                        color: "#aaa",
-                      }}
-                    >
-                      {event.description}
-                    </Typography>
+                    
                   </Box>
                 </Box>
               ))}

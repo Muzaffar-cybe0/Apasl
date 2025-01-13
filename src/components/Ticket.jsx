@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import "../sass/ticket.scss";
 import "animate.css";
 import { Box, Grid, Typography, Button } from "@mui/material";
@@ -7,7 +6,7 @@ export default function Ticket() {
     {
       id: 1,
       title: "EARLY BIRD",
-      price: "$150",
+      price: "$200",
       bgColor: "#fff5e6", // light orange background
     }
   ];

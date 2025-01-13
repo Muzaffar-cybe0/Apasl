@@ -27,7 +27,7 @@
     gap: 10px;
     p {
       padding: 10px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
       backdrop-filter: blur(25px) saturate(200%);
       -webkit-backdrop-filter: blur(25px) saturate(200%);
@@ -44,13 +44,6 @@
         text-shadow: 0 0 1px var(--color2);
         font-style: italic;
       }
-    }
-    p:nth-child(1) {
-      color: var(--color3);
-      font-weight: 600;
-      text-shadow: 0 0 1px white;
-      font-style: italic;
-      font-size: 25px;
     }
   }
   &_child-2 {
@@ -99,7 +92,7 @@
       gap: 10px;
       p {
         padding: 10px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
         backdrop-filter: blur(25px) saturate(200%);
         -webkit-backdrop-filter: blur(25px) saturate(200%);
@@ -116,13 +109,6 @@
           text-shadow: 0 0 1px var(--color2);
           font-style: italic;
         }
-      }
-      p:nth-child(1) {
-        color: var(--color3);
-        font-weight: 600;
-        text-shadow: 0 0 1px white;
-        font-style: italic;
-        font-size: 25px;
       }
     }
     &_child-2 {
@@ -171,7 +157,7 @@
       gap: 10px;
       p {
         padding: 10px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
         backdrop-filter: blur(25px) saturate(200%);
         -webkit-backdrop-filter: blur(25px) saturate(200%);
@@ -188,13 +174,6 @@
           text-shadow: 0 0 1px var(--color2);
           font-style: italic;
         }
-      }
-      p:nth-child(1) {
-        color: var(--color3);
-        font-weight: 600;
-        text-shadow: 0 0 1px white;
-        font-style: italic;
-        font-size: 25px;
       }
     }
     &_child-2 {
@@ -243,7 +222,7 @@
       gap: 10px;
       p {
         padding: 10px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
         backdrop-filter: blur(25px) saturate(200%);
         -webkit-backdrop-filter: blur(25px) saturate(200%);
@@ -260,13 +239,6 @@
           text-shadow: 0 0 1px var(--color2);
           font-style: italic;
         }
-      }
-      p:nth-child(1) {
-        color: var(--color3);
-        font-weight: 600;
-        text-shadow: 0 0 1px white;
-        font-style: italic;
-        font-size: 25px;
       }
     }
     &_child-2 {

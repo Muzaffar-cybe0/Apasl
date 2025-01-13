@@ -13,10 +13,9 @@ export default function Footer() {
           <li>Venue</li>
         </ul>
         <div className="social-icons">
-          <i className="fab fa-facebook-f"></i>
-          <i className="fab fa-x-twitter"></i>
-          <i className="fab fa-linkedin-in"></i>
-          <i className="fab fa-pinterest-p"></i>
+         <a href="https://www.facebook.com/share/1BCVimofdi/" target="_blank">
+         <i className="fab fa-facebook-f"></i>
+         </a>
         </div>
       </div>
 
