@@ -8,9 +8,9 @@
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: fl;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   gap: 50px;
   padding: 3% 5%;
   background-image: url("../assets/oooscillate-gray.svg"),
@@ -24,39 +24,42 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
-    p {
-      padding: 10px;
-      font-size: 20px;
+    gap: 18px;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.177);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(240, 240, 240, 0.154);
+    border-radius: 10px;
+    padding: 20px;
+    h1{
+      font-size: 25px;
       font-weight: 400;
-      backdrop-filter: blur(25px) saturate(200%);
-      -webkit-backdrop-filter: blur(25px) saturate(200%);
-      background-color: rgba(255, 255, 255, 0.177);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(240, 240, 240, 0.154);
-      border-radius: 10px;
-      line-height: 35px;
-      color: var(--color2);
-      font-style: italic;
-      span {
-        color: var(--color3);
-        font-weight: 600;
-        text-shadow: 0 0 1px var(--color2);
-        font-style: italic;
+      color:#a70000;
+    }
+    p{
+      font-size: 18px;
+      font-weight: 300;
+      span{
+        font-size: 18px;
+        font-weight: 500;
       }
+    }
+    p:nth-child(9){
+      font-size: 25px;
+      font-weight: 400;
+    }
+    cite{
+      font-style: italic;
     }
   }
   &_child-2 {
     width: 100%;
     position: sticky;
-    top: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+    top: 20%;
     padding: 15px;
     img {
-      width: 20%;
+      width: 100%;
       backdrop-filter: blur(25px) saturate(200%);
       -webkit-backdrop-filter: blur(25px) saturate(200%);
       background-color: rgba(255, 255, 255, 0.177);
@@ -89,39 +92,42 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      gap: 10px;
-      p {
-        padding: 10px;
-        font-size: 20px;
+      gap: 18px;
+      backdrop-filter: blur(25px) saturate(200%);
+      -webkit-backdrop-filter: blur(25px) saturate(200%);
+      background-color: rgba(255, 255, 255, 0.177);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(240, 240, 240, 0.154);
+      border-radius: 10px;
+      padding: 20px;
+      h1{
+        font-size: 25px;
         font-weight: 400;
-        backdrop-filter: blur(25px) saturate(200%);
-        -webkit-backdrop-filter: blur(25px) saturate(200%);
-        background-color: rgba(255, 255, 255, 0.177);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(240, 240, 240, 0.154);
-        border-radius: 10px;
-        line-height: 35px;
-        color: var(--color2);
-        font-style: italic;
-        span {
-          color: var(--color3);
-          font-weight: 600;
-          text-shadow: 0 0 1px var(--color2);
-          font-style: italic;
+        color:#a70000;
+      }
+      p{
+        font-size: 18px;
+        font-weight: 300;
+        span{
+          font-size: 18px;
+          font-weight: 500;
         }
+      }
+      p:nth-child(9){
+        font-size: 25px;
+        font-weight: 400;
+      }
+      cite{
+        font-style: italic;
       }
     }
     &_child-2 {
       width: 100%;
       position: sticky;
-      top: 30%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      top: 20%;
       padding: 15px;
       img {
-        width: 20%;
+        width: 100%;
         backdrop-filter: blur(25px) saturate(200%);
         -webkit-backdrop-filter: blur(25px) saturate(200%);
         background-color: rgba(255, 255, 255, 0.177);
@@ -154,36 +160,39 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      gap: 10px;
-      p {
-        padding: 10px;
-        font-size: 20px;
+      gap: 18px;
+      backdrop-filter: blur(25px) saturate(200%);
+      -webkit-backdrop-filter: blur(25px) saturate(200%);
+      background-color: rgba(255, 255, 255, 0.177);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(240, 240, 240, 0.154);
+      border-radius: 10px;
+      padding: 20px;
+      h1{
+        font-size: 25px;
         font-weight: 400;
-        backdrop-filter: blur(25px) saturate(200%);
-        -webkit-backdrop-filter: blur(25px) saturate(200%);
-        background-color: rgba(255, 255, 255, 0.177);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(240, 240, 240, 0.154);
-        border-radius: 10px;
-        line-height: 35px;
-        color: var(--color2);
-        font-style: italic;
-        span {
-          color: var(--color3);
-          font-weight: 600;
-          text-shadow: 0 0 1px var(--color2);
-          font-style: italic;
+        color:#a70000;
+      }
+      p{
+        font-size: 18px;
+        font-weight: 300;
+        span{
+          font-size: 18px;
+          font-weight: 500;
         }
+      }
+      p:nth-child(9){
+        font-size: 25px;
+        font-weight: 400;
+      }
+      cite{
+        font-style: italic;
       }
     }
     &_child-2 {
       width: 100%;
       position: sticky;
-      top: 30%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      top: 20%;
       padding: 15px;
       img {
         width: 30%;
@@ -219,39 +228,42 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      gap: 10px;
-      p {
-        padding: 10px;
+      gap: 18px;
+      backdrop-filter: blur(25px) saturate(200%);
+      -webkit-backdrop-filter: blur(25px) saturate(200%);
+      background-color: rgba(255, 255, 255, 0.177);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(240, 240, 240, 0.154);
+      border-radius: 10px;
+      padding: 20px;
+      h1{
         font-size: 20px;
         font-weight: 400;
-        backdrop-filter: blur(25px) saturate(200%);
-        -webkit-backdrop-filter: blur(25px) saturate(200%);
-        background-color: rgba(255, 255, 255, 0.177);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(240, 240, 240, 0.154);
-        border-radius: 10px;
-        line-height: 35px;
-        color: var(--color2);
-        font-style: italic;
-        span {
-          color: var(--color3);
-          font-weight: 600;
-          text-shadow: 0 0 1px var(--color2);
-          font-style: italic;
+        color:#a70000;
+      }
+      p{
+        font-size: 15px;
+        font-weight: 300;
+        span{
+          font-size: 15px;
+          font-weight: 500;
         }
+      }
+      p:nth-child(9){
+        font-size: 20px;
+        font-weight: 400;
+      }
+      cite{
+        font-style: italic;
       }
     }
     &_child-2 {
       width: 100%;
       position: sticky;
-      top: 30%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      top: 20%;
       padding: 15px;
       img {
-        width: 50%;
+        width: 45%;
         backdrop-filter: blur(25px) saturate(200%);
         -webkit-backdrop-filter: blur(25px) saturate(200%);
         background-color: rgba(255, 255, 255, 0.177);

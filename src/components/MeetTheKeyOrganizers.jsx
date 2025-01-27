@@ -1,11 +1,10 @@
-import "../sass/speakers.scss";
 import "animate.css";
+import "../sass/meetTheKeyOrganizers.scss";
 import dataJson from "../data/speakersData.json";
 import CirclePlus from "../assets/circle_plus.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-export default function Speakers() {
+export default function MeetTheKeyOrganizers() {
   const [activeModal, setActiveModal] = useState(null);
 
   const handleOpenModal = (id) => {
@@ -15,17 +14,14 @@ export default function Speakers() {
   const handleCloseModal = () => {
     setActiveModal(null);
   };
-
   return (
-    <div className="speakers" id="speakers">
-
-      <div className={`speakers_OlderCh-1`}>
-        <p>listen to the</p>
-        <h1>event speakers</h1>
+    <div className="meetTheKeyOrganizers">
+      <div className="meetTheKeyOrganizers_child-1">
+        <h1>Meet The Key Organizers</h1>
       </div>
 
-      <div className="speakers_OlderCh-2">
-        {dataJson.information.map((item) => {
+      <div className="meetTheKeyOrganizers_child-2">
+        {dataJson.organizers.map((item) => {
           return (
             <div className={`speakers_OlderCh-2_child`} key={item.id}>
               <div className={`speakers_OlderCh-2_child_speakerImg-1`}>
@@ -49,17 +45,14 @@ export default function Speakers() {
         })}
       </div>
 
-     
       {activeModal && (
         <div className="modalOverlay">
-
           <div className="modalContent animate__animated animate__slideInDown">
-
             <button className="closeButton" onClick={handleCloseModal}>
               ✕
             </button>
 
-            {dataJson.information
+            {dataJson.organizers
               .filter((item) => item.id === activeModal)
               .map((item) => (
                 <div key={item.id} className="modalContent-child">
@@ -81,13 +74,11 @@ export default function Speakers() {
                     <p>{item?.seventhRowABTself}</p>
                     <p>{item?.eightthRowABTself}</p>
                   </div>
-
                 </div>
               ))}
           </div>
         </div>
       )}
-
     </div>
   );
 }

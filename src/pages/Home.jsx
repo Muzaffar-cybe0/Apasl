@@ -6,6 +6,7 @@ import { Outlet } from "react-router";
 import Ticket from "../components/Ticket";
 import Schedules from "../components/Schedules";
 import WelcomeSpeech from "../components/WelcomeSpeech";
+import MeetTheKeyOrganizers from "../components/MeetTheKeyOrganizers";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <WelcomeSpeech />
       <EventOutComes />
       <Outlet/>
+      <MeetTheKeyOrganizers/>
       <Ticket/>
-     
       <Schedules/>
       
     </div>
