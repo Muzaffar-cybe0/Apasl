@@ -23,8 +23,8 @@ export default function MeetTheKeyOrganizers() {
       <div className="meetTheKeyOrganizers_child-2">
         {dataJson.organizers.map((item) => {
           return (
-            <div className={`speakers_OlderCh-2_child`} key={item.id}>
-              <div className={`speakers_OlderCh-2_child_speakerImg-1`}>
+            <div className={`meetTheKeyOrganizers_child-2_child`} key={item.id}>
+              <div className={`meetTheKeyOrganizers_child-2_child_speakerImg-1`}>
                 <img src={item.image} alt="image" />
                 <div>
                   <button
@@ -36,7 +36,7 @@ export default function MeetTheKeyOrganizers() {
                 </div>
               </div>
 
-              <div className={`speakers_OlderCh-2_child_speakerName-2`}>
+              <div className={`meetTheKeyOrganizers_child-2_child_speakerName-2`}>
                 <Link to={`/home/speaker/${item.id}`}>{item.name}</Link>
                 <p>{item.role}</p>
               </div>
