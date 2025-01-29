@@ -116,7 +116,7 @@ export default function WelcomeSpeech() {
                   className="WelcomeSpeech_child-3_modalContent-child"
                 >
                   <object
-                    data={item.pdf}
+                    data={`${window.location.origin}/${item.pdf}`}
                     type="application/pdf"
                     width="1000"
                     height="1000"
