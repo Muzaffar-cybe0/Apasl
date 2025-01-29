@@ -241,10 +241,10 @@
   ],
   "book":[
     {
-      "id":1,"pdf":"/public/apasl_tashkent_2025.pdf","img_link":"https://i.postimg.cc/CKkgPxKz/Screen-Shot-2025-01-29-at-20-28-14.png"
+      "id":1,"pdf":"/apasl_tashkent_2025.pdf","img_link":"https://i.postimg.cc/CKkgPxKz/Screen-Shot-2025-01-29-at-20-28-14.png"
     },
     {
-      "id":2,"pdf":"/public/apasl_tashkent_2025_ru.pdf","img_link":"https://i.postimg.cc/kGVwsBnH/apasl-ru.png"
+      "id":2,"pdf":"/apasl_tashkent_2025_ru.pdf","img_link":"https://i.postimg.cc/kGVwsBnH/apasl-ru.png"
     }
   ]
 }
