@@ -16,6 +16,7 @@ import Blog from './pages/Blog'
 import { useEffect, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 
+
 function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -36,7 +37,7 @@ function App() {
         <Route path="home" element={<Home />}>
           <Route index element={<Speakers />} />
         </Route>
-
+        
         <Route path="home/speaker/:itemId" element={<SpeakerDetail />} />
         <Route path="home/authorblogs" element={<AuthorBlog />} />
         <Route path="home/blog/:itemId" element={<Blog />} />

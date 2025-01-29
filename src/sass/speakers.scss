@@ -251,7 +251,9 @@
   color: white;
   font-size: 40px;
 }
-
+.animate__slideInDown {
+  animation: slideInDown 0.5s ease-out;
+}
 .circlePlusBtn {
   background: none;
   border: none;
@@ -263,9 +265,7 @@
   height: 24px;
 }
 
-.animate__slideInDown {
-  animation: slideInDown 0.5s ease-out;
-}
+
 
 @keyframes slideInDown {
   from {
