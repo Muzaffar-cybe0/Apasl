@@ -5,6 +5,7 @@
   --color4: #fff6e9;
 }
 .meetTheKeyOrganizers {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,6 +281,7 @@
 
 @media (max-width: 1024px) {
   .meetTheKeyOrganizers {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,6 +547,7 @@
 }
 @media (max-width: 810px) {
   .meetTheKeyOrganizers {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -807,6 +810,7 @@
 }
 @media (max-width: 480px) {
   .meetTheKeyOrganizers {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
