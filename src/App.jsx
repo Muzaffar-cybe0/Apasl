@@ -11,8 +11,7 @@ import RootLayout from "./layout/RootLayout";
 import Home from "./pages/Home";
 import SpeakerDetail from "./pages/SpeakerDetail";
 import Speakers from "./components/Speakers";
-import AuthorBlog from './pages/AuthorBlog'
-import Blog from './pages/Blog'
+
 import { useEffect, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 
@@ -39,8 +38,7 @@ function App() {
         </Route>
         
         <Route path="home/speaker/:itemId" element={<SpeakerDetail />} />
-        <Route path="home/authorblogs" element={<AuthorBlog />} />
-        <Route path="home/blog/:itemId" element={<Blog />} />
+        
 
       </Route>
     )

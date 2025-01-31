@@ -65,14 +65,14 @@ export default function MeetTheKeyOrganizers() {
                     >
                       {item.name}
                     </Link>
-                    <p>{item?.firstRowABTself}</p>
-                    <p>{item?.secondRowABTself}</p>
-                    <p>{item?.thirdRowABTself}</p>
-                    <p>{item?.fourthRowABTself}</p>
-                    <p>{item?.fifthRowABTself}</p>
-                    <p>{item?.sixthRowABTself}</p>
-                    <p>{item?.seventhRowABTself}</p>
-                    <p>{item?.eightthRowABTself}</p>
+                    {item?.firstRowABTself && <p>{item?.firstRowABTself}</p>}
+                    {item?.secondRowABTself && <p>{item?.secondRowABTself}</p>}
+                    {item?.thirdRowABTself && <p>{item?.thirdRowABTself}</p>}
+                    {item?.fourthRowABTself && <p>{item?.fourthRowABTself}</p>}
+                    {item?.fifthRowABTself && <p>{item?.fifthRowABTself}</p>}
+                    {item?.sixthRowABTself && <p>{item?.sixthRowABTself}</p>}
+                    {item?.seventhRowABTself && <p>{item?.seventhRowABTself}</p>}
+                    {item?.eightthRowABTself && <p>{item?.eightthRowABTself}</p>}
                   </div>
                 </div>
               ))}

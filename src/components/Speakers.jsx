@@ -25,7 +25,7 @@ export default function Speakers() {
       </div>
 
       <div className="speakers_OlderCh-2">
-        {dataJson.information.map((item) => {
+        {dataJson.speakers.map((item) => {
           return (
             <div className={`speakers_OlderCh-2_child`} key={item.id}>
               <div className={`speakers_OlderCh-2_child_speakerImg-1`}>
@@ -59,7 +59,7 @@ export default function Speakers() {
               ✕
             </button>
 
-            {dataJson.information
+            {dataJson.speakers
               .filter((item) => item.id === activeModal)
               .map((item) => (
                 <div key={item.id} className="modalContent-child">
@@ -72,14 +72,14 @@ export default function Speakers() {
                     >
                       {item.name}
                     </Link>
-                    <p>{item?.firstRowABTself}</p>
-                    <p>{item?.secondRowABTself}</p>
-                    <p>{item?.thirdRowABTself}</p>
-                    <p>{item?.fourthRowABTself}</p>
-                    <p>{item?.fifthRowABTself}</p>
-                    <p>{item?.sixthRowABTself}</p>
-                    <p>{item?.seventhRowABTself}</p>
-                    <p>{item?.eightthRowABTself}</p>
+                    {item?.firstRowABTself && <p>{item?.firstRowABTself}</p>}
+                    {item?.secondRowABTself && <p>{item?.secondRowABTself}</p>}
+                    {item?.thirdRowABTself && <p>{item?.thirdRowABTself}</p>}
+                    {item?.fourthRowABTself && <p>{item?.fourthRowABTself}</p>}
+                    {item?.fifthRowABTself && <p>{item?.fifthRowABTself}</p>}
+                    {item?.sixthRowABTself && <p>{item?.sixthRowABTself}</p>}
+                    {item?.seventhRowABTself && <p>{item?.seventhRowABTself}</p>}
+                    {item?.eightthRowABTself && <p>{item?.eightthRowABTself}</p>}
                   </div>
 
                 </div>
