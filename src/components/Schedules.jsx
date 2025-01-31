@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Tabs, Tab, Box, Typography, Avatar } from "@mui/material";
+import { Tabs, Tab, Box, Typography} from "@mui/material";
 import "animate.css";
 import "../sass/schedules.scss";
 import dataJson from '../data/speakersData.json'
@@ -11,6 +11,7 @@ export default function Schedules() {
   
 
   const handleTabChange = (event, newValue) => {
+    
     setCurrentTab(newValue);
   };
 
@@ -110,24 +111,7 @@ export default function Schedules() {
                   </Box>
 
                   <Link to={"/home/authorblogs"}>
-                    <Avatar
-                      src={event.avatar}
-                      alt={event.speaker}
-                      sx={{
-                        width: {
-                          xs: "80px",
-                          md: "80px",
-                          lg: "90px",
-                          xl: "100px",
-                        },
-                        height: {
-                          xs: "80px",
-                          md: "80px",
-                          lg: "90px",
-                          xl: "100px",
-                        },
-                      }}
-                    />
+                    
                   </Link>
 
                   <Box sx={{ flex: 3, ml: { xs: 0, md: 2 } }}>
@@ -141,14 +125,7 @@ export default function Schedules() {
                       {event.title}
                     </Typography>
 
-                    <Typography
-                      sx={{
-                        fontSize: "12px",
-                        color: "#aaa",
-                      }}
-                    >
-                      {event.speaker}
-                    </Typography>
+                    
                     
                   </Box>
                 </Box>
