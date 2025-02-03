@@ -1,6 +1,6 @@
 import "./App.css";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Navigate,
   Route,
@@ -23,24 +23,20 @@ function App() {
       setLoading(false);
     }, 2500);
   }, []);
-  
-  const router = createBrowserRouter(
+
+  const router = createHashRouter(
     createRoutesFromElements(
       <>
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<Navigate to="/home" replace />} />
 
-      <Route path="/" element={<RootLayout />}>
-
-        <Route index element={<Navigate to="/home" replace />} />
-
-        <Route path="home" element={<Home />}>
-          <Route index element={<Speakers />} />
+          <Route path="home" element={<Home />}>
+            <Route index element={<Speakers />} />
+          </Route>
+          <Route path="home/speaker/:itemId" element={<SpeakerDetail />} />
         </Route>
-        <Route path="home/speaker/:itemId" element={<SpeakerDetail />} />
 
-      </Route>
-
-      <Route path="admin" element={<AdminPanel />}></Route>
-
+        <Route path="admin" element={<AdminPanel />}></Route>
       </>
     )
   );
