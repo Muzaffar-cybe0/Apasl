@@ -72,14 +72,7 @@ export default function Speakers() {
                     >
                       {item.name}
                     </Link>
-                    {item?.firstRowABTself && <p>{item?.firstRowABTself}</p>}
-                    {item?.secondRowABTself && <p>{item?.secondRowABTself}</p>}
-                    {item?.thirdRowABTself && <p>{item?.thirdRowABTself}</p>}
-                    {item?.fourthRowABTself && <p>{item?.fourthRowABTself}</p>}
-                    {item?.fifthRowABTself && <p>{item?.fifthRowABTself}</p>}
-                    {item?.sixthRowABTself && <p>{item?.sixthRowABTself}</p>}
-                    {item?.seventhRowABTself && <p>{item?.seventhRowABTself}</p>}
-                    {item?.eightthRowABTself && <p>{item?.eightthRowABTself}</p>}
+                    {item?.aboutSelf && <p>{item?.aboutSelf}</p>}
                   </div>
 
                 </div>
