@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import{ useEffect, useRef, useState } from "react";
 import "../sass/navbar.scss";
 import "../css/hamburgers.min.css";
 import Logo from "../assets/Logo.png";
@@ -40,8 +40,8 @@ export default function Navbar() {
         <a href="#sponsors">Sponsors</a>
         <a href="#about">About</a>
         <a href="#speakers">Speakers</a>
+        <a href="#organizers">Organizers</a>
         <a href="#schedules">Schedules</a>
-        <a href="#blog">Blog</a>
       </div>
 
       <div className="navbar_child-3">

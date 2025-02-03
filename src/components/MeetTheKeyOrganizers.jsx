@@ -15,7 +15,7 @@ export default function MeetTheKeyOrganizers() {
     setActiveModal(null);
   };
   return (
-    <div className="meetTheKeyOrganizers">
+    <div className="meetTheKeyOrganizers" id="organizers">
       <div className="meetTheKeyOrganizers_child-1">
         <h1>Meet The Key Organizers</h1>
       </div>

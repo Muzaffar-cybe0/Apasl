@@ -1,6 +1,10 @@
 <IfModule mod_rewrite.c>
      RewriteEngine On
      RewriteBase /
+   
+     # Exclude URLs with a hash (#)
+     RewriteCond %{REQUEST_URI} !#
+   
      RewriteCond %{REQUEST_FILENAME} !-f
      RewriteCond %{REQUEST_FILENAME} !-d
      RewriteRule . /index.html [L]
