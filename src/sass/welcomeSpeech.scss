@@ -36,7 +36,7 @@
       font-size: 25px;
       font-weight: 400;
       color: var(--color2);
-      text-shadow:1px 1px var(--color3);
+      text-shadow: 1px 1px var(--color3);
     }
     p {
       font-size: 18px;
@@ -56,6 +56,8 @@
     cite {
       font-style: normal;
       color: var(--color2);
+      text-shadow: 2px 2px var(--color3);
+      font-size: 18px;
     }
   }
   &_child-2 {
@@ -126,7 +128,7 @@
           width: 100%;
           height: 550px;
         }
-        a{
+        a {
           text-decoration: none;
           color: var(--color3);
           transition: color 0.3s ease-in-out;
@@ -191,7 +193,7 @@
         font-size: 35px;
         font-weight: 400;
         color: var(--color2);
-        text-shadow:2px 2px var(--color3);
+        text-shadow: 2px 2px var(--color3);
       }
       p {
         font-size: 22px;
@@ -201,7 +203,7 @@
           font-size: 22px;
           font-weight: 600;
           color: var(--color2);
-          text-shadow:2px 2px var(--color3);
+          text-shadow: 2px 2px var(--color3);
         }
       }
       p:nth-child(9) {
@@ -214,7 +216,7 @@
         font-weight: 400;
         font-style: normal;
         color: var(--color2);
-        text-shadow:2px 2px var(--color3);
+        text-shadow: 2px 2px var(--color3);
       }
     }
     &_child-2 {
@@ -283,7 +285,7 @@
             width: 100%;
             height: 550px;
           }
-          a{
+          a {
             text-decoration: none;
             color: var(--color3);
             transition: color 0.3s ease-in-out;
@@ -349,7 +351,7 @@
         font-size: 25px;
         font-weight: 400;
         color: var(--color2);
-        text-shadow:2px 2px var(--color3);
+        text-shadow: 2px 2px var(--color3);
       }
       p {
         font-size: 18px;
@@ -359,7 +361,7 @@
           font-size: 18px;
           font-weight: 500;
           color: var(--color2);
-          text-shadow:2px 2px var(--color3);
+          text-shadow: 2px 2px var(--color3);
         }
       }
       p:nth-child(9) {
@@ -370,6 +372,8 @@
       cite {
         font-style: normal;
         color: var(--color2);
+        text-shadow: 2px 2px var(--color3);
+        font-size: 18px;
       }
     }
     &_child-2 {
@@ -438,7 +442,7 @@
             width: 100%;
             height: 550px;
           }
-          a{
+          a {
             text-decoration: none;
             color: var(--color3);
             transition: color 0.3s ease-in-out;
@@ -504,7 +508,7 @@
         font-size: 25px;
         font-weight: 400;
         color: var(--color2);
-        text-shadow:2px 2px var(--color3);
+        text-shadow: 2px 2px var(--color3);
       }
       p {
         color: var(--color2);
@@ -514,7 +518,7 @@
           color: var(--color2);
           font-size: 18px;
           font-weight: 500;
-          text-shadow:2px 2px var(--color3);
+          text-shadow: 2px 2px var(--color3);
         }
       }
       p:nth-child(9) {
@@ -525,6 +529,7 @@
       cite {
         color: var(--color2);
         font-style: normal;
+        font-size: 18px;
       }
     }
     &_child-2 {
@@ -593,7 +598,7 @@
             width: 100%;
             height: 550px;
           }
-          a{
+          a {
             text-decoration: none;
             color: var(--color3);
             transition: color 0.3s ease-in-out;
@@ -607,7 +612,7 @@
             }
           }
         }
-        
+
         .animate__slideInDown {
           animation: slideInDown 0.5s ease-out;
         }
@@ -659,7 +664,7 @@
         font-size: 20px;
         font-weight: 400;
         color: var(--color2);
-        text-shadow:2px 2px var(--color3);
+        text-shadow: 2px 2px var(--color3);
       }
       p {
         color: var(--color2);
@@ -669,7 +674,7 @@
           color: var(--color2);
           font-size: 15px;
           font-weight: 500;
-          text-shadow:2px 2px var(--color3);
+          text-shadow: 2px 2px var(--color3);
         }
       }
       p:nth-child(9) {
@@ -680,6 +685,8 @@
       cite {
         color: var(--color2);
         font-style: normal;
+        text-shadow:2px 2px var(--color3);
+        font-size: 15px;
       }
     }
     &_child-2 {
@@ -688,7 +695,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    
+
       div {
         width: 100%;
         display: flex;
@@ -706,7 +713,6 @@
           transition: all 0.3s ease-in-out;
         }
       }
-      
     }
     &_child-3 {
       position: fixed;
@@ -744,7 +750,7 @@
             width: 100%;
             height: 550px;
           }
-          a{
+          a {
             text-decoration: none;
             color: var(--color3);
             transition: color 0.3s ease-in-out;
@@ -758,7 +764,7 @@
             }
           }
         }
-        
+
         .animate__slideInDown {
           animation: slideInDown 0.5s ease-out;
         }
