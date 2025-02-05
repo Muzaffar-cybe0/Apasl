@@ -1,13 +1,22 @@
 import { useState } from "react";
 import dataJson from "../data/speakersData.json";
 import "../admin_Scss/booksSection.scss";
+
+import { Viewer, Worker } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+
 export default function BooksSection() {
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
   const [open, setOpen] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
   const [openPdf, setOpenPdf] = useState(false);
   const [edit, setEdit] = useState({});
   const [Hdelete, setHdelete] = useState({});
   const [pdfModal, setPdfModal] = useState();
+
   const handleEditSave = (item) => {
     setEdit(item);
     setOpen(true);
@@ -17,7 +26,7 @@ export default function BooksSection() {
     setOpenDelete(true);
   };
   const PdfSave = (item) => {
-     setPdfModal(item);
+    setPdfModal(item);
     setOpenPdf(true);
   };
   return (
@@ -25,22 +34,15 @@ export default function BooksSection() {
       <div className="BooksSection_child-1">
         <form>
           <div>
-            <label htmlFor="image">Organizer image:</label>
+            <label htmlFor="image">Pdf image:</label>
             <input type="file" id="image" title="Choose image" />
           </div>
           <div>
-            <label htmlFor="name">Organizer name:</label>
-            <input type="text" id="name" placeholder="Name" />
+            <label htmlFor="image">Pdf file</label>
+            <input type="file" id="image" title="Choose File" />
           </div>
-          <div>
-            <label htmlFor="role">Organizer role:</label>
-            <input type="text" id="role" placeholder="Role" />
-          </div>
-          <div>
-            <label htmlFor="abtS">AboutSelf:</label>
-            <textarea placeholder="AboutSelf" id="abtS"></textarea>
-          </div>
-          <button type="submit">Add New Organizer</button>
+          
+          <button type="submit">Add New File</button>
         </form>
       </div>
 
@@ -62,13 +64,13 @@ export default function BooksSection() {
                 </td>
                 <td>
                   <button type="button" onClick={() => PdfSave(item.pdf)}>
-                    See Pdf
+                    See
                   </button>
                 </td>
                 <td>
                   <button
                     type="button"
-                    style={{ backgroundColor: "yellow" }}
+                    style={{ backgroundColor: "rgb(182, 182, 0)" }}
                     onClick={() => handleEditSave(item)}
                   >
                     Edit
@@ -93,22 +95,12 @@ export default function BooksSection() {
           onClick={(e) => e.stopPropagation()}
         >
           <form>
+            <img src={edit.img_link} alt="selected_image" />
             <div>
               <label htmlFor="image">Organizer image:</label>
               <input type="file" id="image" title="Choose image" />
             </div>
-            <div>
-              <label htmlFor="name">Organizer name:</label>
-              <input type="text" id="name" placeholder="Name" />
-            </div>
-            <div>
-              <label htmlFor="role">Organizer role:</label>
-              <input type="text" id="role" placeholder="Role" />
-            </div>
-            <div>
-              <label htmlFor="abtS">AboutSelf:</label>
-              <textarea placeholder="AboutSelf" id="abtS"></textarea>
-            </div>
+
             <button type="submit">Edit</button>
             <button type="button" onClick={() => setOpen(false)}>
               Close
@@ -120,22 +112,12 @@ export default function BooksSection() {
           className={`Books_Delete_modal ${openDelete === true ? "show2" : ""}`}
         >
           <form>
+            <img src={Hdelete.img_link} alt="selected_image" />
             <div>
               <label htmlFor="image">Organizer image:</label>
               <input type="file" id="image" title="Choose image" />
             </div>
-            <div>
-              <label htmlFor="name">Organizer name:</label>
-              <input type="text" id="name" placeholder="Name" />
-            </div>
-            <div>
-              <label htmlFor="role">Organizer role:</label>
-              <input type="text" id="role" placeholder="Role" />
-            </div>
-            <div>
-              <label htmlFor="abtS">AboutSelf:</label>
-              <textarea placeholder="AboutSelf" id="abtS"></textarea>
-            </div>
+
             <button type="submit">Delete</button>
             <button type="button" onClick={() => setOpenDelete(false)}>
               Close
@@ -143,14 +125,19 @@ export default function BooksSection() {
           </form>
         </div>
 
-        <div className="pdf_modal">
-          <object
-            data={`${window.location.origin}/${PdfSave}`}
-            type="application/pdf"
-            width="1000"
-            height="1000"
-          ></object>
-        </div>
+        {pdfModal && ( // 🟢 Only render if pdfModal is not null
+          <div className="pdf_modal">
+            <button className="pdf_modal_closeBtn" onClick={() => setPdfModal(null)}>Close PDF</button>{" "}
+            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+              <div className="pdf_div">
+                <Viewer
+                  fileUrl={pdfModal}
+                  plugins={[defaultLayoutPluginInstance]}
+                />
+              </div>
+            </Worker>
+          </div>
+        )}
       </div>
     </div>
   );

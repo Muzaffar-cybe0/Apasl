@@ -121,25 +121,12 @@
         align-items: center;
         flex-direction: column;
         gap: 50px;
-        width: 100%;
+        width: 100%;  
         height: 100%;
         padding: 50px 0px;
-        object {
+        .pdf_div{
           width: 100%;
-          height: 550px;
-        }
-        a {
-          text-decoration: none;
-          color: var(--color3);
-          transition: color 0.3s ease-in-out;
-          background-color: rgba(255, 255, 255, 0.177);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(240, 240, 240, 0.154);
-          border-radius: 10px;
-          padding: 10px 50px;
-          &:hover {
-            color: var(--color2);
-          }
+          height: 100%;
         }
       }
 
@@ -278,26 +265,14 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 100%;
+          width: 100%;  
           height: 100%;
           padding: 50px 0px;
-          object {
+          .pdf_div{
             width: 100%;
-            height: 550px;
+            height: 100%;
           }
-          a {
-            text-decoration: none;
-            color: var(--color3);
-            transition: color 0.3s ease-in-out;
-            background-color: rgba(255, 255, 255, 0.177);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(240, 240, 240, 0.154);
-            border-radius: 10px;
-            padding: 10px 50px;
-            &:hover {
-              color: var(--color2);
-            }
-          }
+          
         }
 
         .animate__slideInDown {
@@ -438,9 +413,9 @@
           width: 100%;
           height: 100%;
           padding: 50px 0px;
-          object {
+          .pdf_div{
             width: 100%;
-            height: 550px;
+            height: 100%;
           }
           a {
             text-decoration: none;
@@ -594,22 +569,9 @@
           width: 100%;
           height: 100%;
           padding: 50px 0px;
-          object {
+          .pdf_div{
             width: 100%;
-            height: 550px;
-          }
-          a {
-            text-decoration: none;
-            color: var(--color3);
-            transition: color 0.3s ease-in-out;
-            background-color: rgba(255, 255, 255, 0.177);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(240, 240, 240, 0.154);
-            border-radius: 10px;
-            padding: 10px 50px;
-            &:hover {
-              color: var(--color2);
-            }
+            height: 100%;
           }
         }
 
@@ -685,7 +647,7 @@
       cite {
         color: var(--color2);
         font-style: normal;
-        text-shadow:2px 2px var(--color3);
+        text-shadow: 2px 2px var(--color3);
         font-size: 15px;
       }
     }
@@ -734,7 +696,7 @@
         width: 90%;
         max-width: 92%;
         margin: 50px auto;
-        padding: 30px;
+        padding:20px 10px;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         position: relative;
@@ -746,22 +708,9 @@
           width: 100%;
           height: 100%;
           padding: 40px 0px;
-          object {
+          .pdf_div{
             width: 100%;
-            height: 550px;
-          }
-          a {
-            text-decoration: none;
-            color: var(--color3);
-            transition: color 0.3s ease-in-out;
-            background-color: rgba(255, 255, 255, 0.177);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(240, 240, 240, 0.154);
-            border-radius: 10px;
-            padding: 10px 50px;
-            &:hover {
-              color: var(--color2);
-            }
+            height: 100%;
           }
         }
 

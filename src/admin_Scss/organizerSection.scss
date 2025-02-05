@@ -55,16 +55,14 @@
         padding: 10px 0px;
         font-size: 18px;
         font-weight: 400;
-        border: 1px solid dodgerblue;
-        background-color: dodgerblue;
+        border: 1px solid transparent;
+        background-color: green;
         color: white;
         border-radius: 5px;
         transition: all 0.3s ease-in-out;
         text-transform: capitalize;
         &:hover {
-          border: 1px solid dodgerblue;
-          background-color: white;
-          color: dodgerblue;
+          background-color: rgb(3, 185, 3);
         }
       }
     }
@@ -96,9 +94,9 @@
           border-radius: 5px;
           text-transform: capitalize;
           transition: all 0.3s ease-in-out;
-          border: 2px solid var(--color2);
+          color: white;
           &:hover {
-            border: 2px solid var(--color3);
+            transform: scale(1.1);
           }
         }
         img {
@@ -175,15 +173,13 @@
           padding: 15px 20px;
           font-size: 18px;
           font-weight: 400;
-          border: 1px solid var(--color3);
-          background-color: yellow;
-          color: var(--color3);
+          border: 1px solid transparent;
+          background-color: #b6b600;
+          color: white;
           border-radius: 5px;
           transition: all 0.3s ease-in-out;
           &:hover {
-            border: 1px solid yellow;
-            background-color: white;
-            color: var(--color3);
+            transform: scale(1.1);
           }
         }
         button:last-child {
@@ -197,9 +193,7 @@
           border-radius: 5px;
           transition: all 0.3s ease-in-out;
           &:hover {
-            border: 1px solid var(--color1);
-            background-color: white;
-            color: var(--color3);
+           transform: scale(1.1);
           }
         }
       }
@@ -273,15 +267,13 @@
           padding: 15px 20px;
           font-size: 18px;
           font-weight: 400;
-          border: 1px solid var(--color1);
-          background-color: var(--color1);
+          border: 1px solid transparent;
+          background-color:red;
           color: white;
           border-radius: 5px;
           transition: all 0.3s ease-in-out;
           &:hover {
-            border: 1px solid var(--color1);
-            background-color: white;
-            color: var(--color3);
+            transform: scale(1.1);
           }
         }
         button:last-child {
@@ -295,9 +287,7 @@
           border-radius: 5px;
           transition: all 0.3s ease-in-out;
           &:hover {
-            border: 1px solid var(--color1);
-            background-color: white;
-            color: var(--color3);
+           transform: scale(1.1);
           }
         }
       }

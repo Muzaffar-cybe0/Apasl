@@ -12,6 +12,7 @@ import { Button, Layout, Menu, theme } from "antd";
 import SpeakersSection from "../admin_components/SpeakersSection";
 import OrganizersSection from "../admin_components/OrganizersSection";
 import BooksSection from "../admin_components/BooksSection";
+import ScheduleSection from "../admin_components/ScheduleSection";
 
 const { Header, Sider, Content } = Layout;
 
@@ -31,7 +32,7 @@ export default function AdminPanel() {
       case "3":
         return <BooksSection/>
       case "4":
-        return <h2>Schedules Data</h2>;
+        return <ScheduleSection/>
       default:
         return <h2>Select a category</h2>;
     }

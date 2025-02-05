@@ -2,7 +2,13 @@ import "../sass/welcomeSpeech.scss";
 import "animate.css";
 import { useState } from "react";
 import dataJson from "../data/speakersData.json";
+import { Viewer, Worker } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 export default function WelcomeSpeech() {
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
   const [activeModal, setActiveModal] = useState(null);
 
   const handleOpenModal = (id) => {
@@ -115,13 +121,14 @@ export default function WelcomeSpeech() {
                   key={item.id}
                   className="WelcomeSpeech_child-3_modalContent-child"
                 >
-                  <object
-                    data={`${window.location.origin}/${item.pdf}`}
-                    type="application/pdf"
-                    width="1000"
-                    height="1000"
-                  ></object>
-                  <a href={item.pdf} download>Download</a>
+                  <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                    <div className="pdf_div">
+                      <Viewer
+                        fileUrl={`${window.location.origin}/${item.pdf}`}
+                        plugins={[defaultLayoutPluginInstance]}
+                      />
+                    </div>
+                  </Worker>
                 </div>
               ))}
           </div>

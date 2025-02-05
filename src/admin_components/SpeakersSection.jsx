@@ -68,7 +68,7 @@ export default function SpeakersSection() {
                 <td>
                   <button
                     type="button"
-                    style={{ backgroundColor: "yellow" }}
+                    style={{ backgroundColor: "rgb(182, 182, 0)" }}
                     onClick={() => handleEditSave(item)}
                   >
                     Edit

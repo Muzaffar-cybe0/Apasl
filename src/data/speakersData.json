@@ -148,55 +148,43 @@
   ],
   "schedules": [
     {
+      "id":"1",
       "date": "4-June",
       "events": [
         {
           "time": "10:00-13:00",
-          "title": "Experience in eliminating viral hepatitis C. Problems and prospects.",
-          "speaker": "Henri Robert",
-          "avatar": "https://i.postimg.cc/ZRsrQ58k/speaker1.png"
+          "title": "Experience in eliminating viral hepatitis C. Problems and prospects."
         },
         {
           "time": "13:00-14:30",
-          "title": "Lunch",
-          "speaker": "",
-          "avatar": "../assets/speaker2.png"
+          "title": "Lunch"
         },
         {
           "time": "14:30-18:00",
-          "title": "Experience in organizing national programs to reduce the incidence of HBV and HDV infections.",
-          "speaker": "Henri Robert",
-          "avatar": "../assets/speaker3.png"
+          "title": "Experience in organizing national programs to reduce the incidence of HBV and HDV infections."
         }
       ]
     },
     {
+      "id":"2",
       "date": "5-June",
 
       "events": [
         {
           "time": "9:30-11:30",
-          "title": "Introduction of GCC screening in national programs for the elimination of viral hepatitis.",
-          "speaker": "Henri Robert",
-          "avatar": "https://i.postimg.cc/GtZvcggq/speaker2.png"
+          "title": "Introduction of GCC screening in national programs for the elimination of viral hepatitis."
         },
         {
           "time": "11:30-13:00",
-          "title": "Increased access to liver transplantation. Experience of different countries.",
-          "speaker": "Robert Henri",
-          "avatar": "../assets/speaker2.png"
+          "title": "Increased access to liver transplantation. Experience of different countries."
         },
         {
           "time": "13:00-14:30",
-          "title": "Lunch",
-          "speaker": "Henri Robert",
-          "avatar": "../assets/speaker3.png"
+          "title": "Lunch"
         },
         {
           "time": "14:30-18:00",
-          "title": "National programs for reducing enteral hepatitis A and E.",
-          "speaker": "Robert Henri",
-          "avatar": "../assets/speaker4.png"
+          "title": "National programs for reducing enteral hepatitis A and E."
         }
       ]
     }

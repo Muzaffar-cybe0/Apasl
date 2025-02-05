@@ -15,8 +15,8 @@ export default function Home() {
       <Associates />
       <WelcomeSpeech />
       <EventOutComes />
-      <Outlet/>
       <MeetTheKeyOrganizers/>
+      <Outlet/>
       <Ticket/>
       <Schedules/>
       
