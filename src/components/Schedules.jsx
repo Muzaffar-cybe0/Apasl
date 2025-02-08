@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Tabs, Tab, Box, Typography} from "@mui/material";
+import { Tabs, Tab, Box, Typography } from "@mui/material";
 import "animate.css";
 import "../sass/schedules.scss";
-import dataJson from '../data/speakersData.json'
+import dataJson from "../data/speakersData.json";
+import { useTranslation } from "react-i18next";
 
 export default function Schedules() {
   const [currentTab, setCurrentTab] = useState(0);
   const [schedules, setSchedules] = useState([]);
-  
+
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
 
   const handleTabChange = (event, newValue) => {
-    
     setCurrentTab(newValue);
   };
 
@@ -22,19 +25,25 @@ export default function Schedules() {
         setSchedules(json);
       })
       .catch((err) => console.error("Failed to fetch speakers data:", err));
-  }, []);
+
+    const handleLanguageChange = () => {
+      setLanguage(i18n.language);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, [i18n]);
 
   return (
     <div className="schedules" id="schedules">
-      <div
-        className={`schedules-child1 `}
-      >
-        <p>schedule details</p>
-        <h1>schedule</h1>
+      <div className={`schedules-child1 `}>
+        <p>{t("schedules1")}</p>
+        <h1>{t("schedules2")}</h1>
       </div>
-      <div
-        className={`schedules-child2 `}
-      >
+      <div className={`schedules-child2 `}>
         <Box
           sx={{
             width: "95%",
@@ -62,9 +71,10 @@ export default function Schedules() {
                 label={
                   <Box sx={{ textAlign: "center" }}>
                     <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>
-                      {schedule.date}
+                      {typeof schedule.date === "string"
+                        ? schedule.date
+                        : schedule.date[language]}
                     </Typography>
-                   
                   </Box>
                 }
               />
@@ -104,15 +114,14 @@ export default function Schedules() {
                   }}
                 >
                   <Box sx={{ flex: 1 }}>
-                    
                     <Typography sx={{ fontWeight: "bold", color: "#fff" }}>
-                    {event.time}
+                      {typeof event.time === "string"
+                        ? event.time
+                        : event.time[language]}
                     </Typography>
                   </Box>
 
-                  <Link to={"/home/authorblogs"}>
-                    
-                  </Link>
+                  <Link to={"/home/authorblogs"}></Link>
 
                   <Box sx={{ flex: 3, ml: { xs: 0, md: 2 } }}>
                     <Typography
@@ -122,11 +131,10 @@ export default function Schedules() {
                         fontSize: { xs: "14px", md: "16px" },
                       }}
                     >
-                      {event.title}
+                      {typeof event.title === "string"
+                        ? event.title
+                        : event.title[language]}
                     </Typography>
-
-                    
-                    
                   </Box>
                 </Box>
               ))}

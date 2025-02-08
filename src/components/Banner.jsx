@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../sass/banner.scss";
 const COUNTDOWN_TARGET = new Date("2024-10-31T23:59:59");
-
+import { Trans, useTranslation } from "react-i18next";
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET - new Date();
   const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
@@ -37,6 +37,7 @@ export default function Banner() {
       clearInterval(timer);
     };
   }, []);
+  const { t } = useTranslation();
   return (
     <div className="banner">
       <div className="banner_wrapper-1">
@@ -60,20 +61,19 @@ export default function Banner() {
         </div>
 
         <div className="banner_wrapper-1_child-2">
-          <h1>Apasl 2025 Tashkent</h1>
+          <h1>{t("bannerText1")}</h1>
           <p>
-            International Experience of National Programs for the elimination of
-            viral hepatitis
+          {t("bannerText2")}
           </p>
           <p>
-            Uzbekistan and Azerbaijan Association of Gastroenterology and
-            Hepatalogy
-            <span>june 4-5, 2025</span>
+            <Trans i18nKey="bannerText3" components={{ 1: <span /> }}>
+              Uzbekistan and Azerbaijan Association of Gastroenterology and
+              Hepatalogy
+              <span>june 4-5, 2025</span>
+            </Trans>
           </p>
-          <button type="button">buy ticket</button>
+          <button type="button">{t("bannerText4")}</button>
         </div>
-
-       
       </div>
     </div>
   );

@@ -2,11 +2,25 @@ import "animate.css";
 import "../sass/meetTheKeyOrganizers.scss";
 import dataJson from "../data/speakersData.json";
 import CirclePlus from "../assets/circle_plus.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function MeetTheKeyOrganizers() {
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
   const [activeModal, setActiveModal] = useState(null);
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setLanguage(i18n.language);
+    };
 
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, [i18n]);
   const handleOpenModal = (id) => {
     setActiveModal(id);
   };
@@ -17,14 +31,16 @@ export default function MeetTheKeyOrganizers() {
   return (
     <div className="meetTheKeyOrganizers" id="organizers">
       <div className="meetTheKeyOrganizers_child-1">
-        <h1>Meet The Key Organizers</h1>
+        <h1>{t("meetTheKeyOrganizers1")}</h1>
       </div>
 
       <div className="meetTheKeyOrganizers_child-2">
         {dataJson.organizers.map((item) => {
           return (
             <div className={`meetTheKeyOrganizers_child-2_child`} key={item.id}>
-              <div className={`meetTheKeyOrganizers_child-2_child_speakerImg-1`}>
+              <div
+                className={`meetTheKeyOrganizers_child-2_child_speakerImg-1`}
+              >
                 <img src={item.image} alt="image" />
                 <div>
                   <button
@@ -36,9 +52,21 @@ export default function MeetTheKeyOrganizers() {
                 </div>
               </div>
 
-              <div className={`meetTheKeyOrganizers_child-2_child_speakerName-2`}>
-                <Link to={`/home/speaker/${item.id}`}>{item.name}</Link>
-                <p>{item.role}</p>
+              <div
+                className={`meetTheKeyOrganizers_child-2_child_speakerName-2`}
+              >
+                <Link to={`/home/speaker/${item.id}`}>
+                  {typeof item.name === "string"
+                    ? item.name
+                    : item.name[language]}
+                </Link>
+                <p>
+                  {item.role
+                    ? typeof item.role === "string"
+                      ? item.role
+                      : item.role[language]
+                    : null}
+                </p>
               </div>
             </div>
           );
@@ -63,9 +91,22 @@ export default function MeetTheKeyOrganizers() {
                       to={`/home/speaker/${item.id}`}
                       className="speaker_name"
                     >
-                      {item.name}
+                      {typeof item.name === "string"
+                        ? item.name
+                        : item.name[language]}
                     </Link>
-                    {item?.aboutSelf && <p>{item?.aboutSelf}</p>}
+                    <p>
+                      {item.role
+                        ? typeof item.role === "string"
+                          ? item.role
+                          : item.role[language]
+                        : null}
+                    </p>
+                    <p>
+                      {typeof item.aboutSelf === "string"
+                        ? item.aboutSelf
+                        : item.aboutSelf[language]}
+                    </p>
                   </div>
                 </div>
               ))}

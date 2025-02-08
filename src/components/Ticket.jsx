@@ -1,7 +1,9 @@
 import "../sass/ticket.scss";
 import "animate.css";
 import { Box, Grid, Typography, Button } from "@mui/material";
+import { useTranslation } from "react-i18next";
 export default function Ticket() {
+  const {t} = useTranslation()
   const cardData = [
     {
       id: 1,
@@ -17,8 +19,8 @@ export default function Ticket() {
       <div
         className={`ticket_wrapper1`}
       >
-        <p>pricing plans</p>
-        <h1>get your ticket</h1>
+        <p>{t("ticket1")}</p>
+        <h1>{t("ticket2")}</h1>
       </div>
 
       <div className="card_wrapper2">
@@ -84,7 +86,7 @@ export default function Ticket() {
                       },
                     }}
                   >
-                    BUY TICKET
+                   {t("ticket3")}
                   </Button>
                 </Box>
               </Grid>

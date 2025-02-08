@@ -10,31 +10,47 @@ export default function ScheduleSection() {
   return (
     <div className="schedule-section">
       <div className="schedule-form">
-        <form>
-          <div>
-            <label htmlFor="date">Add New Date:</label>
-            <input type="text" id="date" placeholder="4 June" />
-          </div>
-          <div>
-            <label htmlFor="dates">Date:</label>
-            <select name="dates" id="dates">
-              {schedules.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.date}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label htmlFor="time">Time:</label>
-            <input type="text" id="time" placeholder="10:30-13:00" />
-          </div>
-          <div>
-            <label htmlFor="title">Title:</label>
-            <input type="text" id="title" placeholder="Event title" />
-          </div>
-          <button type="submit">Add Date</button>
-        </form>
+        <div className="schedule-form_child-1">
+          <form>
+            <div>
+              <label htmlFor="dates">Date:</label>
+              <select name="dates" id="dates">
+                {schedules.map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.date}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="time">Time:</label>
+              <input type="text" id="time" placeholder="10:30-13:00" />
+            </div>
+            <div>
+              <label htmlFor="title">Title:</label>
+              <input type="text" id="title" placeholder="Event title" />
+            </div>
+            <button type="submit">Add Date</button>
+          </form>
+        </div>
+        <div className="schedule-form_child-2">
+          <form>
+            <div>
+              <label htmlFor="date">Add New Date:</label>
+              <input type="text" id="date" placeholder="4 June" />
+            </div>
+            <div>
+              <label htmlFor="time">Time:</label>
+              <input type="text" id="time" placeholder="10:30-13:00" />
+            </div>
+            <div>
+              <label htmlFor="title">Title:</label>
+              <input type="text" id="title" placeholder="Event title" />
+            </div>
+            <button type="submit">Add Date</button>
+          </form>
+        </div>
       </div>
 
       <div className="schedule-table">
