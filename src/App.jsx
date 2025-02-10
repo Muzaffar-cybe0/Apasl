@@ -14,6 +14,7 @@ import SpeakerDetail from "./pages/SpeakerDetail";
 import Speakers from "./components/Speakers";
 import BounceLoader from "react-spinners/BounceLoader";
 import AdminPanel from "./pages/AdminPanel";
+import Login from "./pages/Login";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -36,7 +37,9 @@ function App() {
           <Route path="home/speaker/:itemId" element={<SpeakerDetail />} />
         </Route>
 
-        <Route path="admin" element={<AdminPanel />}></Route>
+        <Route path="admin" element={<AdminPanel />}>
+          <Route path="login" element={<Login />} />
+        </Route>
       </>
     )
   );

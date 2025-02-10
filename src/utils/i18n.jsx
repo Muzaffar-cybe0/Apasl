@@ -38,6 +38,7 @@ const resources = {
       footer5: "Phone",
       footer6: "SEND",
       footer7: "© 2024 Exhibz. All rights reserved",
+      footer8: "Your Email",
       welcomeMessage1: "Dear Colleagues and Friends,",
       welcomeMessage2:
         "It is with immense pleasure that I invite you to <1>the APASL 2025 Conference</1>, which will be held in the vibrant and historic city of <2>Tashkent, Uzbekistan</2>, <3>on June 4-5, 2025</3>.",
@@ -98,6 +99,7 @@ const resources = {
       footer5: "Телефон",
       footer6: "ОТПРАВИТЬ",
       footer7: "© 2024 Exhibz. Все права защищены",
+      footer8: "Ваш Email",
       welcomeMessage1: "Уважаемые коллеги и друзья,",
       welcomeMessage2:
         "С огромным удовольствием приглашаю вас на <1>Конференцию APASL 2025</1>, которая пройдет в ярком и историческом городе <2>Ташкент, Узбекистан</2>, <3>4-5 июня 2025 года</3>.",
@@ -157,6 +159,7 @@ const resources = {
       footer5: "Telefon",
       footer6: "YUBORISH",
       footer7: "© 2024 Exhibz. Barcha huquqlar himoyalangan",
+      footer8: "Sizning emailingiz",
       welcomeMessage1: "Hurmatli hamkasblar va do‘stlar,",
       welcomeMessage2:
         "Katta mamnuniyat bilan sizni <1>APASL 2025 Konferentsiyasiga</1> taklif qilamiz, u yorqin va tarixiy <2>Toshkent shahrida, O'zbekiston</2>da <3>2025-yil 4-5-iyun</3>da o'tkaziladi.",

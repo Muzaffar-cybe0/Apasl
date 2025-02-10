@@ -26,13 +26,13 @@ export default function AdminPanel() {
   const renderContent = () => {
     switch (selectedKey) {
       case "1":
-        return <SpeakersSection/>
+        return <SpeakersSection />;
       case "2":
-        return <OrganizersSection/>
+        return <OrganizersSection />;
       case "3":
-        return <BooksSection/>
+        return <BooksSection />;
       case "4":
-        return <ScheduleSection/>
+        return <ScheduleSection />;
       default:
         return <h2>Select a category</h2>;
     }
@@ -41,15 +41,13 @@ export default function AdminPanel() {
   return (
     <div className="Admin">
       <Layout style={{ minHeight: "100vh" }}>
-        
         <Sider trigger={null} collapsible collapsed={collapsed}>
-          
           <Menu
             theme="dark"
             mode="inline"
             defaultSelectedKeys={["1"]}
             selectedKeys={[selectedKey]}
-            onClick={({ key }) => setSelectedKey(key)} 
+            onClick={({ key }) => setSelectedKey(key)}
             items={[
               { key: "1", icon: <UserOutlined />, label: "Speakers" },
               { key: "2", icon: <TeamOutlined />, label: "Organizers" },

@@ -47,7 +47,7 @@ export default function Footer() {
 
           <div className="footer-column">
             <div className="subscription">
-              <input type="email" placeholder="Your Email" />
+              <input type="email" placeholder={t("footer8")} />
               <button className="subscribe-button">{t("footer6")}</button>
             </div>
           </div>
