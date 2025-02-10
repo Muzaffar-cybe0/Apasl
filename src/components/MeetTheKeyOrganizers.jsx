@@ -55,11 +55,11 @@ export default function MeetTheKeyOrganizers() {
               <div
                 className={`meetTheKeyOrganizers_child-2_child_speakerName-2`}
               >
-                <Link to={`/home/speaker/${item.id}`}>
+                <p>
                   {typeof item.name === "string"
                     ? item.name
                     : item.name[language]}
-                </Link>
+                </p>
                 <p>
                   {item.role
                     ? typeof item.role === "string"
@@ -87,14 +87,11 @@ export default function MeetTheKeyOrganizers() {
                   <img src={`${item.image}`} alt="Speaker" />
 
                   <div>
-                    <Link
-                      to={`/home/speaker/${item.id}`}
-                      className="speaker_name"
-                    >
+                    <p className="speaker_name">
                       {typeof item.name === "string"
                         ? item.name
                         : item.name[language]}
-                    </Link>
+                    </p>
                     <p>
                       {item.role
                         ? typeof item.role === "string"

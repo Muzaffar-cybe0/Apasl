@@ -2,19 +2,30 @@ import { useEffect, useRef, useState } from "react";
 import "../sass/navbar.scss";
 import "../css/hamburgers.min.css";
 import Logo from "../assets/Logo.png";
+import EnglishFlag from "../assets/en_flag.jpg"; // Import English flag
+import RussianFlag from "../assets/ru_flag.jpg"; // Import Russian flag
+import UzbekFlag from "../assets/uz_flag.jpg"; // Import Uzbek flag
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [sticky, setSticky] = useState(false);
   const [menu, setMenu] = useState(false);
   const scrollListenerRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const changeLanguage = (event) => {
-    i18n.changeLanguage(event.target.value);
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setIsOpen(false);
   };
 
+  // Set default language to English if none is selected
   useEffect(() => {
+    if (!i18n.language) {
+      i18n.changeLanguage("en"); // Default to English
+    }
+
     scrollListenerRef.current = () => {
       setSticky(window.scrollY > 90);
     };
@@ -23,7 +34,7 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", scrollListenerRef.current);
     };
-  }, []);
+  }, [i18n]);
 
   const handleMenu = () => setMenu((p) => !p);
 
@@ -33,6 +44,14 @@ export default function Navbar() {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  // Use the local images for flags
+  const languageFlag =
+    i18n.language === "en"
+      ? EnglishFlag
+      : i18n.language === "ru"
+      ? RussianFlag
+      : UzbekFlag;
 
   return (
     <div className={`navbar ${sticky ? "sticky" : ""}`}>
@@ -57,15 +76,42 @@ export default function Navbar() {
         <button onClick={() => scrollToSection("schedules")}>
           {t("navBtn6")}
         </button>
-        <select
-          onChange={changeLanguage}
-          value={i18n.language}
-          className="px-2 py-1 border rounded"
-        >
-          <option value="en">🇬🇧 English</option>
-          <option value="ru">🇷🇺 Русский</option>
-          <option value="uz">🇺🇿 Uzbek</option>
-        </select>
+        <div className={`language-dropdown ${isOpen ? "open" : ""}`}>
+          <div className="selected-language" onClick={() => setIsOpen(!isOpen)}>
+            <img
+              src={languageFlag}
+              alt={i18n.language || "en"} // Ensure default to English
+              className="flag-img"
+            />
+            <span>{i18n.language?.toUpperCase() || "EN"}</span>{" "}
+            {/* Ensure fallback */}
+          </div>
+          {isOpen && (
+            <div className="dropdown-menu">
+              <div
+                className="dropdown-item"
+                onClick={() => changeLanguage("en")}
+              >
+                <img src={EnglishFlag} alt="English" className="flag-img" />
+                English
+              </div>
+              <div
+                className="dropdown-item"
+                onClick={() => changeLanguage("ru")}
+              >
+                <img src={RussianFlag} alt="Russian" className="flag-img" />
+                Русский
+              </div>
+              <div
+                className="dropdown-item"
+                onClick={() => changeLanguage("uz")}
+              >
+                <img src={UzbekFlag} alt="Uzbek" className="flag-img" />
+                Uzbek
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="navbar_child-3">

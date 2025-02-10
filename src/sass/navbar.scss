@@ -60,17 +60,56 @@
     button:hover {
       color: #b8eaf6;
     }
-    select {
-      color: var(--color2);
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 18px;
-      text-transform: capitalize;
-      transition: all 0.5s ease-in-out;
-      background-color: transparent;
-      border: none;
-      outline: none;
+    .language-dropdown {
+      position: relative;
+      cursor: pointer;
+      color: white;
+
+      .selected-language {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .flag-img {
+          width: 20px;
+          height: 15px;
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 150px;
+        z-index: 999;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+
+        .dropdown-item {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          color: var(--color3);
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+
+          .flag-img {
+            width: 18px;
+            height: 12px;
+          }
+        }
+      }
+
+      &.open .dropdown-menu {
+        display: block; /* Show dropdown when open class is added */
+      }
     }
   }
   &_child-3 {

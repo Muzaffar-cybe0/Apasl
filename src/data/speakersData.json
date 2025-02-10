@@ -8,7 +8,11 @@
         "ru": "Эркин Мусабаев",
         "uz": "Erkin Musabaev"
       },
-      "role": null,
+      "role": {
+        "en": "Professor, DSc,MD",
+        "ru": "Профессор, ДSc, MD",
+        "uz": "Professor, DSc, MD"
+      },
       "aboutSelf": {
         "en": "Professor Erkin Isakovich Musabaev, an academician of the Academy of Sciences of Uzbekistan, is a distinguished medical scientist specializing in virology and infectious diseases. Currently serving as the Director of the Research Institute of Virology under the Ministry of Health of the Republic of Uzbekistan, he has over 40 years of experience in the field. With a medical degree from the Tashkent State Medical Institute, he earned his PhD in 1983 and his Doctor of Medical Sciences degree in 1990. Throughout his career, Prof. Musabaev has held pivotal roles, including Deputy Director for Scientific Work at the Scientific-Research Institute of Epidemiology, Microbiology, and Infectious Diseases, and Head of the Infectious Diseases Department at the Tashkent Institute of Advanced Medical Studies. He has authored over 300 scientific publications, including five monographs, and supervised numerous doctoral and candidate dissertations. As a co-principal investigator of the Uzbekistan Hepatitis Elimination Project (UHEP), he has been instrumental in advancing public health initiatives to combat viral hepatitis. Recognized for his exceptional contributions, Prof. Musabaev received the title of 'Honored Healthcare Worker of Uzbekistan' in 2020 and was elected as an academician of the Academy of Sciences of Uzbekistan in 2023.",
         "ru": "Профессор Эркин Исакович Мусабаев, академик Академии наук Узбекистана, является выдающимся медицинским ученым, специализирующимся в области вирусологии и инфекционных заболеваний. В настоящее время он занимает должность директора Научно-исследовательского института вирусологии при Министерстве здравоохранения Республики Узбекистан и имеет более 40 лет опыта в этой сфере. Получив медицинское образование в Ташкентском государственном медицинском институте, он защитил степень кандидата медицинских наук в 1983 году, а степень доктора медицинских наук – в 1990 году. В ходе своей карьеры профессор Мусабаев занимал ключевые должности, включая заместителя директора по научной работе Научно-исследовательского института эпидемиологии, микробиологии и инфекционных заболеваний, а также заведующего кафедрой инфекционных болезней Ташкентского института усовершенствования врачей. Он является автором более 300 научных публикаций, включая пять монографий, и руководил многочисленными докторскими и кандидатскими диссертациями. Как один из ведущих исследователей проекта по ликвидации гепатита в Узбекистане (UHEP), он сыграл важную роль в развитии общественных инициатив по борьбе с вирусным гепатитом. За выдающиеся заслуги профессор Мусабаев был удостоен звания «Заслуженный работник здравоохранения Узбекистана» в 2020 году и избран академиком Академии наук Узбекистана в 2023 году.",
@@ -24,7 +28,7 @@
         "uz": "Gulnara Agayeva"
       },
       "role": {
-        "en": "PhD. Dr.",
+        "en": "PhD, Dr",
         "ru": "Кандидат наук, доктор",
         "uz": "PhD, doktor"
       },
@@ -44,12 +48,12 @@
       },
       "role": {
         "en": "Dr, President, PGLDS",
-        "ru": "Д-р, Президент, PGLDS",
+        "ru": "Др, Президент, PGLDS",
         "uz": "Dr. Prezident, PGLDS"
       },
       "aboutSelf": {
         "en": "Dr. Lubna Kamani is a distinguished gastroenterologist and hepatologist in Pakistan, serving as the President of the Pak GI & Liver Disease Society (PGLDS). She holds the position of Professor of Gastroenterology and Director of the GI Residency Program at Liaquat National Hospital in Karachi, and also serves as a Consultant at Aga Khan University Hospital. With extensive experience in managing gastrointestinal and liver diseases, Dr. Kamani has been instrumental in advancing gastroenterology in Pakistan. Under her leadership, PGLDS has focused on training young doctors, promoting research, and encouraging more women to enter the field, recognizing the importance of female patients feeling comfortable discussing their health issues with female doctors. Dr. Kamani has played a pivotal role in developing national guidelines for the management of Helicobacter pylori, addressing a significant health concern in Pakistan. She has also been a strong advocate for increasing the number of trained gastroenterologists to meet the growing burden of gastrointestinal health issues in the country. Her contributions extend to public health advocacy, where she has emphasized the need for mandatory hepatitis B and C screening linked to the issuance and renewal of national identity cards, aiming to reduce the prevalence of these infections in Pakistan. Dr. Kamani's dedication to medical education, patient care, and public health initiatives has significantly impacted the field of gastroenterology and hepatology in Pakistan, making her a leading figure in her specialty.",
-        "ru": "Д-р Лубна Камани — выдающийся гастроэнтеролог и гепатолог в Пакистане, занимающая должность президента Пакистанского общества заболеваний ЖКТ и печени (PGLDS). Она является профессором гастроэнтерологии и директором программы ординатуры по заболеваниям ЖКТ в Национальной больнице Лиаката в Карачи, а также консультантом в Университетской больнице Ага Хана. Обладая обширным опытом в лечении заболеваний желудочно-кишечного тракта и печени, д-р Камани сыграла ключевую роль в развитии гастроэнтерологии в Пакистане. Под её руководством PGLDS сосредоточил свои усилия на обучении молодых врачей, развитии научных исследований и поощрении женщин к работе в этой сфере, понимая важность того, чтобы пациентки чувствовали себя комфортно, обсуждая свои медицинские проблемы с женщинами-врачами. Д-р Камани сыграла важную роль в разработке национальных рекомендаций по лечению Helicobacter pylori, что является актуальной медицинской проблемой в Пакистане. Она также активно выступает за увеличение числа квалифицированных гастроэнтерологов, чтобы справиться с растущей нагрузкой заболеваний ЖКТ в стране. Её вклад распространяется и на сферу общественного здравоохранения: она подчеркивает необходимость обязательного скрининга на гепатиты B и C при выдаче и продлении национальных удостоверений личности, чтобы снизить распространенность этих инфекций в Пакистане. Преданность д-ра Камани медицинскому образованию, уходу за пациентами и инициативам в области общественного здравоохранения оказала значительное влияние на развитие гастроэнтерологии и гепатологии в Пакистане, сделав её одной из ведущих специалистов в этой области.",
+        "ru": "Др Лубна Камани — выдающийся гастроэнтеролог и гепатолог в Пакистане, занимающая должность президента Пакистанского общества заболеваний ЖКТ и печени (PGLDS). Она является профессором гастроэнтерологии и директором программы ординатуры по заболеваниям ЖКТ в Национальной больнице Лиаката в Карачи, а также консультантом в Университетской больнице Ага Хана. Обладая обширным опытом в лечении заболеваний желудочно-кишечного тракта и печени, д-р Камани сыграла ключевую роль в развитии гастроэнтерологии в Пакистане. Под её руководством PGLDS сосредоточил свои усилия на обучении молодых врачей, развитии научных исследований и поощрении женщин к работе в этой сфере, понимая важность того, чтобы пациентки чувствовали себя комфортно, обсуждая свои медицинские проблемы с женщинами-врачами. Д-р Камани сыграла важную роль в разработке национальных рекомендаций по лечению Helicobacter pylori, что является актуальной медицинской проблемой в Пакистане. Она также активно выступает за увеличение числа квалифицированных гастроэнтерологов, чтобы справиться с растущей нагрузкой заболеваний ЖКТ в стране. Её вклад распространяется и на сферу общественного здравоохранения: она подчеркивает необходимость обязательного скрининга на гепатиты B и C при выдаче и продлении национальных удостоверений личности, чтобы снизить распространенность этих инфекций в Пакистане. Преданность д-ра Камани медицинскому образованию, уходу за пациентами и инициативам в области общественного здравоохранения оказала значительное влияние на развитие гастроэнтерологии и гепатологии в Пакистане, сделав её одной из ведущих специалистов в этой области.",
         "uz": "Dr. Lubna Kamani — Pokistonda taniqli gastroenterolog va gepatolog bo‘lib, Pokiston Gastroenterologiya va Jigar Kasalliklari Jamiyati (PGLDS) prezidenti lavozimida faoliyat yuritadi. U Karachidagi Liaqat Milliy Kasalxonasida gastroenterologiya professori va Gİ rezidentura dasturi direktori bo‘lib ishlaydi, shuningdek, Aga Xon Universiteti kasalxonasida konsultant sifatida xizmat qiladi. Gastrointestinal va jigar kasalliklarini davolash bo‘yicha keng tajribaga ega bo‘lgan Dr. Kamani, Pokistonda gastroenterologiyaning rivojlanishida muhim rol o‘ynagan. Uning rahbarligi ostida PGLDS yosh shifokorlarni o‘qitish, ilmiy tadqiqotlarni rivojlantirish va ayol bemorlarning o‘z salomatligi haqida ayol shifokorlar bilan bemalol gaplasha olishini ta’minlash maqsadida ayollarni ushbu sohada ishlashga rag‘batlantirishga alohida e’tibor qaratgan. Dr. Kamani Pokistonda dolzarb sog‘liq muammolaridan biri bo‘lgan Helicobacter pylori infeksiyasini davolash bo‘yicha milliy yo‘riqnomalarni ishlab chiqishda asosiy rol o‘ynagan. U, shuningdek, mamlakatda oshqozon-ichak kasalliklari bilan bog‘liq muammolarga javob bera oladigan malakali gastroenterologlar sonini oshirish tarafdori hisoblanadi. Uning hissasi ommaviy sog‘liqni saqlash sohasida ham katta bo‘lib, u Pokistonda gepatit B va C viruslariga qarshi kurashish maqsadida milliy shaxsiy guvohnomalarni berish va yangilash jarayoniga majburiy skriningni kiritish muhimligini ta’kidlab keladi. Dr. Kamani o‘zining tibbiy ta’lim, bemorlarni parvarish qilish va sog‘liqni saqlash tashabbuslariga bo‘lgan sadoqati bilan Pokistonda gastroenterologiya va gepatologiya sohasining rivojlanishiga katta ta’sir ko‘rsatib, ushbu sohada yetakchi mutaxassislardan biriga aylangan."
       }
     },
@@ -62,9 +66,9 @@
         "uz": "Нежатий Ормеджи"
       },
       "role": {
-        "en": "Prof. Dr.",
-        "ru": "Проф. Др.",
-        "uz": "Prof. Dr."
+        "en": "Prof, Dr",
+        "ru": "Проф, Др",
+        "uz": "Prof, Dr"
       },
       "aboutSelf": {
         "en": "Professor Dr. Necati Örmeci is a renowned Turkish gastroenterologist and hepatologist, recognized for his expertise in gastrointestinal endoscopy, liver diseases, and the management of viral hepatitis. He serves as Vice-President and Dean of the Medical Faculty at Istanbul Health and Technology University, contributing significantly to medical education and research. Prof. Örmeci has held various leadership roles, including past president of the Turkish Gastroenterology Association and executive committee member of the Asian Pacific Association for the Study of the Liver (APASL). His international experience includes research in Japan on early gastrointestinal cancer diagnosis and a visiting professorship at the Cleveland Clinic in Florid. An accomplished academic, Prof. Örmeci has authored approximately 170 scientific publications and contributed chapters to 17 books. His research focuses on portal hypertension, viral hepatitis (B, C, D), early gastrointestinal cancers, and hydatid diseases. He is an honorary permanent member of the Turkish Academy of Sciences (TÜBA) and continues to be an influential figure in advancing gastroenterology and hepatology on a global scale.",
@@ -100,9 +104,9 @@
         "uz": "Yusif Alkhazov"
       },
       "role": {
-        "en": " MD, Infectiologist,  EASL member",
-        "ru": "М.Д., инфекционист, член EASL",
-        "uz": "MD, Infektsionist, EASL a'zosi"
+        "en": "Infectiologist, EASL member, MD",
+        "ru": "Инфекционист, член EASL, MD",
+        "uz": "Infeksionist, EASL a'zosi, MD"
       },
       "aboutSelf": {
         "en": "Dr. Yusif Alkhazov is a distinguished infectious disease specialist at the 'EuroMed' Private Medical Center in Baku, Azerbaijan. EASL member. He has significantly contributed to the study of hepatitis B and C in Azerbaijan, presenting his findings at international symposia.",
@@ -119,9 +123,9 @@
         "uz": "Prof. Yogesh K. Chawla"
       },
       "role": {
-        "en": "M.B.B.S.,M.D, D.M.(Gastroenterology) AIIMS, New Delhi,FAMS",
-        "ru": "М.Б.Б.С., М.Д., Д.М. (Гастроэнтерология) AIIMS, Нью-Дели, Ф.А.М.С.",
-        "uz": "M.B.B.S., M.D., D.M. (Gastroenterologiya) AIIMS, Nyu-Dehli, F.A.M.S."
+        "en": "Professor, M.B.B.S.,M.D, D.M.(Gastroenterology) AIIMS, New Delhi,FAMS",
+        "ru": "Профессор, M.B.B.S., M.D, D.M. (Гастроэнтерология) AIIMS, Нью-Дели, FAMS",
+        "uz": "Professor, M.B.B.S., M.D, D.M. (Gastroenterologiya) AIIMS, Nyu-Dehli, FAMS"
       },
       "aboutSelf": {
         "en": "Prof. Yogesh K. Chawla, a Padma Shri laureate and recipient of the prestigious B.C. Roy Award, is a globally renowned expert in gastroenterology and hepatology, with an illustrious career spanning leadership roles at premier institutions like AIIMS and PGIMER. As a distinguished academician and visionary, he has made groundbreaking contributions to medical science, shaping the future of healthcare through his exemplary research, teaching, and mentorship.",
@@ -157,9 +161,9 @@
         "uz": "Hala Zaid"
       },
       "role": {
-        "en": "MD, Regional Director",
-        "ru": "М.Д., Региональный директор",
-        "uz": "M.D., Regional direktor"
+        "en": "Regional Director, MD",
+        "ru": "Региональный директор, MD",
+        "uz": "Mintaqaviy direktor, MD"
       },
       "aboutSelf": {
         "en": "Dr. Hala Zaid is the Regional Director for ACCESS Health International in the MENA region, with over 33 years of experience in healthcare management, sector reform, and medical education. Formerly the Minister of Health and Population of Egypt, she led the successful Hepatitis C elimination program and the rollout of universal health insurance. Recognized as one of the 100 Most Influential African Women by Avance Media in 2020, Dr. Zaid now spearheads strategic initiatives at ACCESS Health International, driving healthcare innovation and improving access to quality care across the region.",
@@ -176,9 +180,9 @@
         "uz": "Prof. Mariya Buti"
       },
       "role": {
-        "en": "MD, FAASLD",
-        "ru": "М.Д., FAASLD",
-        "uz": "M.D., FAASLD"
+        "en": "Professor, MD, FAASLD",
+        "ru": "Профессор, МД, FAASLD",
+        "uz": "Professor, MD, FAASLD"
       },
       "aboutSelf": {
         "en": "Professor Maria Buti is a distinguished hepatologist with over 35 years of experience in viral hepatitis, particularly in the diagnosis and treatment of hepatitis B, C, and D. She earned her medical degree from the University of Barcelona and her PhD in Internal Medicine from the Universitat Autònoma de Barcelona. Currently, she serves as Professor of Medicine and Chief of Internal Medicine and Hepatology at the Hospital General Universitari Valle Hebron in Barcelona, Spain. Prof. Buti has authored over 500 publications in the field of liver disease and has held leadership roles, including President of the Spanish Association for the Study of Liver Diseases. She is an active member of professional societies such as the European Association for the Study of the Liver (EASL) and the American Association for the Study of Liver Diseases (AASLD). Currently, she chairs the Public Health and Policy Committee at EASL and serves as an associate editor of the Journal of Hepatology.",
@@ -214,9 +218,9 @@
         "uz": "Mohamed Hassany"
       },
       "role": {
-        "en": "Dr.MD.",
-        "ru": "Доктор М.Д.",
-        "uz": "Doktor M.D."
+        "en": "Dr, MD",
+        "ru": "Доктор, МД",
+        "uz": "Doktor, MD"
       },
       "aboutSelf": {
         "en": "Associate Professor of Infectious Diseases and Hepatogastroenterology, National Hepatology & Tropical Medicine Research Institute (NHTMRI) Minister's Assistant for Projects and Public Health Initiatives Executive director,  the National Committee for Control of Viral Hepatitis (NCCVH)Ministry of Health and Population The Arab Republic of Egypt The Governmental District, The new Administrative Capital, Cairo.",
@@ -233,9 +237,9 @@
         "uz": "Cihan Yurdaydin"
       },
       "role": {
-        "en": "MD.",
-        "ru": "М.Д.",
-        "uz": "M.D."
+        "en": "MD",
+        "ru": "МД",
+        "uz": "MD"
       },
       "aboutSelf": {
         "en": "Department of Gastroenterology and Hepatology Koç University Medical School",
@@ -252,9 +256,9 @@
         "uz": "Saleem Kamili"
       },
       "role": {
-        "en": "Ph.D., Chief, Laboratory Branch",
-        "ru": "Ph.D., Начальник лабораторного отделения",
-        "uz": "Ph.D., Laboratoriya bo'limi boshlig'i"
+        "en": "PhD, Chief, Laboratory Branch",
+        "ru": "PhD, Начальник лабораторного отделения",
+        "uz": "PhD, Laboratoriya bo'limi boshlig'i"
       },
       "aboutSelf": {
         "en": "Division of Viral Hepatitis, NCHHSTP Centers for Disease Control and Prevention",
@@ -271,9 +275,9 @@
         "uz": "A.Kadir Dokmeci"
       },
       "role": {
-        "en": "Prof. Former President of APASL",
-        "ru": "Проф. Бывший президент APASL",
-        "uz": "Prof. APASL sobiq prezidenti"
+        "en": "Professor. Former President of APASL",
+        "ru": "Профессор. Бывший президент APASL",
+        "uz": "Professor. APASL sobiq prezidenti"
       },
       "aboutSelf": {
         "en": "Member of APASL Steering Committee",
@@ -290,9 +294,9 @@
         "uz": "Maia Tsereteli"
       },
       "role": {
-        "en": "MD, Ph.D. Head of Department HIV/AIDS",
-        "ru": "М.Д., Ph.D. Заведующая отделом по ВИЧ/СПИД",
-        "uz": "MD, Ph.D. HIV/AIDS bo‘limi boshlig‘i"
+        "en": "MD, PhD. Head of Department HIV/AIDS",
+        "ru": "МД, PhD. Заведующая отделом по ВИЧ/СПИД",
+        "uz": "MD, PhD. HIV/AIDS bo‘limi boshlig‘i"
       },
       "aboutSelf": {
         "en": "Hepatitis, STI & TB National Center for Disease Control and Public Health",
@@ -309,12 +313,12 @@
         "uz": "Heiner Wedemeyer"
       },
       "role": {
-        "en": "Prof.Dr.med.",
-        "ru": "Проф. Др. мед.",
-        "uz": "Prof. Dr. med."
+        "en": "Professor, Dr.med.",
+        "ru": "Профессор, Др.мед.",
+        "uz": "Professor, Dr.med."
       },
       "aboutSelf": {
-        "en": "Department   of   Gastroenterology,Hepatology, Infectious  Diseases  and  Endocrinology, Hannover  Medical  School  (MHH)Carl-Neuberg-Straße   1, D-30625    Hannover,Germany, Head  and  Chair of the  Department of Gastroenterology,Hepatology,Infectious  Diseases  and  Endocrinology,Hannover  Medical  School  (W3). Medical   Doctorate   (Dr.med.),University   of  Göttingen,thesis  supervisor Prof.Dr.Dr.Detlev  Schild. Studies  of  Medicine  and  Musicology,University  of Gottingen State license physician  1996",
+        "en": "Department of Gastroenterology,Hepatology, Infectious  Diseases  and  Endocrinology, Hannover  Medical  School  (MHH)Carl-Neuberg-Straße   1, D-30625    Hannover,Germany, Head  and  Chair of the  Department of Gastroenterology,Hepatology,Infectious  Diseases  and  Endocrinology,Hannover  Medical  School  (W3). Medical   Doctorate   (Dr.med.),University   of  Göttingen,thesis  supervisor Prof.Dr.Dr.Detlev  Schild. Studies  of  Medicine  and  Musicology,University  of Gottingen State license physician  1996",
         "ru": "Отдел гастроэнтерологии, гепатологии, инфекционных болезней и эндокринологии, Медицинская школа Ганновера (MHH) Карл-Нойберг-Штрассе 1, D-30625 Ганновер, Германия. Руководитель и заведующий отделом гастроэнтерологии, гепатологии, инфекционных болезней и эндокринологии, Медицинская школа Ганновера (W3). Медицинская докторская степень (Dr.med.) получена в Университете Геттингена, научным руководителем диссертации был проф. д‑р д‑р Детлев Шильд. Изучал медицину и музыковедение в Университете Геттингена.Государственная лицензия врача, 1996.",
         "uz": "Gastroenterologiya, gepatologiya, infeksion kasalliklar va endokrinologiya bo‘limi, Gannover Tibbiyot Maktabi (MHH)Carl-Neuberg-Straße 1, D-30625 Gannover, Germaniya. Gastroenterologiya, gepatologiya, infeksion kasalliklar va endokrinologiya bo‘limi rahbari va boshlig‘i, Gannover Tibbiyot Maktabi (W3). Tibbiyot doktorlik darajasi (Dr.med.) Gottingen Universitetida, dissertatsiya rahbari: Prof. Dr. Dr. Detlev Schild.Tibbiyot va musiqashunoslik bo‘yicha ta’lim olgan, Gottingen Universiteti. Davlat litsenziyali shifokor, 1996."
       }
@@ -329,7 +333,11 @@
         "ru": "Эркин Мусабаев",
         "uz": "Erkin Musabaev"
       },
-      "role": null,
+      "role": {
+        "en": "Professor, DSc,MD",
+        "ru": "Профессор, ДSc, MD",
+        "uz": "Professor, DSc, MD"
+      },
       "aboutSelf": {
         "en": "Professor Erkin Isakovich Musabaev, an academician of the Academy of Sciences of Uzbekistan, is a distinguished medical scientist specializing in virology and infectious diseases. Currently serving as the Director of the Research Institute of Virology under the Ministry of Health of the Republic of Uzbekistan, he has over 40 years of experience in the field. With a medical degree from the Tashkent State Medical Institute, he earned his PhD in 1983 and his Doctor of Medical Sciences degree in 1990. Throughout his career, Prof. Musabaev has held pivotal roles, including Deputy Director for Scientific Work at the Scientific-Research Institute of Epidemiology, Microbiology, and Infectious Diseases, and Head of the Infectious Diseases Department at the Tashkent Institute of Advanced Medical Studies. He has authored over 300 scientific publications, including five monographs, and supervised numerous doctoral and candidate dissertations. As a co-principal investigator of the Uzbekistan Hepatitis Elimination Project (UHEP), he has been instrumental in advancing public health initiatives to combat viral hepatitis. Recognized for his exceptional contributions, Prof. Musabaev received the title of 'Honored Healthcare Worker of Uzbekistan' in 2020 and was elected as an academician of the Academy of Sciences of Uzbekistan in 2023.",
         "ru": "Профессор Эркин Исакович Мусабаев, академик Академии наук Узбекистана, является выдающимся медицинским ученым, специализирующимся в области вирусологии и инфекционных заболеваний. В настоящее время он занимает должность директора Научно-исследовательского института вирусологии при Министерстве здравоохранения Республики Узбекистан и имеет более 40 лет опыта в этой сфере. Получив медицинское образование в Ташкентском государственном медицинском институте, он защитил степень кандидата медицинских наук в 1983 году, а степень доктора медицинских наук – в 1990 году. В ходе своей карьеры профессор Мусабаев занимал ключевые должности, включая заместителя директора по научной работе Научно-исследовательского института эпидемиологии, микробиологии и инфекционных заболеваний, а также заведующего кафедрой инфекционных болезней Ташкентского института усовершенствования врачей. Он является автором более 300 научных публикаций, включая пять монографий, и руководил многочисленными докторскими и кандидатскими диссертациями. Как один из ведущих исследователей проекта по ликвидации гепатита в Узбекистане (UHEP), он сыграл важную роль в развитии общественных инициатив по борьбе с вирусным гепатитом. За выдающиеся заслуги профессор Мусабаев был удостоен звания «Заслуженный работник здравоохранения Узбекистана» в 2020 году и избран академиком Академии наук Узбекистана в 2023 году.",
@@ -380,9 +388,9 @@
         {
           "time": "10:00-13:00",
           "title": {
-            "en": "Experience in eliminating viral hepatitis C. Problems and prospects.",
-            "ru": "Опыт ликвидации вирусного гепатита C. Проблемы и перспективы.",
-            "uz": "Virusli gepatit C ni bartaraf etish tajribasi. Muammolar va istiqbollar."
+            "en": "Experience in eliminating viral hepatitis C. Problems and prospects",
+            "ru": "Опыт ликвидации вирусного гепатита C. Проблемы и перспективы",
+            "uz": "Virusli gepatit C ni bartaraf etish tajribasi. Muammolar va istiqbollar"
           }
         },
         {
@@ -396,9 +404,9 @@
         {
           "time": "14:30-18:00",
           "title": {
-            "en": "Experience in organizing national programs to reduce the incidence of HBV and HDV infections.",
-            "ru": "Опыт организации национальных программ по снижению заболеваемости инфекциями HBV и HDV.",
-            "uz": "HBV va HDV infeksiyalarining tarqalishini kamaytirish bo'yicha milliy dasturlarni tashkil etish tajribasi."
+            "en": "Experience in organizing national programs to reduce the incidence of HBV and HDV infections",
+            "ru": "Опыт организации национальных программ по снижению заболеваемости инфекциями HBV и HDV",
+            "uz": "HBV va HDV infeksiyalarining tarqalishini kamaytirish bo'yicha milliy dasturlarni tashkil etish tajribasi"
           }
         }
       ]
@@ -415,17 +423,17 @@
         {
           "time": "9:30-11:30",
           "title": {
-            "en": "Introduction of GCC screening in national programs for the elimination of viral hepatitis.",
-            "ru": "Внедрение скрининга GCC в национальные программы по ликвидации вирусного гепатита.",
-            "uz": "Virusli gepatitni yo'qotish bo'yicha milliy dasturlarda GCC skriningini joriy etish."
+            "en": "Introduction of GCC screening in national programs for the elimination of viral hepatitis",
+            "ru": "Внедрение скрининга GCC в национальные программы по ликвидации вирусного гепатита",
+            "uz": "Virusli gepatitni yo'qotish bo'yicha milliy dasturlarda GCC skriningini joriy etish"
           }
         },
         {
           "time": "11:30-13:00",
           "title": {
-            "en": "Increased access to liver transplantation. Experience of different countries.",
-            "ru": "Расширенный доступ к трансплантации печени. Опыт различных стран.",
-            "uz": "Jigarni transplantatsiya qilishga bo'lgan kirish imkoniyatining oshishi. Turli mamlakatlar tajribasi."
+            "en": "Increased access to liver transplantation. Experience of different countries",
+            "ru": "Расширенный доступ к трансплантации печени. Опыт различных стран",
+            "uz": "Jigarni transplantatsiya qilishga bo'lgan kirish imkoniyatining oshishi. Turli mamlakatlar tajribasi"
           }
         },
         {
@@ -439,9 +447,9 @@
         {
           "time": "14:30-18:00",
           "title": {
-            "en": "National programs for reducing enteral hepatitis A and E.",
-            "ru": "Национальные программы по снижению энтеральных гепатитов A и E.",
-            "uz": "Enteral gepatit A va E ni kamaytirishga qaratilgan milliy dasturlar."
+            "en": "National programs for reducing enteral hepatitis A and E",
+            "ru": "Национальные программы по снижению энтеральных гепатитов A и E",
+            "uz": "Enteral gepatit A va E ni kamaytirishga qaratilgan milliy dasturlar"
           }
         }
       ]

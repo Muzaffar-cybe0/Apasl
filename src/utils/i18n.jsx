@@ -10,15 +10,15 @@ const resources = {
       navBtn4: "Speakers",
       navBtn5: "Organizers",
       navBtn6: "Schedules",
-      bannerText1: "Apasl 2025 Tashkent",
+      bannerText1: "APASL TASHKENT 2025",
       bannerText2:
         "International Experience of National Programs for the elimination of viral hepatitis",
       bannerText3:
-        "Uzbekistan and Azerbaijan Association of Gastroenterology and Hepatalogy <1>june 4-5, 2025</1>",
+        "Uzbekistan and Azerbaijan Association of Gastroenterology and Hepatology <1>june 4-5, 2025</1>",
       bannerText4: "buy ticket",
       associates1: "Ministry of Health of the Republican Uzbekistan",
       associates2:
-        "Research Insitute of Virology of the Republican specialized scientific and practical medical center of the epidemiology, microbiology,infectious and parasitic diseases.",
+        "Research Insitute of Virology of the Republican specialized scientific and practical medical center of the epidemiology, microbiology,infectious and parasitic diseases",
       associates3: "Association of hepatologists of uzbekistan",
       associates4: "Azerbaijan gastroentrology and hepatology association",
       eventOutcomes1: "why join us",
@@ -69,7 +69,7 @@ const resources = {
       navBtn4: "Спикеры",
       navBtn5: "Организаторы",
       navBtn6: "Расписание",
-      bannerText1: "АПАСЛ 2025 Ташкент",
+      bannerText1: "APASL ТАШКЕНТ 2025",
       bannerText2:
         "Международный опыт национальных программ по ликвидации вирусного гепатита",
       bannerText3:
@@ -77,7 +77,7 @@ const resources = {
       bannerText4: "Купить билет",
       associates1: "Министерство здравоохранения Республики Узбекистан",
       associates2:
-        "Научно-исследовательский институт вирусологии Республиканского специализированного научно-практического медицинского центра эпидемиологии, микробиологии, инфекционных и паразитарных заболеваний.",
+        "Научно-исследовательский институт вирусологии Республиканского специализированного научно-практического медицинского центра эпидемиологии, микробиологии, инфекционных и паразитарных заболеваний",
 
       associates3: "Ассоциация гепатологов Узбекистана",
 
@@ -130,7 +130,7 @@ const resources = {
       navBtn4: "Ma'ruzachilar",
       navBtn5: "Tashkilotchilar",
       navBtn6: "Jadval",
-      bannerText1: "APASL 2025 Toshkent",
+      bannerText1: "APASL TOSHKENT 2025",
       bannerText2:
         "Virusli gepatitni yo‘q qilish bo‘yicha milliy dasturlarning xalqaro tajribasi",
       bannerText3:
@@ -138,7 +138,7 @@ const resources = {
       bannerText4: "Chipta sotib olish",
       associates1: "O‘zbekiston Respublikasi Sog‘liqni saqlash vazirligi",
       associates2:
-        "Epidemiologiya, mikrobiologiya, yuqumli va parazitar kasalliklar bo‘yicha Respublika ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazining Virusologiya ilmiy-tadqiqot instituti.",
+        "Epidemiologiya, mikrobiologiya, yuqumli va parazitar kasalliklar bo‘yicha Respublika ixtisoslashtirilgan ilmiy-amaliy tibbiyot markazining Virusologiya ilmiy-tadqiqot instituti",
       associates3: "O‘zbekiston gepatologlar assotsiatsiyasi",
       associates4:
         "Ozarbayjon gastroenterologiya va gepatologiya assotsiatsiyasi",
@@ -187,7 +187,7 @@ const resources = {
 i18n.use(initReactI18next).init({
   resources,
   fallbackLng: "en",
-  lng: "ru",
+  lng: "en",
 
   interpolation: {
     escapeValue: false,

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import { Tabs, Tab, Box, Typography } from "@mui/material";
 import "animate.css";
 import "../sass/schedules.scss";
@@ -121,7 +121,7 @@ export default function Schedules() {
                     </Typography>
                   </Box>
 
-                  <Link to={"/home/authorblogs"}></Link>
+                
 
                   <Box sx={{ flex: 3, ml: { xs: 0, md: 2 } }}>
                     <Typography

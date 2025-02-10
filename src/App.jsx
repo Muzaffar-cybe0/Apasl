@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 
 import RootLayout from "./layout/RootLayout";
 import Home from "./pages/Home";
-import SpeakerDetail from "./pages/SpeakerDetail";
 import Speakers from "./components/Speakers";
 import BounceLoader from "react-spinners/BounceLoader";
 import AdminPanel from "./pages/AdminPanel";
@@ -34,7 +33,6 @@ function App() {
           <Route path="home" element={<Home />}>
             <Route index element={<Speakers />} />
           </Route>
-          <Route path="home/speaker/:itemId" element={<SpeakerDetail />} />
         </Route>
 
         <Route path="admin" element={<AdminPanel />}>

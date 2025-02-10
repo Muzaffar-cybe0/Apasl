@@ -11,19 +11,13 @@
   align-items: center;
   flex-direction: column;
   gap: 90px;
-  background-image: url("../assets/oooscillate-gray.svg"),
-    linear-gradient(145deg, var(--color3) 40%, var(--color4));
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   padding: 50px 0px;
   &_OlderCh-1 {
     text-align: center;
     line-height: 35px;
 
     p {
-      color: var(--color2);
+      color: var(--color3);
       font-family: "Roboto", sans-serif;
       font-weight: 500;
       font-style: normal;
@@ -31,7 +25,7 @@
       font-size: 14px;
     }
     h1 {
-      color: var(--color2);
+      color: var(--color3);
       font-family: "Roboto", sans-serif;
       font-weight: 500;
       font-style: normal;
@@ -55,9 +49,8 @@
       flex-direction: column;
       gap: 10px;
       transition: all 0.5s ease-in-out;
-      background-color: rgba(255, 255, 255, 0.177);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(240, 240, 240, 0.154);
+      background-color: white;
+      box-shadow: 2px 2px 7px gray;
       border-radius: 10px;
       padding: 30px 20px;
       &_speakerImg-1 {
@@ -70,7 +63,9 @@
         overflow: hidden;
         position: relative;
         aspect-ratio: 1 / 1;
-        border: 5px solid rgba(255, 255, 255, 0.177);
+        border: 5px solid rgb(220, 219, 219);
+        border-top: 5px solid var(--color3);
+        border-right: 5px solid var(--color1);
         img:nth-child(1) {
           width: 100%;
           height: 100%;
@@ -87,7 +82,7 @@
           background-color: #1e1e1e93;
           opacity: 0;
           transition: all 0.5s ease-in-out;
-          button{
+          button {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -132,8 +127,8 @@
       &_speakerName-2 {
         text-align: center;
         line-height: 25px;
-        a {
-          color: var(--color2);
+        p:nth-child(1) {
+          color: var(--color3);
           font-size: 20px;
           text-decoration: none;
         }
@@ -141,7 +136,7 @@
         p {
           height: 60px;
           max-height: 100px;
-          color: var(--color2);
+          color: var(--color3);
           font-size: 14px;
           font-weight: 300;
         }
@@ -191,9 +186,8 @@
 }
 
 .modalContent {
-  background-color: rgba(255, 255, 255, 0.177);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(240, 240, 240, 0.154);
+  background-color: white;
+  box-shadow: 2px 2px 7px gray;
   border-radius: 10px;
   width: 90%;
   max-width: 92%;
@@ -209,13 +203,13 @@
     align-items: flex-start;
     gap: 10%;
     img {
-      width:  20%;
+      width: 20%;
       height: 20%;
       object-fit: cover;
       border-radius: 50%;
       transition: all 0.5s ease-in-out;
       aspect-ratio: 1 / 1;
-      border: 10px solid rgba(240, 240, 240, 0.138);
+      border: 10px solid rgb(225, 225, 225);
       position: sticky;
       top: 5%;
     }
@@ -225,16 +219,16 @@
       align-items: flex-start;
       flex-direction: column;
       gap: 20px;
-      a {
+      p:nth-child(1) {
         text-decoration: none;
-        color: var(--color2);
+        color: var(--color3);
         font-size: 30px;
       }
       p {
         font-size: 20px;
         font-weight: 300;
         line-height: 25px;
-        color: var(--color2);
+        color: var(--color3);
         font-style: normal;
       }
     }
@@ -249,7 +243,7 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: white;
+  color: var(--color3);
   font-size: 40px;
 }
 .animate__slideInDown {
@@ -266,8 +260,6 @@
   height: 24px;
 }
 
-
-
 @keyframes slideInDown {
   from {
     transform: translateY(-100%);
@@ -281,23 +273,19 @@
 
 @media (max-width: 1024px) {
   .speakers {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 90px;
-    background-image: url("../assets/oooscillate-gray.svg"),
-      linear-gradient(145deg, var(--color3) 40%, var(--color4));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     padding: 50px 0px;
     &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
+
       p {
-        color: var(--color2);
+        color: var(--color3);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -305,7 +293,7 @@
         font-size: 14px;
       }
       h1 {
-        color: var(--color2);
+        color: var(--color3);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -321,7 +309,7 @@
       gap: 50px 2%;
 
       &_child {
-        width: 25%;
+        width: 20%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -329,10 +317,8 @@
         flex-direction: column;
         gap: 10px;
         transition: all 0.5s ease-in-out;
-
-        background-color: rgba(255, 255, 255, 0.177);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(240, 240, 240, 0.154);
+        background-color: white;
+        box-shadow: 2px 2px 7px gray;
         border-radius: 10px;
         padding: 30px 20px;
         &_speakerImg-1 {
@@ -345,7 +331,9 @@
           overflow: hidden;
           position: relative;
           aspect-ratio: 1 / 1;
-          border: 5px solid rgba(255, 255, 255, 0.177);
+          border: 5px solid rgb(220, 219, 219);
+          border-top: 5px solid var(--color3);
+          border-right: 5px solid var(--color1);
           img:nth-child(1) {
             width: 100%;
             height: 100%;
@@ -362,7 +350,7 @@
             background-color: #1e1e1e93;
             opacity: 0;
             transition: all 0.5s ease-in-out;
-            button{
+            button {
               display: flex;
               justify-content: center;
               align-items: center;
@@ -407,8 +395,8 @@
         &_speakerName-2 {
           text-align: center;
           line-height: 25px;
-          a {
-            color: var(--color2);
+          p:nth-child(1) {
+            color: var(--color3);
             font-size: 20px;
             text-decoration: none;
           }
@@ -416,7 +404,7 @@
           p {
             height: 60px;
             max-height: 100px;
-            color: var(--color2);
+            color: var(--color3);
             font-size: 14px;
             font-weight: 300;
           }
@@ -451,15 +439,28 @@
       }
     }
   }
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
   .modalContent {
-    background-color: rgba(255, 255, 255, 0.177);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(240, 240, 240, 0.154);
+    background-color: white;
+    box-shadow: 2px 2px 7px gray;
     border-radius: 10px;
     width: 90%;
     max-width: 92%;
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -467,16 +468,16 @@
     &-child {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       gap: 10%;
       img {
-        width:  20%;
+        width: 20%;
         height: 20%;
         object-fit: cover;
         border-radius: 50%;
         transition: all 0.5s ease-in-out;
         aspect-ratio: 1 / 1;
-        border: 10px solid rgba(240, 240, 240, 0.138);
+        border: 10px solid rgb(225, 225, 225);
         position: sticky;
         top: 5%;
       }
@@ -486,20 +487,45 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 20px;
-        a {
+        p:nth-child(1) {
           text-decoration: none;
-          color: var(--color2);
+          color: var(--color3);
           font-size: 30px;
         }
         p {
           font-size: 20px;
           font-weight: 300;
           line-height: 25px;
-          color: var(--color2);
+          color: var(--color3);
           font-style: normal;
         }
       }
     }
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color3);
+    font-size: 40px;
+  }
+  .animate__slideInDown {
+    animation: slideInDown 0.5s ease-out;
+  }
+  .circlePlusBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .circlePlus {
+    width: 24px;
+    height: 24px;
   }
 }
 @media (max-width: 810px) {
@@ -509,19 +535,13 @@
     align-items: center;
     flex-direction: column;
     gap: 90px;
-    background-image: url("../assets/oooscillate-gray.svg"),
-      linear-gradient(145deg, var(--color3) 40%, var(--color4));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     padding: 50px 0px;
     &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
 
       p {
-        color: var(--color2);
+        color: var(--color3);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -529,7 +549,7 @@
         font-size: 14px;
       }
       h1 {
-        color: var(--color2);
+        color: var(--color3);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -553,9 +573,8 @@
         flex-direction: column;
         gap: 10px;
         transition: all 0.5s ease-in-out;
-        background-color: rgba(255, 255, 255, 0.177);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(240, 240, 240, 0.154);
+        background-color: white;
+        box-shadow: 2px 2px 7px gray;
         border-radius: 10px;
         padding: 30px 20px;
         &_speakerImg-1 {
@@ -568,7 +587,9 @@
           overflow: hidden;
           position: relative;
           aspect-ratio: 1 / 1;
-          border: 5px solid rgba(255, 255, 255, 0.177);
+          border: 5px solid rgb(220, 219, 219);
+          border-top: 5px solid var(--color3);
+          border-right: 5px solid var(--color1);
           img:nth-child(1) {
             width: 100%;
             height: 100%;
@@ -585,17 +606,15 @@
             background-color: #1e1e1e93;
             opacity: 1;
             transition: all 0.5s ease-in-out;
-            button{
+            button {
               display: flex;
               justify-content: center;
               align-items: center;
               .circlePlus {
-                width: 50%;
+                width: 35%;
                 margin-top: 0px;
                 transition: all 0.5s ease-in-out;
-              
               }
-              
             }
           }
         }
@@ -629,8 +648,8 @@
         &_speakerName-2 {
           text-align: center;
           line-height: 25px;
-          a {
-            color: var(--color2);
+          p:nth-child(1) {
+            color: var(--color3);
             font-size: 20px;
             text-decoration: none;
           }
@@ -638,7 +657,7 @@
           p {
             height: 60px;
             max-height: 100px;
-            color: var(--color2);
+            color: var(--color3);
             font-size: 14px;
             font-weight: 300;
           }
@@ -674,9 +693,8 @@
     }
   }
   .modalContent {
-    background-color: rgba(255, 255, 255, 0.177);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(240, 240, 240, 0.154);
+    background-color: white;
+    box-shadow: 2px 2px 7px gray;
     border-radius: 10px;
     width: 90%;
     max-width: 92%;
@@ -693,13 +711,13 @@
       flex-direction: column;
       gap: 30px;
       img {
-        width:  25%;
+        width: 25%;
         height: 25%;
         object-fit: cover;
         border-radius: 50%;
         transition: all 0.5s ease-in-out;
         aspect-ratio: 1 / 1;
-        border: 10px solid rgba(240, 240, 240, 0.138);
+        border: 10px solid rgb(225, 225, 225);
         position: unset;
         top: unset;
       }
@@ -709,22 +727,21 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 20px;
-        a {
+        p:nth-child(1) {
           text-decoration: none;
-          color: var(--color2);
+          color: var(--color3);
           font-size: 30px;
         }
         p {
           font-size: 20px;
           font-weight: 300;
           line-height: 25px;
-          color: var(--color2);
+          color: var(--color3);
           font-style: normal;
         }
       }
     }
   }
-  
 }
 @media (max-width: 480px) {
   .speakers {
@@ -733,18 +750,12 @@
     align-items: center;
     flex-direction: column;
     gap: 90px;
-    background-image: url("../assets/oooscillate-gray.svg"),
-      linear-gradient(145deg, var(--color3) 40%, var(--color4));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     padding: 50px 0px;
-  &_OlderCh-1 {
+    &_OlderCh-1 {
       text-align: center;
       line-height: 35px;
       p {
-        color: var(--color2);
+        color: var(--color3);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -752,7 +763,7 @@
         font-size: 14px;
       }
       h1 {
-        color: var(--color2);
+        color: var(--color3);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -776,9 +787,8 @@
         flex-direction: column;
         gap: 10px;
         transition: all 0.5s ease-in-out;
-        background-color: rgba(255, 255, 255, 0.177);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(240, 240, 240, 0.154);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 2px 2px 7px rgb(197, 197, 197);
         border-radius: 10px;
         padding: 30px 20px;
         &_speakerImg-1 {
@@ -791,7 +801,9 @@
           overflow: hidden;
           position: relative;
           aspect-ratio: 1 / 1;
-          border: 5px solid rgba(255, 255, 255, 0.177);
+          border: 5px solid rgb(220, 219, 219);
+          border-top: 5px solid var(--color3);
+          border-right: 5px solid var(--color1);
           img:nth-child(1) {
             width: 100%;
             height: 100%;
@@ -808,16 +820,15 @@
             background-color: #1e1e1e93;
             opacity: 1;
             transition: all 0.5s ease-in-out;
-            button{
+            button {
               display: flex;
               justify-content: center;
               align-items: center;
               .circlePlus {
-                width: 35%;
+                width: 30%;
                 margin-top: 0px;
                 transition: all 0.5s ease-in-out;
               }
-              
             }
           }
         }
@@ -851,8 +862,8 @@
         &_speakerName-2 {
           text-align: center;
           line-height: 25px;
-          a {
-            color: var(--color2);
+          p:nth-child(1) {
+            color: var(--color3);
             font-size: 20px;
             text-decoration: none;
           }
@@ -860,7 +871,7 @@
           p {
             height: 60px;
             max-height: 100px;
-            color: var(--color2);
+            color: var(--color3);
             font-size: 14px;
             font-weight: 300;
           }
@@ -896,9 +907,8 @@
     }
   }
   .modalContent {
-    background-color: rgba(255, 255, 255, 0.177);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(240, 240, 240, 0.154);
+    background-color: white;
+    box-shadow: 2px 2px 7px rgb(222, 222, 222);
     border-radius: 10px;
     width: 90%;
     max-width: 92%;
@@ -915,13 +925,15 @@
       flex-direction: column;
       gap: 30px;
       img {
-        width:  50%;
+        width: 50%;
         height: 50%;
         object-fit: cover;
         border-radius: 50%;
         transition: all 0.5s ease-in-out;
         aspect-ratio: 1 / 1;
-        border: 10px solid rgba(240, 240, 240, 0.138);
+        border: 5px solid rgb(220, 219, 219);
+        border-top: 5px solid var(--color3);
+        border-right: 5px solid var(--color1);
         position: unset;
         top: unset;
       }
@@ -931,16 +943,16 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 20px;
-        a {
+        p:nth-child(1) {
           text-decoration: none;
-          color: var(--color2);
+          color: var(--color3);
           font-size: 20px;
         }
         p {
           font-size: 15px;
           font-weight: 300;
           line-height: 25px;
-          color: var(--color2);
+          color: var(--color3);
           font-style: normal;
         }
       }

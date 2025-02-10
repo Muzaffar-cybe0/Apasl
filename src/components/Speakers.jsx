@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import CirclePlus from "../assets/circle_plus.svg";
 import "../sass/speakers.scss";
@@ -55,11 +54,11 @@ export default function Speakers() {
             </div>
 
             <div className="speakers_OlderCh-2_child_speakerName-2">
-              <Link to={`/home/speaker/${item.id}`}>
+              <p>
                 {typeof item.name === "string"
                   ? item.name
                   : item.name[language]}
-              </Link>
+              </p>
               <p>
                 {item.role
                   ? typeof item.role === "string"
@@ -85,14 +84,11 @@ export default function Speakers() {
                 <div key={item.id} className="modalContent-child">
                   <img src={item.image} alt="Speaker" />
                   <div>
-                    <Link
-                      to={`/home/speaker/${item.id}`}
-                      className="speaker_name"
-                    >
+                    <p className="speaker_name">
                       {typeof item.name === "string"
                         ? item.name
                         : item.name[language]}
-                    </Link>
+                    </p>
                     <p>
                       {item.role
                         ? typeof item.role === "string"

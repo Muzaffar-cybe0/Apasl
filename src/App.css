@@ -4,8 +4,10 @@
   --color3: #1e1e1e;
   --color4: #fff6e9;
 }
+
 .app {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,36 +15,32 @@
   gap: 80px;
   position: relative;
 }
+
 .loader-container {
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -100%; /* Starts above the screen */
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  animation: slideDown 2.4s ease-in-out;
   background-color: #023e8a;
+  animation: slideDown 2.5s ease-in-out forwards; /* Make sure it completes and stays hidden */
 }
 
 @keyframes slideDown {
   0% {
+    top: -100%; /* Starts above the screen */
     opacity: 1;
-    transform: translate(-50%, -50%);
   }
-  40% {
+  50% {
+    top: 0%; /* Fully slides down to cover the app */
     opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  80% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
   }
   100% {
+    top: -100%; /* Slides back up */
     opacity: 0;
-    transform: translate(-50%, -150%);
   }
 }
