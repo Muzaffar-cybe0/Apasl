@@ -45,7 +45,6 @@ export default function Navbar() {
     }
   };
 
-  // Use the local images for flags
   const languageFlag =
     i18n.language === "en"
       ? EnglishFlag
@@ -76,6 +75,8 @@ export default function Navbar() {
         <button onClick={() => scrollToSection("schedules")}>
           {t("navBtn6")}
         </button>
+      </div>
+      <div className="navbar_wrapper-3">
         <div className={`language-dropdown ${isOpen ? "open" : ""}`}>
           <div className="selected-language" onClick={() => setIsOpen(!isOpen)}>
             <img
@@ -83,7 +84,7 @@ export default function Navbar() {
               alt={i18n.language || "en"} // Ensure default to English
               className="flag-img"
             />
-            <span>{i18n.language?.toUpperCase() || "EN"}</span>{" "}
+            <span style={{color:"#ecf9fc"}}>{i18n.language?.toUpperCase() || "EN"}</span>{" "}
             {/* Ensure fallback */}
           </div>
           {isOpen && (
@@ -112,10 +113,9 @@ export default function Navbar() {
             </div>
           )}
         </div>
-      </div>
-
-      <div className="navbar_child-3">
-        <i className="fa-solid fa-bars" onClick={handleMenu}></i>
+        <div className="navbar_wrapper-3_child-2">
+          <i className="fa-solid fa-bars" onClick={handleMenu}></i>
+        </div>
       </div>
     </div>
   );
