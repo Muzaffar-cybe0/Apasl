@@ -1,12 +1,11 @@
 import "../sass/footer.scss";
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
 export default function Footer() {
- const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-columns">
-      
           <div className="footer-column">
             <ul className="footer-links">
               <li>
@@ -15,7 +14,6 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-     
                   <i className="fab fa-facebook-f"></i> {t("footer1")}
                 </a>
               </li>
@@ -47,8 +45,7 @@ export default function Footer() {
 
           <div className="footer-column">
             <div className="subscription">
-              <input type="email" placeholder={t("footer8")} />
-              <button className="subscribe-button">{t("footer6")}</button>
+              <a href="mailto:someone@example.com">Open @Gmail</a>
             </div>
           </div>
         </div>

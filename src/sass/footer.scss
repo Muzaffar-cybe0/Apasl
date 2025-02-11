@@ -77,21 +77,23 @@
   width: 100%;
 }
 
-.subscription input {
-  flex-grow: 1;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #555;
-  background: transparent;
-  color: #fff;
-  padding: 10px;
-
-  &::placeholder {
-    color: white;
-    font-size: 14px;
-    font-weight: 400;
+.subscription {
+  a{
+    color:var(--color2);
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+    padding: 10px;
+    border: 1px solid var(--color1);
+    border-radius: 5px;
   }
 }
+
 
 .subscribe-button {
   background-color: var(--color1);
@@ -133,6 +135,9 @@
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
+    a{
+      text-align: center;
+    }
   }
 
   .subscribe-button {
