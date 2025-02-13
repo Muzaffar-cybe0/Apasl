@@ -4,136 +4,166 @@
   --color3: #1e1e1e;
   --color4: #fff6e9;
 }
+
+$schedule-bg: var(--color3);
+$text-light: var(--color2);
+$primary-color: var(--color1);
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 640px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 .schedules {
   width: 100%;
+  padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   gap: 30px;
-  &-child1 {
-   
+
+  .schedules-child1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: 15px;
-    p{
-     color: var(--color3);
-     font-size: 14px;
-     font-weight: 300;
-     text-transform: uppercase;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      color: var(--color3);
+      font-weight: 300;
+      text-transform: uppercase;
     }
-    h1{
-     color: var(--color3);
-     font-size: 40px;
-     text-transform: uppercase;
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: var(--color3);
+      text-transform: uppercase;
     }
   }
-  &-child2{
+
+  .schedules-child2 {
     width: 100%;
-    
-  }
-}
-@media (max-width: 1024px) {
-  .schedules {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    &-child1 {
-     
+    border-radius: 10px;
+    background-color: $schedule-bg;
+    padding: 20px;
+
+    .tabs {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 15px;
-      p{
-       color: var(--color3);
-       font-size: 14px;
-       font-weight: 300;
-       text-transform: uppercase;
-      }
-      h1{
-       color: var(--color3);
-       font-size: 40px;
-       text-transform: uppercase;
+      overflow-x: auto;
+      margin-bottom: 20px;
+
+      .tab {
+        flex: 0 0 auto;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        border-bottom: 4px solid transparent;
+        color: $text-light;
+
+        &.active {
+          border-color: $primary-color;
+        }
       }
     }
-    &-child2{
-      width: 100%;
-     
+
+    .tab-content {
+      background-color: $schedule-bg;
+      padding: 20px;
+
+      .event {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; // Align text properly
+        justify-content: flex-start;
+        border-bottom: 0.2px solid #707070;
+        padding: 10px 0;
+        gap: 10px;
+
+        .time {
+          font-weight: bold;
+          color: $text-light;
+          min-width: 80px;
+        }
+
+        .title {
+          font-weight: bold;
+          font-size: 16px;
+          color: $text-light;
+          flex-grow: 1;
+        }
+      }
     }
   }
-}
-@media (max-width: 810px) {
-  .schedules {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    &-child1 {
-     
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 15px;
-      p{
-       color: var(--color3);
-       font-size: 14px;
-       font-weight: 300;
-       text-transform: uppercase;
+
+  // Small screens (phones)
+  @include respond(sm) {
+    .schedules-child1 {
+      p {
+        font-size: 16px;
       }
-      h1{
-       color: var(--color3);
-       font-size: 40px;
-       text-transform: uppercase;
+
+      h1 {
+        font-size: 38px;
       }
-    }
-    &-child2{
-      width: 100%;
-      
     }
   }
-}
-@media (max-width: 480px) {
-  .schedules {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    &-child1 {
-     
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 15px;
-      p{
-       color: var(--color3);
-       font-size: 14px;
-       font-weight: 300;
-       text-transform: uppercase;
+
+  // Medium screens (tablets)
+  @include respond(md) {
+    padding: 40px;
+
+    .schedules-child1 {
+      p {
+        font-size: 18px;
       }
-      h1{
-       color: var(--color3);
-       font-size: 40px;
-       text-transform: uppercase;
+
+      h1 {
+        font-size: 40px;
       }
     }
-    &-child2{
-      width: 100%;
-     
+
+    .schedules-child2 {
+      .event {
+        .title {
+          font-size: 18px;
+        }
+      }
     }
   }
-}
-a {
-  text-decoration: none;
+
+  // Large screens (desktops)
+  @include respond(lg) {
+    padding: 60px;
+
+    .schedules-child1 {
+      p {
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+
+    .schedules-child2 {
+      .event {
+        .title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }

@@ -19,7 +19,7 @@ const resources = {
       associates1: "Ministry of Health of the Republican Uzbekistan",
       associates2:
         "Research Insitute of Virology of the Republican specialized scientific and practical medical center of the epidemiology, microbiology,infectious and parasitic diseases",
-      associates3: "Association of hepatologists of uzbekistan",
+      associates3: "Association of hepatologists of Uzbekistan",
       associates4: "Azerbaijan gastroentrology and hepatology association",
       eventOutcomes1: "why join us",
       eventOutcomes2: "event outcomes",

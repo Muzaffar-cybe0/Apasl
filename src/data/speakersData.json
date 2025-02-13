@@ -118,9 +118,9 @@
       "id": "7",
       "image": "https://i.postimg.cc/5tCqkKWC/speaker7.jpg",
       "name": {
-        "en": "Prof.Yogesh.K.Chawla",
-        "ru": "Проф. Йогеш К. Чавла",
-        "uz": "Prof. Yogesh K. Chawla"
+        "en": "Yogesh.K.Chawla",
+        "ru": "Йогеш К. Чавла",
+        "uz": "Yogesh K. Chawla"
       },
       "role": {
         "en": "Professor, M.B.B.S.,M.D, D.M.(Gastroenterology) AIIMS, New Delhi,FAMS",
@@ -175,9 +175,9 @@
       "id": "10",
       "image": "https://i.postimg.cc/HWKCDsgC/speaker10.jpg",
       "name": {
-        "en": "Prof, Maria Buti ",
-        "ru": "Проф. Мария Бути",
-        "uz": "Prof. Mariya Buti"
+        "en": "Maria Buti ",
+        "ru": "Мария Бути",
+        "uz": "Mariya Buti"
       },
       "role": {
         "en": "Professor, MD, FAASLD",
@@ -353,7 +353,7 @@
         "uz": "Gulnara Agayeva"
       },
       "role": {
-        "en": "PhD. Dr.",
+        "en": "PhD, Dr",
         "ru": "Кандидат наук, доктор",
         "uz": "PhD, doktor"
       },
