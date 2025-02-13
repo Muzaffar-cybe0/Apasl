@@ -8,6 +8,7 @@
 $schedule-bg: var(--color3);
 $text-light: var(--color2);
 $primary-color: var(--color1);
+$white: #ffffff;
 
 @mixin respond($breakpoint) {
   @if $breakpoint == sm {
@@ -36,7 +37,7 @@ $primary-color: var(--color1);
     display: flex;
     flex-direction: column;
     gap: 15px;
-    text-align: center;
+    text-align: left; // Ensuring all text is aligned left
 
     p {
       font-size: 14px;
@@ -67,7 +68,7 @@ $primary-color: var(--color1);
       .tab {
         flex: 0 0 auto;
         padding: 10px;
-        text-align: center;
+        text-align: left; // Aligning tabs left
         font-weight: bold;
         cursor: pointer;
         border-bottom: 4px solid transparent;
@@ -86,23 +87,82 @@ $primary-color: var(--color1);
       .event {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; // Align text properly
+        align-items: flex-start;
         justify-content: flex-start;
-        border-bottom: 0.2px solid #707070;
+        border-bottom: 0.2px solid #707070; // Added border bottom here
         padding: 10px 0;
         gap: 10px;
 
         .time {
           font-weight: bold;
-          color: $text-light;
+          color: $white;
           min-width: 80px;
+          text-align: left; // Align time left
         }
 
         .title {
           font-weight: bold;
           font-size: 16px;
-          color: $text-light;
+          color: $white;
           flex-grow: 1;
+          text-align: left;
+        }
+
+        .speakers {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          color: $white;
+          text-align: left; // Align speaker names to the left
+
+          .speaker {
+            font-size: 14px;
+
+            strong {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .session {
+          font-size: 14px;
+          color: $white;
+          text-align: left;
+          border-bottom: 0.2px solid #707070; // Added border-bottom here
+        }
+
+        .presentations {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .presentation {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: $white;
+            text-align: left; // Align presentations to the left
+
+            .presentation-time {
+              font-size: 14px;
+            }
+
+            .presentation-title {
+              font-size: 16px;
+              font-weight: bold;
+            }
+
+            .presentation-speaker {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .discussion,
+        .break {
+          color: $white;
+          text-align: left; // Align discussion and break text to the left
+          border-bottom: 0.2px solid #707070; // Added border-bottom here
         }
       }
     }
@@ -110,6 +170,8 @@ $primary-color: var(--color1);
 
   // Small screens (phones)
   @include respond(sm) {
+    padding: 15px;
+
     .schedules-child1 {
       p {
         font-size: 16px;
@@ -117,6 +179,39 @@ $primary-color: var(--color1);
 
       h1 {
         font-size: 38px;
+      }
+    }
+
+    .schedules-child2 {
+      padding: 15px;
+
+      .tabs {
+        margin-bottom: 10px;
+
+        .tab {
+          padding: 8px;
+          font-size: 14px;
+        }
+      }
+
+      .tab-content {
+        padding: 15px;
+
+        .event {
+          padding: 8px 0;
+
+          .time {
+            font-size: 14px;
+          }
+
+          .title {
+            font-size: 16px;
+          }
+
+          .speakers {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -136,9 +231,32 @@ $primary-color: var(--color1);
     }
 
     .schedules-child2 {
-      .event {
-        .title {
-          font-size: 18px;
+      .tabs {
+        margin-bottom: 15px;
+
+        .tab {
+          padding: 12px;
+          font-size: 16px;
+        }
+      }
+
+      .tab-content {
+        padding: 20px;
+
+        .event {
+          padding: 12px 0;
+
+          .time {
+            font-size: 16px;
+          }
+
+          .title {
+            font-size: 18px;
+          }
+
+          .speakers {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -159,9 +277,32 @@ $primary-color: var(--color1);
     }
 
     .schedules-child2 {
-      .event {
-        .title {
-          font-size: 20px;
+      .tabs {
+        margin-bottom: 20px;
+
+        .tab {
+          padding: 15px;
+          font-size: 18px;
+        }
+      }
+
+      .tab-content {
+        padding: 30px;
+
+        .event {
+          padding: 15px 0;
+
+          .time {
+            font-size: 18px;
+          }
+
+          .title {
+            font-size: 20px;
+          }
+
+          .speakers {
+            font-size: 18px;
+          }
         }
       }
     }

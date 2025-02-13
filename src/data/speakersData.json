@@ -118,9 +118,9 @@
       "id": "7",
       "image": "https://i.postimg.cc/5tCqkKWC/speaker7.jpg",
       "name": {
-        "en": "Yogesh.K.Chawla",
-        "ru": "Йогеш К. Чавла",
-        "uz": "Yogesh K. Chawla"
+        "en": "Prof.Yogesh.K.Chawla",
+        "ru": "Проф. Йогеш К. Чавла",
+        "uz": "Prof. Yogesh K. Chawla"
       },
       "role": {
         "en": "Professor, M.B.B.S.,M.D, D.M.(Gastroenterology) AIIMS, New Delhi,FAMS",
@@ -175,9 +175,9 @@
       "id": "10",
       "image": "https://i.postimg.cc/HWKCDsgC/speaker10.jpg",
       "name": {
-        "en": "Maria Buti ",
-        "ru": "Мария Бути",
-        "uz": "Mariya Buti"
+        "en": "Prof, Maria Buti ",
+        "ru": "Проф. Мария Бути",
+        "uz": "Prof. Mariya Buti"
       },
       "role": {
         "en": "Professor, MD, FAASLD",
@@ -353,7 +353,7 @@
         "uz": "Gulnara Agayeva"
       },
       "role": {
-        "en": "PhD, Dr",
+        "en": "PhD. Dr.",
         "ru": "Кандидат наук, доктор",
         "uz": "PhD, doktor"
       },
@@ -378,79 +378,393 @@
   ],
   "schedules": [
     {
-      "id": "1",
-      "date": {
-        "en": "4-June",
-        "ru": "4-июня",
-        "uz": "4-iyun"
+      "day": {
+        "en": "Day 1",
+        "ru": "День 1",
+        "uz": "1-кун"
       },
+      "date": "June 4",
+
       "events": [
         {
-          "time": "10:00-13:00",
+          "time": "8:00-9:00",
           "title": {
-            "en": "Experience in eliminating viral hepatitis C. Problems and prospects",
-            "ru": "Опыт ликвидации вирусного гепатита C. Проблемы и перспективы",
-            "uz": "Virusli gepatit C ni bartaraf etish tajribasi. Muammolar va istiqbollar"
-          }
+            "en": "Registration of participants",
+            "ru": "Регистрация участников",
+            "uz": "Иштирокчиларни рўйхатга олиш"
+          },
+          "type": "registration"
         },
         {
-          "time": "13:00-14:30",
+          "time": "9:00-9:30",
+          "title": {
+            "en": "Opening ceremony",
+            "ru": "Церемония открытия",
+            "uz": "Очилиш маросими"
+          },
+          "speakers": [
+            
+            {
+              "name": "Minister of Health of the Republic of Uzbekistan"
+            },
+            {
+              "name": "Musabaev E.I, Uzbekistan"
+            },
+            {
+              "name": "Agaeva G.Sh, Azerbaijan"
+            }
+          ],
+          "type": "ceremony"
+        },
+        {
+          "time": "9:30-12:00",
+          "session": {
+            "en": "Experience in eliminating viral hepatitis C. Problems and prospects",
+            "ru": "Опыт ликвидации вирусного гепатита С. Проблемы и перспективы",
+            "uz": "S гепатитини йўқотишдаги тажриба. Муаммолар ва истиқболлар"
+          },
+          "presentations": [
+            {
+              "time": "9:30-9:50",
+              "speaker": "Muhammad Hasani, Egypt",
+              "title": {
+                "en": "Egypt's experience",
+                "ru": "Опыт Египта",
+                "uz": "Misr tajribasi"
+              }
+            },
+            {
+              "time": "9:50-10:10",
+              "speaker": "Maia Tseritelli, Georgia",
+              "title": {
+                "en": "Georgia’s experience with the ongoing Hepatitis C Elimination Program",
+                "ru": "Опыт Грузии в программе ликвидации гепатита С",
+                "uz": "Gruziyaning S гепатитини йўқотиш дастури"
+              }
+            },
+            {
+              "time": "10:10-10:30",
+              "speaker": "Diana Payawal, Philippines",
+              "title": {
+                "en": "Hepatitis C elimination program in the Philippines",
+                "ru": "Программа ликвидации гепатита С на Филиппинах",
+                "uz": "Filippinda S гепатитини йўқотиш дастури"
+              }
+            },
+            {
+              "time": "10:30-10:50",
+              "speaker": "Necati Ormechi, Turkiye",
+              "title": {
+                "en": "Hepatitis C elimination program in Turkiye",
+                "ru": "Программа ликвидации гепатита С в Турции",
+                "uz": "Turkiyada S гепатитини йўқотиш дастури"
+              }
+            },
+            {
+              "time": "10:50-11:05",
+              "speaker": "Lubna Kamani, Pakistan",
+              "title": {
+                "en": "Hepatitis C elimination program in Pakistan",
+                "ru": "Программа ликвидации гепатита С в Пакистане",
+                "uz": "Pokistonda S гепатитини йўқотиш дастури"
+              }
+            },
+            {
+              "time": "11:05-11:20",
+              "speaker": "Huma Qureshi, Pakistan",
+              "title": {
+                "en": "Prime Minister's Program for the HCV elimination in Pakistan",
+                "ru": "Программа премьер-министра по ликвидации HCV в Пакистане",
+                "uz": "Pokistonda HCV йўқотиш бўйича Бош вазир дастури"
+              }
+            },
+            {
+              "time": "11:20-11:40",
+              "speaker": "Laziz Tuychiev, Uzbekistan"
+            },
+            {
+              "time": "11:40-12:00",
+              "title": {
+                "en": "Discussion",
+                "ru": "Дискуссия",
+                "uz": "Мухокама"
+              },
+              "type": "discussion"
+            }
+          ]
+        },
+        {
+          "time": "12:00-13:00",
+          "session": {
+            "en": "Satellite session with the support of ABBOT",
+            "ru": "Спутниковая сессия при поддержке ABBOT",
+            "uz": "ABBOT томонидан қўллаб-қувватланган спутник сессияси"
+          },
+          "presentations": [
+            {
+              "time": "12:00-12:20",
+              "speaker": "Jasmohan Bajaj, USA",
+              "title": {
+                "en": "Hepatic encephalopathy (online)",
+                "ru": "Печеночная энцефалопатия (онлайн)",
+                "uz": "Jigar ensefalopatiyasi (онлайн)"
+              }
+            },
+            {
+              "time": "12:20-12:40",
+              "speaker": "ABBOT"
+            },
+            {
+              "time": "12:40-13:00",
+              "title": {
+                "en": "Discussion",
+                "ru": "Дискуссия",
+                "uz": "Мухокама"
+              },
+              "type": "discussion"
+            }
+          ]
+        },
+        {
+          "time": "13:00-14:00",
           "title": {
             "en": "Lunch",
-            "ru": "Ужин",
-            "uz": "Tushlik"
-          }
+            "ru": "Обед",
+            "uz": "Тушлик"
+          },
+          "type": "break"
         },
         {
-          "time": "14:30-18:00",
-          "title": {
-            "en": "Experience in organizing national programs to reduce the incidence of HBV and HDV infections",
-            "ru": "Опыт организации национальных программ по снижению заболеваемости инфекциями HBV и HDV",
-            "uz": "HBV va HDV infeksiyalarining tarqalishini kamaytirish bo'yicha milliy dasturlarni tashkil etish tajribasi"
-          }
+          "time": "14:00-15:00",
+          "presentations": [
+            {
+              "time": "14:00-14:20",
+              "speaker": "Shiv Sarin, India",
+              "title": {
+                "en": "Art lecture",
+                "ru": "Лекция по искусству",
+                "uz": "Санъат марузаси"
+              }
+            },
+            {
+              "time": "14:20-14:40",
+              "speaker": "Heiner Wedemeyer, Germany",
+              "title": {
+                "en": "Long-term outcome after cure of hepatitis C",
+                "ru": "Долгосрочные результаты после излечения гепатита С",
+                "uz": "S гепатитини даволашдан кейин узуқ муддатли натижалар"
+              }
+            },
+            {
+              "time": "14:40-15:00",
+              "speaker": "Mushvig Hasanov, Azerbaijan",
+              "title": {
+                "en": "Gallstone disease in patients with hepatitis C virus",
+                "ru": "Желчнокаменная болезнь у пациентов с вирусом гепатита С",
+                "uz": "S гепатити вирусили беморларда ўт тоши касаллиги"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "id": "2",
-      "date": {
-        "en": "5-June",
-        "ru": "5-июня",
-        "uz": "5-iyun"
+      "day": {
+        "en": "Day 2",
+        "ru": "День 2",
+        "uz": "2-кун"
       },
-
+      "date": "June 5",
       "events": [
         {
-          "time": "9:30-11:30",
-          "title": {
-            "en": "Introduction of GCC screening in national programs for the elimination of viral hepatitis",
-            "ru": "Внедрение скрининга GCC в национальные программы по ликвидации вирусного гепатита",
-            "uz": "Virusli gepatitni yo'qotish bo'yicha milliy dasturlarda GCC skriningini joriy etish"
-          }
+          "time": "9:30-10:50",
+          "session": {
+            "en": "Experience in organizing national programs to reduce the incidence of HBV infections",
+            "ru": "Опыт организации национальных программ по снижению заболеваемости HBV",
+            "uz": "HBV йўқотиш миллий дастурларини ташкил этишдаги тажриба"
+          },
+          "presentations": [
+            {
+              "time": "9:30-9:50",
+              "speaker": "Abdulkadir Dokmechi, Turkiye",
+              "title": {
+                "en": "Hepatitis B elimination program in Turkiye",
+                "ru": "Программа ликвидации гепатита B в Турции",
+                "uz": "Turkiyada B гепатитини йўқотиш дастури"
+              }
+            },
+            {
+              "time": "9:50-10:10",
+              "speaker": "Yogesh Chawla, India",
+              "title": {
+                "en": "Hepatitis B elimination program in India",
+                "ru": "Программа ликвидации гепатита B в Индии",
+                "uz": "Hindistonda B гепатитини йўқотиш дастури"
+              }
+            },
+            {
+              "time": "10:10-10:30",
+              "speaker": "Kulpash Sagyndikovna, Kazakhstan",
+              "title": {
+                "en": "Viral Hepatitis Elimination Program in Kazakhstan",
+                "ru": "Программа ликвидации вирусных гепатитов в Казахстане",
+                "uz": "Qozogʻistonda virusli gepatitlarni yoʻqotish dasturi"
+              }
+            },
+            {
+              "time": "10:30-10:50",
+              "title": {
+                "en": "Discussion",
+                "ru": "Дискуссия",
+                "uz": "Мухокама"
+              },
+              "type": "discussion"
+            }
+          ]
         },
         {
-          "time": "11:30-13:00",
-          "title": {
-            "en": "Increased access to liver transplantation. Experience of different countries",
-            "ru": "Расширенный доступ к трансплантации печени. Опыт различных стран",
-            "uz": "Jigarni transplantatsiya qilishga bo'lgan kirish imkoniyatining oshishi. Turli mamlakatlar tajribasi"
-          }
+          "time": "10:50-12:05",
+          "session": {
+            "en": "Hepatitis Delta session",
+            "ru": "Сессия по гепатиту Дельта",
+            "uz": "Delta gepatiti sessiyasi"
+          },
+          "presentations": [
+            {
+              "time": "10:50-11:10",
+              "speaker": "Gihan Yurtaydin, Turkiye",
+              "title": {
+                "en": "Overview of the natural history of CHD and global disparities in its management",
+                "ru": "Обзор естественной истории ХГД и глобальных различий в лечении",
+                "uz": "CHD ning tabiiy tarixi va uning boshqaruvidagi global farqlar"
+              }
+            },
+            {
+              "time": "11:10-11:30",
+              "speaker": "Robert Gish, USA",
+              "title": {
+                "en": "An update on the drugs in development for Chronic Delta Hepatitis",
+                "ru": "Обновленная информация о разработке препаратов для хронического дельта-гепатита",
+                "uz": "Surunkali Delta gepatiti uchun dori vositalarini ishlab chiqish yangiliklari"
+              }
+            },
+            {
+              "time": "11:30-11:45",
+              "speaker": "Alkhazov Yusif, Azerbaijan",
+              "title": {
+                "en": "Viral hepatitis Delta. Difficult patient",
+                "ru": "Вирусный гепатит Дельта. Сложный пациент",
+                "uz": "Virusli Delta gepatiti. Qiyin bemor"
+              }
+            },
+            {
+              "time": "11:45-12:05",
+              "title": {
+                "en": "Discussion",
+                "ru": "Дискуссия",
+                "uz": "Мухокама"
+              },
+              "type": "discussion"
+            }
+          ]
         },
         {
-          "time": "13:00-14:30",
+          "time": "12:05-13:00",
+          "session": {
+            "en": "Introduction of HCC screening in national programs for the elimination of viral hepatitis",
+            "ru": "Внедрение скрининга HCC в национальные программы по ликвидации вирусных гепатитов",
+            "uz": "Virusli gepatitlarni yoʻqotish milliy dasturlarida HCC skriningini joriy etish"
+          },
+          "presentations": [
+            {
+              "time": "12:05-12:25",
+              "speaker": "Francesco Negro, Switzerland",
+              "title": {
+                "en": "Impact of screening on liver cancer",
+                "ru": "Влияние скрининга на рак печени",
+                "uz": "Skriningning jigar saratoniга таъсири"
+              }
+            },
+            {
+              "time": "12:25-12:45",
+              "speaker": "Homie Razavi, USA",
+              "title": {
+                "en": "Risk of cancer associated with HBV, HCV, MASLD, alcohol and smoking",
+                "ru": "Риск рака, связанный с HBV, HCV, MASLD, алкоголем и курением",
+                "uz": "HBV, HCV, MASLD, spirtli ichimliklar va chekish bilan bogʻliq saraton xavfi"
+              }
+            },
+            {
+              "time": "12:45-13:00",
+              "title": {
+                "en": "Discussion",
+                "ru": "Дискуссия",
+                "uz": "Мухокама"
+              },
+              "type": "discussion"
+            }
+          ]
+        },
+        {
+          "time": "13:00-14:00",
           "title": {
             "en": "Lunch",
-            "ru": "Ужин",
-            "uz": "Tushlik"
-          }
+            "ru": "Обед",
+            "uz": "Тушлик"
+          },
+          "type": "break"
         },
         {
-          "time": "14:30-18:00",
-          "title": {
+          "time": "14:00-15:00",
+          "session": {
+            "en": "Increased access to liver transplantation. Experience of different countries",
+            "ru": "Увеличение доступности трансплантации печени. Опыт разных стран",
+            "uz": "Jigar transplantatsiyasiga kirishni oshirish. Turli mamlakatlarning tajribasi"
+          },
+          "speakers": [
+            {
+              "name": "Indian specialist"
+            },
+            {
+              "name": "Deniz Balci, Turkiye"
+            }
+          ]
+        },
+        {
+          "session": {
             "en": "National programs for reducing enteral hepatitis A and E",
             "ru": "Национальные программы по снижению энтеральных гепатитов A и E",
-            "uz": "Enteral gepatit A va E ni kamaytirishga qaratilgan milliy dasturlar"
-          }
+            "uz": "A va E enteral gepatitlarini kamaytirish milliy dasturlari"
+          },
+          "presentations": [
+            {
+              "title": {
+                "en": "Two lectures",
+                "ru": "Две лекции",
+                "uz": "Икки маруза"
+              }
+            }
+          ]
+        },
+        {
+          "session": {
+            "en": "Session for Lab Diagnostics of viral hepatitis",
+            "ru": "Сессия по лабораторной диагностике вирусных гепатитов",
+            "uz": "Virusli gepatitlarni laboratoriya diagnostikasi сессияси"
+          },
+          "presentations": [
+            {
+              "speaker": "Saleem Kamili, USA"
+            },
+            {
+              "speaker": "Dagdemir Aslikhan., Azerbaijan",
+              "title": {
+                "en": "Laboratory diagnosis of the viral hepatitis in Azerbaijan",
+                "ru": "Лабораторная диагностика вирусных гепатитов в Азербайджане",
+                "uz": "Ozarbayjonda virusli gepatitlarni laboratoriya diagnostikasi"
+              }
+            }
+          ]
         }
       ]
     }
