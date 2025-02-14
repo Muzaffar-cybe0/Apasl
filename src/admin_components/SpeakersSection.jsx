@@ -11,14 +11,14 @@ export default function SpeakersSection() {
   const [openDelete, setOpenDelete] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
 
-  const [formData, setFormData] = useState({
+  const [addFormData, setAddFormData] = useState({
     image: "",
     name: { en: "", ru: "", uz: "" },
     role: { en: "", ru: "", uz: "" },
     aboutSelf: { en: "", ru: "", uz: "" },
   });
 
-  const [modalData, setModalData] = useState({
+  const [editFormData, setEditFormData] = useState({
     image: "",
     name: { en: "", ru: "", uz: "" },
     role: { en: "", ru: "", uz: "" },
@@ -33,26 +33,22 @@ export default function SpeakersSection() {
 
   const handleEdit = (item) => {
     setEdit(item);
-    setFormData({
+    setEditFormData({
       image: item.image || "",
       name: { ...item.name },
       role: { ...item.role },
       aboutSelf: { ...item.aboutSelf },
     });
-    setOpenEdit(true); // Ensure this triggers modal visibility
+    setOpenEdit(true);
   };
 
   const handleCloseEditModal = () => {
-    setOpenEdit(false); // Close the modal when clicking Cancel or outside
+    setOpenEdit(false);
   };
 
-  const handleDelete = (id) => {
-    setDeleteId(id);
-    setOpenDelete(true);
-  };
-
-  const handleChange = (e, lang, field) => {
-    setModalData((prev) => ({
+  const handleChange = (e, lang, field, formType) => {
+    const setter = formType === "edit" ? setEditFormData : setAddFormData;
+    setter((prev) => ({
       ...prev,
       [field]: {
         ...prev[field],
@@ -63,46 +59,52 @@ export default function SpeakersSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Updated Speaker Data:", modalData);
+    if (openEdit) {
+      console.log("Updated Speaker Data:", editFormData);
+    } else {
+      console.log("New Speaker Data:", addFormData);
+    }
     setOpenEdit(false);
   };
 
-  const confirmDelete = () => {
-    console.log("Deleted speaker with ID:", deleteId);
+  const handleDelete = () => {
+    console.log("Deleting speaker with ID:", deleteId);
     setOpenDelete(false);
+    // Add your delete logic here
   };
 
   return (
     <div className="SpeakersSection">
       <div className="SpeakersSection_child-1">
+        <h2>Add New Speaker</h2>
+        <br />
         <form onSubmit={handleSubmit}>
-          {/* Main form is not populated with the modal data */}
+          <label>Image URL:</label>
+          <input
+            type="file"
+            onChange={(e) =>
+              setAddFormData({ ...addFormData, image: e.target.value })
+            }
+          />
           {["en", "ru", "uz"].map((lang) => (
             <div key={lang}>
               <label>Name ({lang.toUpperCase()}):</label>
               <input
                 type="text"
-                value={""} // Keep the main form empty
-                onChange={() => {}}
+                value={addFormData.name[lang]}
+                onChange={(e) => handleChange(e, lang, "name", "add")}
               />
-            </div>
-          ))}
-
-          {["en", "ru", "uz"].map((lang) => (
-            <div key={lang}>
               <label>Role ({lang.toUpperCase()}):</label>
               <input
                 type="text"
-                value={""} // Keep the main form empty
-                onChange={() => {}}
+                value={addFormData.role[lang]}
+                onChange={(e) => handleChange(e, lang, "role", "add")}
               />
-            </div>
-          ))}
-
-          {["en", "ru", "uz"].map((lang) => (
-            <div key={lang}>
               <label>About Self ({lang.toUpperCase()}):</label>
-              <textarea value={""} onChange={() => {}} />
+              <textarea
+                value={addFormData.aboutSelf[lang]}
+                onChange={(e) => handleChange(e, lang, "aboutSelf", "add")}
+              />
             </div>
           ))}
           <button type="submit">Add Speaker</button>
@@ -136,7 +138,14 @@ export default function SpeakersSection() {
                   <button onClick={() => handleEdit(item)}>Edit</button>
                 </td>
                 <td>
-                  <button onClick={() => handleDelete(item.id)}>Delete</button>
+                  <button
+                    onClick={() => {
+                      setDeleteId(item.id);
+                      setOpenDelete(true);
+                    }}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
@@ -148,52 +157,56 @@ export default function SpeakersSection() {
         <div className="Ss_Edit_modal show">
           <span className="modal-close" onClick={handleCloseEditModal}>
             &times;
-          </span>{" "}
-          {/* Close modal on click */}
-          <form onSubmit={handleSubmit}>
+          </span>
+
+          <div className="modal-content">
             {["en", "ru", "uz"].map((lang) => (
-              <div key={lang}>
-                <label>Name ({lang.toUpperCase()}):</label>
-                <input
-                  type="text"
-                  value={formData.name[lang]}
-                  onChange={(e) => handleChange(e, lang, "name")}
-                />
+              <div key={lang} className={`modal-${lang} modal_form`}>
+                <h3>Edit Speaker ({lang.toUpperCase()})</h3>
+                <form onSubmit={handleSubmit}>
+                  <label>Name:</label>
+                  <input
+                    type="text"
+                    value={editFormData.name[lang]}
+                    onChange={(e) => handleChange(e, lang, "name", "edit")}
+                  />
+                  <label>Role:</label>
+                  <input
+                    type="text"
+                    value={editFormData.role[lang]}
+                    onChange={(e) => handleChange(e, lang, "role", "edit")}
+                  />
+                  <label>About Self:</label>
+                  <textarea
+                    value={editFormData.aboutSelf[lang]}
+                    onChange={(e) => handleChange(e, lang, "aboutSelf", "edit")}
+                  />
+                </form>
               </div>
             ))}
-            {["en", "ru", "uz"].map((lang) => (
-              <div key={lang}>
-                <label>Role ({lang.toUpperCase()}):</label>
-                <input
-                  type="text"
-                  value={formData.role[lang]}
-                  onChange={(e) => handleChange(e, lang, "role")}
-                />
-              </div>
-            ))}
-            {["en", "ru", "uz"].map((lang) => (
-              <div key={lang}>
-                <label>About Self ({lang.toUpperCase()}):</label>
-                <textarea
-                  value={formData.aboutSelf[lang]}
-                  onChange={(e) => handleChange(e, lang, "aboutSelf")}
-                />
-              </div>
-            ))}
-            <button type="submit">Save Changes</button>
+          </div>
+
+          <div className="modal_buttons">
+            <button type="submit" onClick={handleSubmit}>
+              Save Changes
+            </button>
             <button type="button" onClick={handleCloseEditModal}>
               Cancel
-            </button>{" "}
-            {/* Cancel button */}
-          </form>
+            </button>
+          </div>
         </div>
       )}
 
       {openDelete && (
         <div className="Ss_Delete_modal show">
-          <p>Are you sure you want to delete this speaker?</p>
-          <button onClick={confirmDelete}>Yes, Delete</button>
-          <button onClick={() => setOpenDelete(false)}>Cancel</button>
+          <span className="modal-close" onClick={() => setOpenDelete(false)}>
+            &times;
+          </span>
+          <h3>Are you sure you want to delete this speaker?</h3>
+          <div className="modal-buttons">
+            <button onClick={handleDelete}>Yes, Delete</button>
+            <button onClick={() => setOpenDelete(false)}>Cancel</button>
+          </div>
         </div>
       )}
     </div>

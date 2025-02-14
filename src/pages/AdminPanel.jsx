@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../admin_Scss/adminPanel.scss";
 import {
   MenuFoldOutlined,
@@ -9,6 +9,7 @@ import {
   BookOutlined,
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
+import { useNavigate } from "react-router-dom";
 import SpeakersSection from "../admin_components/SpeakersSection";
 import OrganizersSection from "../admin_components/OrganizersSection";
 import BooksSection from "../admin_components/BooksSection";
@@ -19,9 +20,19 @@ const { Header, Sider, Content } = Layout;
 export default function AdminPanel() {
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState("1"); // Track selected menu item
+  const navigate = useNavigate();
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  // Redirect to /admin/login if no login data is stored
+  useEffect(() => {
+    const loginKeys = sessionStorage.getItem("loginKeys");
+    if (!loginKeys) {
+      navigate("/admin/login");
+    }
+  }, [navigate]);
 
   const renderContent = () => {
     switch (selectedKey) {
@@ -76,10 +87,9 @@ export default function AdminPanel() {
                 height: 64,
               }}
             />
-            <h1 style={{ marginLeft: "20px" }}>Admin Panel of Apasl </h1>
+            <h1 style={{ marginLeft: "20px" }}>Admin Panel of Apasl</h1>
           </Header>
 
-          {/* Content */}
           <Content
             style={{
               margin: "24px 16px",

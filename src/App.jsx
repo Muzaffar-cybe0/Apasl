@@ -21,26 +21,26 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 2000);
   }, []);
 
+  // Updated routes: Login is separate at /admin/login, and admin panel is at /admin.
   const router = createHashRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Navigate to="/home" replace />} />
-
           <Route path="home" element={<Home />}>
             <Route index element={<Speakers />} />
           </Route>
         </Route>
 
-        <Route path="admin" element={<AdminPanel />}>
-          <Route path="login" element={<Login />} />
-        </Route>
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </>
     )
   );
+
   return (
     <div className="app">
       {loading ? (
@@ -55,3 +55,4 @@ function App() {
 }
 
 export default App;
+

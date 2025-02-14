@@ -30,7 +30,6 @@ export default function Schedules() {
 
   return (
     <div className="schedules" id="schedules">
-
       <div className="schedules-child1">
         <p>{t("schedules1")}</p>
         <h1>{t("schedules2")}</h1>
@@ -45,7 +44,9 @@ export default function Schedules() {
                 className={`tab ${currentTab === index ? "active" : ""}`}
                 onClick={() => handleTabChange(index)}
               >
-                {schedule.date} {/* Assuming date is a string */}
+                {schedule.date
+                  ? schedule.date[language] || schedule.date.en
+                  : ""}
               </div>
             ))
           ) : (
@@ -60,9 +61,6 @@ export default function Schedules() {
               className="tab-content"
               style={{ display: currentTab === index ? "block" : "none" }}
             >
-              <h3 style={{color:"#ecf9fc"}}>
-                {schedule.day ? schedule.day[language] || schedule.day.en : ""}
-              </h3>{" "}
              
               {schedule.events && schedule.events.length > 0 ? (
                 schedule.events.map((event, eventIndex) => (
@@ -80,8 +78,13 @@ export default function Schedules() {
                       <div className="speakers">
                         {event.speakers.map((speaker, speakerIndex) => (
                           <div key={speakerIndex} className="speaker">
-                            <strong>{speaker.name}</strong>
-                            
+                            <strong>
+                              {typeof speaker.name === "string"
+                                ? speaker.name
+                                : speaker.name
+                                ? speaker.name[language] || speaker.name.en
+                                : ""}
+                            </strong>
                           </div>
                         ))}
                       </div>
@@ -113,7 +116,11 @@ export default function Schedules() {
                                 : ""}
                             </div>
                             <div className="presentation-speaker">
-                              {presentation.speaker}
+                              {typeof presentation.speaker === "string"
+                                ? presentation.speaker
+                                : presentation.speaker
+                                ? presentation.speaker[language]
+                                : ""}
                             </div>
                           </div>
                         ))}

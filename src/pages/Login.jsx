@@ -1,24 +1,26 @@
 import { useState } from "react";
 import "../sass/login.scss";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
 export default function Login() {
   const [login, setLogin] = useState({ email: "", password: "" });
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (login?.email && login?.password) {
-      sessionStorage.setItem("loginKeys", login);
+    if (login.email && login.password) {
+      // Store login info in sessionStorage as a JSON string
+      sessionStorage.setItem("loginKeys", JSON.stringify(login));
       toast("Login was successful", { type: "success" });
       setTimeout(() => {
         navigate("/admin");
-      }, 900);
+      }, 1500);
     } else {
       console.log("Something went wrong");
       toast("Admin not found", { type: "error" });
     }
-
   };
 
   return (
@@ -83,7 +85,11 @@ export default function Login() {
         </span>
       </div>
 
-      <button type="submit" className="submit">
+      <button 
+        type="submit" 
+        className="submit"
+        disabled={!login.email || !login.password} // disable if fields are empty
+      >
         Login
       </button>
     </form>

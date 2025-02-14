@@ -35,9 +35,10 @@ $white: #ffffff;
 
   .schedules-child1 {
     display: flex;
+
     flex-direction: column;
     gap: 15px;
-    text-align: left; // Ensuring all text is aligned left
+    text-align: center;
 
     p {
       font-size: 14px;
@@ -83,13 +84,18 @@ $white: #ffffff;
     .tab-content {
       background-color: $schedule-bg;
       padding: 20px;
-
+      h3{
+        color:var(--color1);
+        border: 0.5px solid var(--color2);  
+        padding: 10px;
+        border-radius: 10px;
+      }
       .event {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        border-bottom: 0.2px solid #707070; // Added border bottom here
+        border-bottom: 5px solid #707070; 
         padding: 10px 0;
         gap: 10px;
 
@@ -97,7 +103,8 @@ $white: #ffffff;
           font-weight: bold;
           color: $white;
           min-width: 80px;
-          text-align: left; // Align time left
+          text-align: left;
+          
         }
 
         .title {
@@ -113,11 +120,11 @@ $white: #ffffff;
           flex-direction: column;
           gap: 5px;
           color: $white;
-          text-align: left; // Align speaker names to the left
-
+          text-align: left;
+          align-items: flex-start;
           .speaker {
-            font-size: 14px;
-
+            font-size: 20px;
+            text-align: left;
             strong {
               font-weight: bold;
             }
@@ -125,10 +132,13 @@ $white: #ffffff;
         }
 
         .session {
-          font-size: 14px;
+          font-size: 18px;
           color: $white;
           text-align: left;
-          border-bottom: 0.2px solid #707070; // Added border-bottom here
+          border: 1px solid var(--color1);
+          padding: 10px;
+          border-radius: 5px;
+          
         }
 
         .presentations {
@@ -139,21 +149,25 @@ $white: #ffffff;
           .presentation {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 10px;
             color: $white;
-            text-align: left; // Align presentations to the left
-
+            text-align: left;
+            border-bottom: 0.2px solid #707070;
+            padding: 10px 0px;
             .presentation-time {
-              font-size: 14px;
+              font-size: 18px;
+              color: var(--color1);
             }
 
             .presentation-title {
               font-size: 16px;
               font-weight: bold;
+              
             }
 
             .presentation-speaker {
-              font-size: 14px;
+              font-size: 18px;
+             
             }
           }
         }

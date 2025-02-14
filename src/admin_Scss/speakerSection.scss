@@ -1,3 +1,9 @@
+:root {
+  --color1: #e60013;
+  --color2: #ecf9fc;
+  --color3: #1e1e1e;
+  --color4: #fff6e9;
+}
 .SpeakersSection {
   display: flex;
   justify-content: center;
@@ -18,8 +24,8 @@
         width: 100%;
         height: auto;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
 
         label {
@@ -48,7 +54,7 @@
 
       input,
       textarea {
-        width: 80%;
+        width: 100%;
         padding: 10px;
         border: 1px solid dodgerblue;
         border-radius: 5px;
@@ -59,7 +65,7 @@
       }
 
       button {
-        width: 20%;
+        width: 100%;
         padding: 10px 0px;
         font-size: 18px;
         font-weight: 400;
@@ -104,128 +110,28 @@
         }
       }
     }
-
-    .Ss_Edit_modal {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 40%;
-      max-height: 90vh;
-      overflow-y: auto;
-      background-color: white;
-      box-shadow: 0 0 10px gray;
-      border-radius: 10px;
-      z-index: 100;
-      display: none; /* Initially hidden */
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
-
-      &.show {
-        display: flex; /* Display when the modal is open */
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        div {
-          display: flex;
-          flex-direction: column;
-        }
-
-        label {
-          font-size: 16px;
-          font-weight: 500;
-          margin-bottom: 5px;
-        }
-
-        input,
-        textarea {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid dodgerblue;
-          border-radius: 5px;
-        }
-
-        textarea {
-          height: 200px;
-        }
-
-        button {
-          width: 30%;
-          padding: 10px 0;
-          font-size: 16px;
-          font-weight: 500;
-          background-color: dodgerblue;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-
-          &:hover {
-            background-color: darkblue;
-          }
-        }
-
-        .language-switcher {
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-          margin-bottom: 10px;
-
-          button {
-            padding: 8px 12px;
-            border: 1px solid dodgerblue;
-            background-color: white;
-            color: dodgerblue;
-            border-radius: 5px;
-            cursor: pointer;
-
-            &.active {
-              background-color: dodgerblue;
-              color: white;
-            }
-          }
-        }
-      }
-
-      .modal-close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        color: gray;
-        cursor: pointer;
-
-        &:hover {
-          color: black;
-        }
-      }
-    }
   }
+
   .Ss_Edit_modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 95%; /* Increased width */
     max-height: 90vh;
     overflow-y: auto;
-    background-color: white;
-    box-shadow: 0 0 10px gray;
-    border-radius: 10px;
-    z-index: 100;
-    display: none; /* Initially hidden */
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
 
     &.show {
-      display: flex; /* Display modal when the class show is added */
+      display: flex;
     }
 
     .modal-close {
@@ -241,10 +147,26 @@
       }
     }
 
+    .modal-content {
+      display: flex;
+      justify-content: space-between; /* Space out the three forms */
+      gap: 20px; /* Add space between the columns */
+      flex-wrap: wrap; /* Allow the forms to wrap if the screen is small */
+      width: 100%;
+
+      .modal_form {
+        flex: 1 1 calc(33% - 20px); /* Each form takes one-third of the width, with gap adjustment */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 100%;
 
       div {
         display: flex;
@@ -260,19 +182,20 @@
       input,
       textarea {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid dodgerblue;
         border-radius: 5px;
+        font-size: 16px;
       }
 
       textarea {
-        height: 200px;
+        height: 250px;
       }
 
       button {
-        width: 30%;
-        padding: 10px 0;
-        font-size: 16px;
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
         font-weight: 500;
         background-color: dodgerblue;
         color: white;
@@ -285,25 +208,33 @@
           background-color: darkblue;
         }
       }
+    }
 
-      .language-switcher {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 10px;
+    .modal_buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end; /* Buttons on the bottom-right */
+      margin-top: 20px;
 
-        button {
-          padding: 8px 12px;
-          border: 1px solid dodgerblue;
-          background-color: white;
-          color: dodgerblue;
-          border-radius: 5px;
-          cursor: pointer;
+      button {
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: var(--color1);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
-          &.active {
-            background-color: dodgerblue;
-            color: white;
-          }
+        &:hover {
+          background-color: darkred;
+        }
+      }
+      button:nth-child(2) {
+        background-color: var(--color3);
+        &:hover {
+          background-color: #1e1e1eb8          ;
         }
       }
     }
@@ -315,35 +246,61 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px gray;
     z-index: 100;
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    max-height: 90vh;
+    overflow-y: auto;
 
     &.show {
       display: flex;
     }
 
-    p {
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    button {
-      padding: 8px 12px;
-      background-color: red;
-      color: white;
-      border: 1px solid red;
-      border-radius: 5px;
-      margin-right: 10px;
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: gray;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: darkred;
+        color: black;
+      }
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      width: 100%;
+
+      button {
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: var(--color1);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: darkred;
+        }
+      }
+      button:nth-child(2) {
+        background-color: var(--color3);
+        &:hover {
+          background-color: #1e1e1eb8          ;
+        }
       }
     }
   }

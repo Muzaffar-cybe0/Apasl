@@ -41,53 +41,57 @@ export default function BooksSection() {
             <label htmlFor="image">Pdf file</label>
             <input type="file" id="image" title="Choose File" />
           </div>
-          
+
           <button type="submit">Add New File</button>
         </form>
       </div>
 
       <div className="BooksSection_child-2">
         <table>
-          <tr>
-            <th>#</th>
-            <th>Image</th>
-            <th>Pdf</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-          {dataJson.book.map((item) => {
-            return (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>
-                  <img src={item.img_link} alt="book_image" />
-                </td>
-                <td>
-                  <button type="button" onClick={() => PdfSave(item.pdf)}>
-                    See
-                  </button>
-                </td>
-                <td>
-                  <button
-                    type="button"
-                    style={{ backgroundColor: "rgb(182, 182, 0)" }}
-                    onClick={() => handleEditSave(item)}
-                  >
-                    Edit
-                  </button>
-                </td>
-                <td>
-                  <button
-                    type="button"
-                    style={{ backgroundColor: "red" }}
-                    onClick={() => handleDelete(item)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Pdf</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dataJson.book.map((item) => {
+              return (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>
+                    <img src={item.img_link} alt="book_image" />
+                  </td>
+                  <td>
+                    <button type="button" onClick={() => PdfSave(item.pdf)}>
+                      See
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      style={{ backgroundColor: "rgb(182, 182, 0)" }}
+                      onClick={() => handleEditSave(item)}
+                    >
+                      Edit
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      style={{ backgroundColor: "red" }}
+                      onClick={() => handleDelete(item)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
         </table>
 
         <div
@@ -127,7 +131,12 @@ export default function BooksSection() {
 
         {pdfModal && ( // 🟢 Only render if pdfModal is not null
           <div className="pdf_modal">
-            <button className="pdf_modal_closeBtn" onClick={() => setPdfModal(null)}>Close PDF</button>{" "}
+            <button
+              className="pdf_modal_closeBtn"
+              onClick={() => setPdfModal(null)}
+            >
+              Close PDF
+            </button>{" "}
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
               <div className="pdf_div">
                 <Viewer
