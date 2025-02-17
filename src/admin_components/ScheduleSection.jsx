@@ -12,10 +12,9 @@ export default function ScheduleSection() {
   const [addSpeakerModal, setAddSpeakerModal] = useState(null);
   const [newSpeaker, setNewSpeaker] = useState({ en: "", ru: "", uz: "" });
 
+  // Removed the "session" check since that key is not present in our JSON.
   const getEventTitle = (event) => {
-    if (event.title) return event.title[currentLang] || "";
-    if (event.session) return event.session[currentLang] || "";
-    return "";
+    return event.title ? event.title[currentLang] || "" : "";
   };
 
   return (
@@ -95,12 +94,16 @@ export default function ScheduleSection() {
                   <td>{`${dateIndex + 1}.${eventIndex + 1}`}</td>
                   <td>{schedule.date[currentLang]}</td>
                   <td>{event.time}</td>
-                  <td>{getEventTitle(event)}</td>
-                  <td>
+                  <td style={{ width: "15%" }}>{getEventTitle(event)}</td>
+                  <td style={{ width: "15%" }}>
                     {event.speakers && event.speakers.length > 0 ? (
                       event.speakers.map((speaker, i) => (
                         <div key={i}>{speaker.name[currentLang]}</div>
                       ))
+                    ) : event.speaker ? (
+                      <div>
+                        {event.speaker[currentLang] || event.speaker.en}
+                      </div>
                     ) : (
                       <span>No speakers</span>
                     )}

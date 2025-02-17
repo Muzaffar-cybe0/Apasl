@@ -61,11 +61,10 @@ export default function Schedules() {
               className="tab-content"
               style={{ display: currentTab === index ? "block" : "none" }}
             >
-             
               {schedule.events && schedule.events.length > 0 ? (
                 schedule.events.map((event, eventIndex) => (
                   <div key={eventIndex} className="event">
-                    <div className="time">{event.time}</div>
+                    {event.time && <div className="time">{event.time}</div>}
                     <div className="title">
                       {typeof event.title === "string"
                         ? event.title
@@ -90,70 +89,13 @@ export default function Schedules() {
                       </div>
                     )}
 
-                    {event.session && (
-                      <div className="session">
-                        {typeof event.session === "string"
-                          ? event.session
-                          : event.session
-                          ? event.session[language] || event.session.en
-                          : ""}
-                      </div>
-                    )}
-
-                    {event.presentations && event.presentations.length > 0 && (
-                      <div className="presentations">
-                        {event.presentations.map((presentation, presIndex) => (
-                          <div key={presIndex} className="presentation">
-                            <div className="presentation-time">
-                              {presentation.time}
-                            </div>
-                            <div className="presentation-title">
-                              {typeof presentation.title === "string"
-                                ? presentation.title
-                                : presentation.title
-                                ? presentation.title[language] ||
-                                  presentation.title.en
-                                : ""}
-                            </div>
-                            <div className="presentation-speaker">
-                              {typeof presentation.speaker === "string"
-                                ? presentation.speaker
-                                : presentation.speaker
-                                ? presentation.speaker[language]
-                                : ""}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {event.type === "discussion" && (
-                      <div className="discussion">
-                        {event.title ? (
-                          <div className="discussion-title">
-                            {typeof event.title === "string"
-                              ? event.title
-                              : event.title
-                              ? event.title[language] || event.title.en
-                              : ""}
-                          </div>
-                        ) : (
-                          <div className="discussion-title">
-                            {t("discussion")}
-                          </div>
-                        )}
-                      </div>
-                    )}
-
-                    {event.type === "break" && (
-                      <div className="break">
-                        {event.title
-                          ? typeof event.title === "string"
-                            ? event.title
-                            : event.title
-                            ? event.title[language] || event.title.en
-                            : ""
-                          : t("break")}
+                    {event.speaker && (
+                      <div className="speaker">
+                        <strong style={{color:"#e60013"}}>
+                          {typeof event.speaker === "string"
+                            ? event.speaker
+                            : event.speaker[language] || event.speaker.en}
+                        </strong>
                       </div>
                     )}
                   </div>

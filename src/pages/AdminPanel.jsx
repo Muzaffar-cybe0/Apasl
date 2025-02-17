@@ -7,6 +7,7 @@ import {
   ScheduleOutlined,
   TeamOutlined,
   BookOutlined,
+  FileOutlined,
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +15,7 @@ import SpeakersSection from "../admin_components/SpeakersSection";
 import OrganizersSection from "../admin_components/OrganizersSection";
 import BooksSection from "../admin_components/BooksSection";
 import ScheduleSection from "../admin_components/ScheduleSection";
+import LanguageSelector from "../admin_components/LanguageSelector";
 
 const { Header, Sider, Content } = Layout;
 
@@ -44,6 +46,8 @@ export default function AdminPanel() {
         return <BooksSection />;
       case "4":
         return <ScheduleSection />;
+      case "5":
+        return <LanguageSelector />;
       default:
         return <h2>Select a category</h2>;
     }
@@ -64,6 +68,7 @@ export default function AdminPanel() {
               { key: "2", icon: <TeamOutlined />, label: "Organizers" },
               { key: "3", icon: <BookOutlined />, label: "Books" },
               { key: "4", icon: <ScheduleOutlined />, label: "Schedules" },
+              { key: "5", icon: <FileOutlined />, label: "Language" },
             ]}
           />
         </Sider>
