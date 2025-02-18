@@ -64,16 +64,19 @@ export default function Schedules() {
               {schedule.events && schedule.events.length > 0 ? (
                 schedule.events.map((event, eventIndex) => (
                   <div key={eventIndex} className="event">
-                    {event.time && <div className="time">{event.time}</div>}
-                    <div className="title">
-                      {typeof event.title === "string"
-                        ? event.title
-                        : event.title
-                        ? event.title[language] || event.title.en
-                        : ""}
-                    </div>
+                      {event.time && <div className="time">{event.time}</div>}
+                    <div className="event-header">
+                    
 
-                    {event.speakers && event.speakers.length > 0 && (
+                      <div className="title">
+                        {typeof event.title === "string"
+                          ? event.title
+                          : event.title
+                          ? event.title[language] || event.title.en
+                          : ""}
+                      </div>
+
+                      {event.speakers && event.speakers.length > 0 && (
                       <div className="speakers">
                         {event.speakers.map((speaker, speakerIndex) => (
                           <div key={speakerIndex} className="speaker">
@@ -91,13 +94,16 @@ export default function Schedules() {
 
                     {event.speaker && (
                       <div className="speaker">
-                        <strong style={{color:"#e60013"}}>
+                        <strong style={{ color: "#e60013" }}>
                           {typeof event.speaker === "string"
                             ? event.speaker
                             : event.speaker[language] || event.speaker.en}
                         </strong>
                       </div>
                     )}
+                    </div>
+
+                    
                   </div>
                 ))
               ) : (

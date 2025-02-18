@@ -14,6 +14,9 @@ import Speakers from "./components/Speakers";
 import BounceLoader from "react-spinners/BounceLoader";
 import AdminPanel from "./pages/AdminPanel";
 import Login from "./pages/Login";
+import UserAccount from "./pages/UserAccount";
+import LoginPage from "./pages/LoginPage";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -37,6 +40,9 @@ function App() {
 
         <Route path="/admin/login" element={<Login />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/account/login" element={<LoginPage />} />
+        <Route path="/account/signup" element={<SignUp />} />
+        <Route path="/account" element={<UserAccount />} />
       </>
     )
   );

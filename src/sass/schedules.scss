@@ -10,21 +10,7 @@ $text-light: var(--color2);
 $primary-color: var(--color1);
 $white: #ffffff;
 
-@mixin respond($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: 640px) {
-      @content;
-    }
-  } @else if $breakpoint == md {
-    @media (min-width: 768px) {
-      @content;
-    }
-  } @else if $breakpoint == lg {
-    @media (min-width: 1024px) {
-      @content;
-    }
-  }
-}
+
 
 .schedules {
   width: 100%;
@@ -86,26 +72,29 @@ $white: #ffffff;
 
       .event {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        border-bottom: 5px solid #707070;
-        padding: 10px 0;
-        gap: 10px;
-
+        justify-content: left;
+        align-items: center;
+        border-bottom: 1px solid #707070;
+        padding: 20px 0;
+        gap: 20%;
         .time {
           font-weight: bold;
           color: $white;
           min-width: 80px;
           text-align: left;
         }
-
-        .title {
-          font-weight: bold;
-          font-size: 16px;
-          color: $white;
-          flex-grow: 1;
-          text-align: left;
+        .event-header {
+          display: flex;
+          align-items: right;
+          gap: 15px;
+          flex-direction: column;
+          .title {
+            font-weight: bold;
+            font-size: 16px;
+            color: $white;
+            flex-grow: 1;
+            text-align: left;
+          }
         }
 
         .speakers {
@@ -119,9 +108,9 @@ $white: #ffffff;
           .speaker {
             font-size: 20px;
             text-align: left;
-            
+
             strong {
-              color:$primary-color;
+              color: $primary-color;
               font-weight: bold;
             }
           }
@@ -130,143 +119,341 @@ $white: #ffffff;
     }
   }
 
-  // Small screens (phones)
-  @include respond(sm) {
-    padding: 15px;
-
+  
+}
+@media (max-width: 1024px) {
+  .schedules {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
     .schedules-child1 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+  
       p {
-        font-size: 16px;
+        font-size: 14px;
+        color: var(--color3);
+        font-weight: 300;
+        text-transform: uppercase;
       }
-
+  
       h1 {
-        font-size: 38px;
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--color3);
+        text-transform: uppercase;
       }
     }
-
+  
     .schedules-child2 {
-      padding: 15px;
-
+      width: 100%;
+      border-radius: 10px;
+      background-color: $schedule-bg;
+      padding: 20px;
+  
       .tabs {
-        margin-bottom: 10px;
-
-        .tab {
-          padding: 8px;
-          font-size: 14px;
-        }
-      }
-
-      .tab-content {
-        padding: 15px;
-
-        .event {
-          padding: 8px 0;
-
-          .time {
-            font-size: 14px;
-          }
-
-          .title {
-            font-size: 16px;
-          }
-
-          .speakers {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-
-  // Medium screens (tablets)
-  @include respond(md) {
-    padding: 40px;
-
-    .schedules-child1 {
-      p {
-        font-size: 18px;
-      }
-
-      h1 {
-        font-size: 40px;
-      }
-    }
-
-    .schedules-child2 {
-      .tabs {
-        margin-bottom: 15px;
-
-        .tab {
-          padding: 12px;
-          font-size: 16px;
-        }
-      }
-
-      .tab-content {
-        padding: 20px;
-
-        .event {
-          padding: 12px 0;
-
-          .time {
-            font-size: 16px;
-          }
-
-          .title {
-            font-size: 18px;
-          }
-
-          .speakers {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-
-  // Large screens (desktops)
-  @include respond(lg) {
-    padding: 60px;
-
-    .schedules-child1 {
-      p {
-        font-size: 20px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-    }
-
-    .schedules-child2 {
-      .tabs {
+        display: flex;
+        overflow-x: auto;
         margin-bottom: 20px;
-
+  
         .tab {
-          padding: 15px;
-          font-size: 18px;
+          flex: 0 0 auto;
+          padding: 10px;
+          text-align: left;
+          font-weight: bold;
+          cursor: pointer;
+          border-bottom: 4px solid transparent;
+          color: $text-light;
+  
+          &.active {
+            border-color: $primary-color;
+          }
         }
       }
-
+  
       .tab-content {
-        padding: 30px;
-
+        background-color: $schedule-bg;
+        padding: 20px;
+  
         .event {
-          padding: 15px 0;
-
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          border-bottom: 1px solid #707070;
+          padding: 20px 0;
+          gap: 20%;
           .time {
-            font-size: 18px;
+            font-weight: bold;
+            color: $white;
+            min-width: 80px;
+            text-align: left;
           }
-
-          .title {
-            font-size: 20px;
+          .event-header {
+            display: flex;
+            align-items: right;
+            gap: 15px;
+            flex-direction: column;
+            .title {
+              font-weight: bold;
+              font-size: 16px;
+              color: $white;
+              flex-grow: 1;
+              text-align: left;
+            }
           }
-
+  
           .speakers {
-            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: $white;
+            text-align: left;
+            align-items: flex-start;
+  
+            .speaker {
+              font-size: 20px;
+              text-align: left;
+  
+              strong {
+                color: $primary-color;
+                font-weight: bold;
+              }
+            }
           }
         }
       }
     }
+  
+    
+  }
+}
+@media (max-width: 800px) {
+  .schedules {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+    .schedules-child1 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+  
+      p {
+        font-size: 14px;
+        color: var(--color3);
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+  
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--color3);
+        text-transform: uppercase;
+      }
+    }
+  
+    .schedules-child2 {
+      width: 100%;
+      border-radius: 10px;
+      background-color: $schedule-bg;
+      padding: 20px;
+  
+      .tabs {
+        display: flex;
+        overflow-x: auto;
+        margin-bottom: 20px;
+  
+        .tab {
+          flex: 0 0 auto;
+          padding: 10px;
+          text-align: left;
+          font-weight: bold;
+          cursor: pointer;
+          border-bottom: 4px solid transparent;
+          color: $text-light;
+  
+          &.active {
+            border-color: $primary-color;
+          }
+        }
+      }
+  
+      .tab-content {
+        background-color: $schedule-bg;
+        padding: 20px;
+  
+        .event {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          border-bottom: 1px solid #707070;
+          padding: 20px 0;
+          gap: 20px;
+          .time {
+            font-weight: bold;
+            color: $white;
+            min-width: 80px;
+            text-align: left;
+          }
+          .event-header {
+            display: flex;
+            align-items: right;
+            gap: 15px;
+            flex-direction: column;
+            .title {
+              font-weight: bold;
+              font-size: 16px;
+              color: $white;
+              flex-grow: 1;
+              text-align: left;
+            }
+          }
+  
+          .speakers {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: $white;
+            text-align: left;
+            align-items: flex-start;
+  
+            .speaker {
+              font-size: 20px;
+              text-align: left;
+  
+              strong {
+                color: $primary-color;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    
+
+  }
+}
+@media (max-width: 480px) {
+  .schedules {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+    .schedules-child1 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+  
+      p {
+        font-size: 14px;
+        color: var(--color3);
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+  
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--color3);
+        text-transform: uppercase;
+      }
+    }
+  
+    .schedules-child2 {
+      width: 100%;
+      border-radius: 10px;
+      background-color: $schedule-bg;
+      padding: 20px;
+  
+      .tabs {
+        display: flex;
+        overflow-x: auto;
+        margin-bottom: 20px;
+  
+        .tab {
+          flex: 0 0 auto;
+          padding: 10px;
+          text-align: left;
+          font-weight: bold;
+          cursor: pointer;
+          border-bottom: 4px solid transparent;
+          color: $text-light;
+  
+          &.active {
+            border-color: $primary-color;
+          }
+        }
+      }
+  
+      .tab-content {
+        background-color: $schedule-bg;
+        padding: 20px;
+  
+        .event {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          flex-direction: column;
+          border-bottom: 1px solid #707070;
+          padding: 20px 0;
+          gap: 20px;
+          .time {
+            font-weight: bold;
+            color: $white;
+            min-width: 80px;
+            text-align: center;
+          }
+          .event-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-direction: column;
+            .title {
+              font-weight: bold;
+              font-size: 16px;
+              color: $white;
+              flex-grow: 1;
+              text-align: center;
+            }
+          }
+  
+          .speakers {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: $white;
+            text-align: center;
+            align-items:center;
+  
+            .speaker {
+              font-size: 20px;
+              text-align: center;
+  
+              strong {
+                color: $primary-color;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    
+
   }
 }

@@ -1,0 +1,176 @@
+:root {
+  --color1: #e60013;
+  --color2: #ecf9fc;
+  --color3: #1e1e1e;
+  --color4: #fff6e9;
+}
+
+.user-account {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
+
+  .header {
+    width: 100%;
+    background: var(--color1);
+    color: var(--color4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .profile-info {
+      display: flex;
+      align-items: center;
+      .avatar {
+        width: 40px;
+        height: 40px;
+        background: var(--color3);
+        color: var(--color4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    }
+    .nav {
+      display: flex;
+      gap: 15px;
+      .nav-btn{
+        background: var(--color3);
+        color: var(--color4);
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background:var(--color3);
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    
+    max-width: 600px;
+    background: var(--color4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .profile-form {
+    display: flex;
+    
+    flex-direction: column;
+    gap: 15px;
+    label {
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid var(--color3);
+      border-radius: 5px;
+    }
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    .save-btn {
+      background: var(--color1);
+      color: var(--color4);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: var(--color1);
+      }
+    }
+    .cancel-btn {
+      background: var(--color3);
+      color: var(--color4);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: var(--color3);
+      }
+    }
+  }
+
+  .profile-details {
+    text-align: left;
+    p {
+      margin-bottom: 10px;
+      strong {
+        font-weight: bold;
+      }
+    }
+    .edit-btn {
+      background: var(--color1);
+      color: var(--color4);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background:var(--color1);
+      }
+    }
+  }
+
+  .footer {
+    
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--color3);
+  }
+
+  @media (max-width: 1024px) {
+    .content {
+      max-width: 500px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .content {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      max-width: 100%;
+      padding: 15px;
+    }
+    .form-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+// SignUp.scss
+.signup-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.signup-card {
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signup-button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 1024px) {
+  .signup-card {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 760px) {
+  .signup-container {
+    padding: 10px;
+  }
+  .signup-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    max-width: 95%;
+    padding: 15px;
+  }
+  input {
+    padding: 8px;
+  }
+  .signup-button {
+    padding: 8px;
+  }
+}

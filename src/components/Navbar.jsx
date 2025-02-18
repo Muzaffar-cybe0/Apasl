@@ -75,6 +75,7 @@ export default function Navbar() {
         <button onClick={() => scrollToSection("schedules")}>
           {t("navBtn6")}
         </button>
+        <Link to="/account/login">{t("navBtn7")}</Link>
       </div>
       <div className="navbar_wrapper-3">
         <div className={`language-dropdown ${isOpen ? "open" : ""}`}>

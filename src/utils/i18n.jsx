@@ -10,6 +10,7 @@ const resources = {
       navBtn4: "Speakers",
       navBtn5: "Organizers",
       navBtn6: "Schedules",
+      navBtn7: "Login",
       bannerText1: "APASL TASHKENT 2025",
       bannerText2:
         "International Experience of National Programs for the elimination of viral hepatitis",
@@ -69,6 +70,7 @@ const resources = {
       navBtn4: "Спикеры",
       navBtn5: "Организаторы",
       navBtn6: "Расписание",
+      navBtn7: "Войти",
       bannerText1: "APASL ТАШКЕНТ 2025",
       bannerText2:
         "Международный опыт национальных программ по ликвидации вирусного гепатита",
@@ -130,6 +132,7 @@ const resources = {
       navBtn4: "Ma'ruzachilar",
       navBtn5: "Tashkilotchilar",
       navBtn6: "Jadval",
+      navBtn7: "Kirish",
       bannerText1: "APASL TOSHKENT 2025",
       bannerText2:
         "Virusli gepatitni yo‘q qilish bo‘yicha milliy dasturlarning xalqaro tajribasi",
