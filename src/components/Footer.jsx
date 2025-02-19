@@ -1,57 +1,86 @@
+import { useState, useEffect } from "react";
 import "../sass/footer.scss";
 import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  const [data, setData] = useState(null);
   const { t } = useTranslation();
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://apasl1.pythonanywhere.com/api/speaker/speakers_list/"
+        );
+        const json = await response.json();
+        console.log("Fetched Data:", json);
+        setData(json);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-columns">
-          <div className="footer-column">
-            <ul className="footer-links">
+          <div className="footer-column1">
+            <ul>
               <li>
-                <a
-                  href="https://www.facebook.com/share/1BCVimofdi/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-facebook-f"></i> {t("footer1")}
-                </a>
+               
+                <button onClick={() => scrollToSection("sponsors")}>
+                  {t("navBtn2")}
+                </button>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/apasl_official/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa-brands fa-instagram"></i> {t("footer2")}
-                </a>
+                <button onClick={() => scrollToSection("sponsors")}>
+                  {t("navBtn3")}
+                </button>
               </li>
               <li>
-                <a
-                  href="https://twitter.com/APASLnews?lang=ru"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa-brands fa-x-twitter"></i> {t("footer3")}
-                </a>
+                <button onClick={() => scrollToSection("sponsors")}>
+                  {t("navBtn4")}
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("sponsors")}>
+                  {t("navBtn5")}
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("sponsors")}>
+                  {t("navBtn6")}
+                </button>
               </li>
             </ul>
-          </div>
-
-          <div className="footer-column">
-            <p>{t("footer4")}: info@eventime.com</p>
-            <p>{t("footer5")}: +1 123 456 7890</p>
-          </div>
-
-          <div className="footer-column">
-            <div className="subscription">
-              <a href="mailto:someone@example.com">Open @Gmail</a>
+            <div className="social-icons">
+              <a
+                href="https://www.facebook.com/share/1BCVimofdi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook-f"></i>
+              </a>
             </div>
           </div>
-        </div>
 
-        <div className="footer-bottom">
-          <p>{t("footer7")}</p>
+          <div className="footer-column2">
+            <div className="subscription">
+              <a href="mailto:info@gmail.com">Send @gmail</a>
+            </div>
+            <div className="footer-bottom">
+              <p>© 2024 Exhibz. All rights reserved</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

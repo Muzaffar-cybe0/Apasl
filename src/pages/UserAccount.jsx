@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../utils/AuthContext";
 import { useNavigate } from "react-router-dom";
-import "../admin_Scss/userAccount.scss";
+import "../sass/userAccount.scss";
 
 const UserAccount = () => {
   const { user, updateUser, logout } = useAuth();

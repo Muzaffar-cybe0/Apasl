@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../utils/AuthContext";
-import "../admin_Scss/loginPage.scss";
+import "../sass/loginPage.scss";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -11,8 +11,8 @@ const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    name: "", // Add name field
-    surname: "", // Add surname field
+    name: "", 
+    surname: "", 
   });
 
   const handleChange = (e) => {
@@ -23,10 +23,10 @@ const Login = () => {
     e.preventDefault();
     const { email, password, name, surname } = formData;
     setLoading(true);
-    const success = login(email, password); // Pass only email and password for now, but you can include the name and surname in the login logic if necessary.
+    const success = login(email, password); 
     setLoading(false);
     if (success) {
-      alert(`Welcome, ${name} ${surname}!`); // Show full name in welcome message
+      alert(`Welcome, ${name} ${surname}!`);
       navigate("/account");
     } else {
       alert("Invalid email or password.");

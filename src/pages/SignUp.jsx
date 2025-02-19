@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../utils/AuthContext";
-import "../admin_Scss/signUp.scss";
+import "../sass/signUp.scss";
 
 const SignUp = () => {
   const [loading, setLoading] = useState(false);
