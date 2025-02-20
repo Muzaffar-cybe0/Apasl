@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../sass/footer.scss";
 import { useTranslation } from "react-i18next";
-
+import axios from "axios";
 export default function Footer() {
   const [data, setData] = useState(null);
   const { t } = useTranslation();
@@ -15,12 +15,11 @@ export default function Footer() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           "https://apasl1.pythonanywhere.com/api/speaker/speakers_list/"
         );
-        const json = await response.json();
-        console.log("Fetched Data:", json);
-        setData(json);
+        console.log("Fetched Data:", response.data);
+        setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -28,6 +27,7 @@ export default function Footer() {
 
     fetchData();
   }, []);
+
 
   return (
     <footer className="footer">
