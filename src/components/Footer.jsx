@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import "../sass/footer.scss";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
+
 export default function Footer() {
-  const [data, setData] = useState(null);
+  
   const { t } = useTranslation();
 
   const scrollToSection = (id) => {
@@ -12,21 +11,9 @@ export default function Footer() {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://apasl1.pythonanywhere.com/api/speaker/speakers_list/"
-        );
-        console.log("Fetched Data:", response.data);
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  
+    
+  
 
 
   return (

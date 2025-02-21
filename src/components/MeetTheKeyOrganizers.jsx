@@ -1,9 +1,9 @@
 import "animate.css";
 import "../sass/meetTheKeyOrganizers.scss";
-import dataJson from "../data/speakersData.json";
+import dataJson from "../data/data";
 import CirclePlus from "../assets/circle_plus.svg";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import { useTranslation } from "react-i18next";
 export default function MeetTheKeyOrganizers() {
   const { t } = useTranslation();

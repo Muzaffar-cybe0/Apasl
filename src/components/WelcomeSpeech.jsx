@@ -1,7 +1,7 @@
 import "../sass/welcomeSpeech.scss";
 import "animate.css";
 import { useState } from "react";
-import dataJson from "../data/speakersData.json";
+import dataJson from "../data/data";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -22,6 +22,7 @@ export default function WelcomeSpeech() {
   };
   return (
     <div className="WelcomeSpeech">
+      
       <div className="WelcomeSpeech_child-1">
         <h1>{t("welcomeMessage1")}</h1>
         <p>

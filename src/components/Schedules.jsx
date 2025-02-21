@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "animate.css";
 import "../sass/schedules.scss";
-import dataJson from "../data/speakersData.json"; // Ensure this path is correct
+import dataJson from "../data/data"; // Ensure this path is correct
 import { useTranslation } from "react-i18next";
 
 export default function Schedules() {

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import CirclePlus from "../assets/circle_plus.svg";
 import "../sass/speakers.scss";
 import "animate.css";
-import dataJson from "../data/speakersData.json";
+import dataJson from "../data/data";
 
 export default function Speakers() {
   const { t } = useTranslation();
