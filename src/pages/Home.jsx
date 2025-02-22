@@ -4,7 +4,7 @@ import Associates from '../components/Associates'
 import EventOutComes from '../components/EventOutComes'
 import { Outlet } from "react-router";
 import Ticket from "../components/Ticket";
-import Schedules from "../components/Schedules";
+// import Schedules from "../components/Schedules";
 import WelcomeSpeech from "../components/WelcomeSpeech";
 import MeetTheKeyOrganizers from "../components/MeetTheKeyOrganizers";
 import { useEffect, useState } from "react";
@@ -35,7 +35,8 @@ export default function Home() {
       <MeetTheKeyOrganizers/>
       <Outlet/>
       <Ticket/>
-      <Schedules/>
+      <h1 style={{textAlign:"center"}}>The Program is under Development...</h1>
+      {/* <Schedules/> */}
       
     </div>
   );
