@@ -3,7 +3,7 @@ import "../sass/meetTheKeyOrganizers.scss";
 import dataJson from "../data/data";
 import CirclePlus from "../assets/circle_plus.svg";
 import { useEffect, useState } from "react";
-
+import Logo from "../assets/Logo.png";
 import { useTranslation } from "react-i18next";
 export default function MeetTheKeyOrganizers() {
   const { t } = useTranslation();
@@ -41,7 +41,12 @@ export default function MeetTheKeyOrganizers() {
               <div
                 className={`meetTheKeyOrganizers_child-2_child_speakerImg-1`}
               >
-                <img src={item.image} alt="image" />
+                {item?.image ? (
+                  <img src={item.image} alt="speaker" />
+                ) : (
+                  <img src={Logo} alt="speaker" />
+                )}
+
                 <div>
                   <button
                     onClick={() => handleOpenModal(item.id)}
@@ -84,7 +89,11 @@ export default function MeetTheKeyOrganizers() {
               .filter((item) => item.id === activeModal)
               .map((item) => (
                 <div key={item.id} className="modalContent-child">
-                  <img src={`${item.image}`} alt="Speaker" />
+                  {item?.image ? (
+                    <img src={item.image} alt="speaker" />
+                  ) : (
+                    <img src={Logo} alt="speaker" />
+                  )}
 
                   <div>
                     <p className="speaker_name">

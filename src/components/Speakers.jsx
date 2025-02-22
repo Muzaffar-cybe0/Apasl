@@ -4,7 +4,7 @@ import CirclePlus from "../assets/circle_plus.svg";
 import "../sass/speakers.scss";
 import "animate.css";
 import dataJson from "../data/data";
-
+import Logo from "../assets/Logo.png";
 export default function Speakers() {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
@@ -42,7 +42,11 @@ export default function Speakers() {
         {dataJson.speakers.map((item) => (
           <div className="speakers_OlderCh-2_child" key={item.id}>
             <div className="speakers_OlderCh-2_child_speakerImg-1">
-              <img src={item.image} alt="image" />
+              {item?.image ? (
+                <img src={item.image} alt="speaker" />
+              ) : (
+                <img src={Logo} alt="speaker" />
+              )}
               <div>
                 <button
                   onClick={() => handleOpenModal(item.id)}
@@ -82,7 +86,11 @@ export default function Speakers() {
               .filter((item) => item.id === activeModal)
               .map((item) => (
                 <div key={item.id} className="modalContent-child">
-                  <img src={item.image} alt="Speaker" />
+                  {item?.image ? (
+                    <img src={item.image} alt="speaker" />
+                  ) : (
+                    <img src={Logo} alt="speaker" />
+                  )}
                   <div>
                     <p className="speaker_name">
                       {typeof item.name === "string"
