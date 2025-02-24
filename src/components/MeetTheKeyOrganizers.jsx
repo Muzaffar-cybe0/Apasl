@@ -1,26 +1,39 @@
 import "animate.css";
 import "../sass/meetTheKeyOrganizers.scss";
-import dataJson from "../data/data";
-import CirclePlus from "../assets/circle_plus.svg";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import CirclePlus from "../assets/circle_plus.svg";
 import Logo from "../assets/Logo.png";
 import { useTranslation } from "react-i18next";
+
 export default function MeetTheKeyOrganizers() {
   const { t } = useTranslation();
-  const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(i18n.language);
   const [activeModal, setActiveModal] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [organizersData, setOrganizersData] = useState([]);
+
   useEffect(() => {
-    const handleLanguageChange = () => {
-      setLanguage(i18n.language);
+    const fetchOrganizers = async () => {
+      try {
+        const response = await axios.get(
+          "https://apasl1.pythonanywhere.com/api/organiser/organiser_list/"
+        );
+        if (response?.data) {
+          setOrganizersData(response.data.results);
+        } else {
+          setOrganizersData([]);
+        }
+      } catch (error) {
+        console.error("Error fetching organizers:", error);
+        setOrganizersData([]);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    i18n.on("languageChanged", handleLanguageChange);
+    fetchOrganizers();
+  }, []);
 
-    return () => {
-      i18n.off("languageChanged", handleLanguageChange);
-    };
-  }, [i18n]);
   const handleOpenModal = (id) => {
     setActiveModal(id);
   };
@@ -28,6 +41,7 @@ export default function MeetTheKeyOrganizers() {
   const handleCloseModal = () => {
     setActiveModal(null);
   };
+
   return (
     <div className="meetTheKeyOrganizers" id="organizers">
       <div className="meetTheKeyOrganizers_child-1">
@@ -35,21 +49,30 @@ export default function MeetTheKeyOrganizers() {
       </div>
 
       <div className="meetTheKeyOrganizers_child-2">
-        {dataJson.organizers.map((item) => {
-          return (
-            <div className={`meetTheKeyOrganizers_child-2_child`} key={item.id}>
-              <div
-                className={`meetTheKeyOrganizers_child-2_child_speakerImg-1`}
-              >
+        {loading ? (
+          <div className="organizers_skeleton_container">
+            {Array.from({ length: 4 }).map((_, idx) => (
+              <div className="organizers_skeleton_item" key={idx}>
+                <div className="organizers_skeleton_img"></div>
+                <div className="organizers_skeleton_text">
+                  <div className="organizers_skeleton_title"></div>
+                  <div className="organizers_skeleton_role"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          organizersData.map((item) => (
+            <div className="meetTheKeyOrganizers_child-2_child" key={item.uid}>
+              <div className="meetTheKeyOrganizers_child-2_child_speakerImg-1">
                 {item?.image ? (
-                  <img src={item.image} alt="speaker" />
+                  <img src={item.image} alt="organizer" />
                 ) : (
-                  <img src={Logo} alt="speaker" />
+                  <img src={Logo} alt="organizer" />
                 )}
-
                 <div>
                   <button
-                    onClick={() => handleOpenModal(item.id)}
+                    onClick={() => handleOpenModal(item.uid)}
                     className="circlePlusBtn"
                   >
                     <img src={CirclePlus} alt="icon" className="circlePlus" />
@@ -57,62 +80,34 @@ export default function MeetTheKeyOrganizers() {
                 </div>
               </div>
 
-              <div
-                className={`meetTheKeyOrganizers_child-2_child_speakerName-2`}
-              >
-                <p>
-                  {typeof item.name === "string"
-                    ? item.name
-                    : item.name[language]}
-                </p>
-                <p>
-                  {item.role
-                    ? typeof item.role === "string"
-                      ? item.role
-                      : item.role[language]
-                    : null}
-                </p>
+              <div className="meetTheKeyOrganizers_child-2_child_speakerName-2">
+                <p>{item.name}</p>
+                <p>{item.role}</p>
               </div>
             </div>
-          );
-        })}
+          ))
+        )}
       </div>
-
+      
       {activeModal && (
         <div className="modalOverlay">
           <div className="modalContent animate__animated animate__slideInDown">
             <button className="closeButton" onClick={handleCloseModal}>
               ✕
             </button>
-
-            {dataJson.organizers
-              .filter((item) => item.id === activeModal)
+            {organizersData
+              .filter((item) => item.uid === activeModal)
               .map((item) => (
-                <div key={item.id} className="modalContent-child">
+                <div key={item.uid} className="modalContent-child">
                   {item?.image ? (
-                    <img src={item.image} alt="speaker" />
+                    <img src={item.image} alt="organizer" />
                   ) : (
-                    <img src={Logo} alt="speaker" />
+                    <img src={Logo} alt="organizer" />
                   )}
-
                   <div>
-                    <p className="speaker_name">
-                      {typeof item.name === "string"
-                        ? item.name
-                        : item.name[language]}
-                    </p>
-                    <p>
-                      {item.role
-                        ? typeof item.role === "string"
-                          ? item.role
-                          : item.role[language]
-                        : null}
-                    </p>
-                    <p>
-                      {typeof item.aboutSelf === "string"
-                        ? item.aboutSelf
-                        : item.aboutSelf[language]}
-                    </p>
+                    <p className="speaker_name">{item.name}</p>
+                    <p>{item.role}</p>
+                    <p>{item.description}</p>
                   </div>
                 </div>
               ))}

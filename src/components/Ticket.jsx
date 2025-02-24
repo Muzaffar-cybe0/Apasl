@@ -1,4 +1,3 @@
-import React from "react";
 import "../sass/ticket.scss";
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +8,7 @@ export default function Ticket() {
     {
       id: 1,
       title: "EARLY BIRD",
-      price: "$250",
+      price: "$200",
       bgColor: "#fff5e6",
     },
   ];

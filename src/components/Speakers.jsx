@@ -3,25 +3,35 @@ import { useTranslation } from "react-i18next";
 import CirclePlus from "../assets/circle_plus.svg";
 import "../sass/speakers.scss";
 import "animate.css";
-import dataJson from "../data/data";
 import Logo from "../assets/Logo.png";
+import axios from "axios";
 export default function Speakers() {
   const { t } = useTranslation();
-  const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(i18n.language); // Track language changes
   const [activeModal, setActiveModal] = useState(null);
-
+  const [loading, setLoading] = useState(true);
+  const [speakersData, setSpeakersData] = useState([]);
   useEffect(() => {
-    const handleLanguageChange = () => {
-      setLanguage(i18n.language);
+    const fetchOrganizers = async () => {
+      try {
+        const response = await axios.get(
+          "https://apasl1.pythonanywhere.com/api/speaker/speakers_list/"
+        );
+        if (response?.data) {
+          setSpeakersData(response.data.results);
+        } else {
+          setSpeakersData([]);
+        }
+      } catch (error) {
+        console.error("Error fetching organizers:", error);
+        setSpeakersData([]);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    i18n.on("languageChanged", handleLanguageChange);
-
-    return () => {
-      i18n.off("languageChanged", handleLanguageChange);
-    };
-  }, [i18n]);
+    fetchOrganizers();
+  }, []);
+console.log(speakersData);
 
   const handleOpenModal = (id) => {
     setActiveModal(id);
@@ -39,40 +49,44 @@ export default function Speakers() {
       </div>
 
       <div className="speakers_OlderCh-2">
-        {dataJson.speakers.map((item) => (
-          <div className="speakers_OlderCh-2_child" key={item.id}>
-            <div className="speakers_OlderCh-2_child_speakerImg-1">
-              {item?.image ? (
-                <img src={item.image} alt="speaker" />
-              ) : (
-                <img src={Logo} alt="speaker" />
-              )}
-              <div>
-                <button
-                  onClick={() => handleOpenModal(item.id)}
-                  className="circlePlusBtn"
-                >
-                  <img src={CirclePlus} alt="icon" className="circlePlus" />
-                </button>
+        {loading ? (
+          <div className="speakers_skeleton_container">
+            {Array.from({ length: 10 }).map((_, idx) => (
+              <div className="speakers_skeleton_item" key={idx}>
+                <div className="speakers_skeleton_img"></div>
+                <div className="speakers_skeleton_text">
+                  <div className="speakers_skeleton_title"></div>
+                  <div className="speakers_skeleton_role"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          speakersData.map((item) => (
+            <div className="speakers_OlderCh-2_child" key={item.uid}>
+              <div className="speakers_OlderCh-2_child_speakerImg-1">
+                {item?.image ? (
+                  <img src={item.image} alt="speaker" />
+                ) : (
+                  <img src={Logo} alt="speaker" />
+                )}
+                <div>
+                  <button
+                    onClick={() => handleOpenModal(item.uid)}
+                    className="circlePlusBtn"
+                  >
+                    <img src={CirclePlus} alt="icon" className="circlePlus" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="speakers_OlderCh-2_child_speakerName-2">
+                <p>{item.name}</p>
+                <p>{item.role}</p>
               </div>
             </div>
-
-            <div className="speakers_OlderCh-2_child_speakerName-2">
-              <p>
-                {typeof item.name === "string"
-                  ? item.name
-                  : item.name[language]}
-              </p>
-              <p>
-                {item.role
-                  ? typeof item.role === "string"
-                    ? item.role
-                    : item.role[language]
-                  : null}
-              </p>
-            </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
 
       {activeModal && (
@@ -82,33 +96,19 @@ export default function Speakers() {
               ✕
             </button>
 
-            {dataJson.speakers
-              .filter((item) => item.id === activeModal)
+            {speakersData
+              .filter((item) => item.uid === activeModal)
               .map((item) => (
-                <div key={item.id} className="modalContent-child">
+                <div key={item.uid} className="modalContent-child">
                   {item?.image ? (
                     <img src={item.image} alt="speaker" />
                   ) : (
                     <img src={Logo} alt="speaker" />
                   )}
                   <div>
-                    <p className="speaker_name">
-                      {typeof item.name === "string"
-                        ? item.name
-                        : item.name[language]}
-                    </p>
-                    <p>
-                      {item.role
-                        ? typeof item.role === "string"
-                          ? item.role
-                          : item.role[language]
-                        : null}
-                    </p>
-                    <p>
-                      {typeof item.aboutSelf === "string"
-                        ? item.aboutSelf
-                        : item.aboutSelf[language]}
-                    </p>
+                    <p className="speaker_name">{item.name}</p>
+                    <p>{item.role}</p>
+                    <p>{item.description}</p>
                   </div>
                 </div>
               ))}

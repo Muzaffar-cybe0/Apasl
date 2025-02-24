@@ -7,7 +7,6 @@ import Speaker6 from "../assets/speakers/Robert.jpg";
 import Speaker7 from "../assets/speakers/Yusif.jpg";
 import Speaker8 from "../assets/speakers/Yogesh.jpg";
 import Speaker9 from "../assets/speakers/Fransesco.jpg";
-import Speaker10 from "../assets/speakers/Hala.jpg";
 import Speaker11 from "../assets/speakers/Maria.jpg";
 import Speaker12 from "../assets/speakers/Razavi.jpg";
 import Speaker13 from "../assets/speakers/Mohamed.jpg";
@@ -16,6 +15,7 @@ import Speaker15 from "../assets/speakers/Saleem.png";
 import Speaker16 from "../assets/speakers/A.Kadir.png";
 import Speaker17 from "../assets/speakers/Maia.png";
 import Speaker18 from "../assets/speakers/Wedemeyer.jpg";
+import Speaker19 from "../assets/speakers/Kaliaskarova.png";
 
 import Book1 from "../assets/Books/Apasl_1.png";
 import Book2 from "../assets/Books/Apasl_2.png";
@@ -82,25 +82,6 @@ import Book2 from "../assets/Books/Apasl_2.png";
     },
     {
       id: "2",
-      image: Speaker2,
-      name: {
-        en: "Gulnara Agayeva",
-        ru: "Гульнара Агаева",
-        uz: "Gulnara Agayeva",
-      },
-      role: {
-        en: "PhD, Dr",
-        ru: "Кандидат наук, доктор",
-        uz: "PhD, doktor",
-      },
-      aboutSelf: {
-        en: "Dr. Agayeva earned her medical degree from Azerbaijan Medical University and has over 35 years of experience in the medical field. She has held significant positions, including Head of the Resuscitation Department at the Republic Toxicological Center and Assistant Professor at Azerbaijan State Medical University. As President of the Azerbaijan Gastroenterology and Hepatology Association, Dr. Agayeva has been instrumental in advancing the field within the region. Her research primarily focuses on viral hepatitis B, C, D, metabolic-associated fatty liver disease (MAFLD), and liver cirrhosis. She has authored over 30 research articles and has presented more than 700 times both domestically and internationally. Dr. Agayeva has been recognized for her exceptional contributions to the field of viral hepatitis and has been awarded numerous awards and honors, including the Azerbaijan Medal of Excellence for Public Health Research, the Azerbaijan President's Medal of Excellence for Public Health, and the Azerbaijan Liver Cirrhosis Foundation's Research Award. Dr. Agayeva is a member of the Global NASH Council, contributing to international efforts in addressing non-alcoholic steatohepatitis (NASH). Her dedication to hepatology is further exemplified by her role in organizing the APASL Single Topic Conference on Delta Hepatitis in Baku, highlighting her commitment to addressing pressing liver health issues. In addition to her clinical and research endeavors, Dr. Agayeva is actively involved in public health education, emphasizing the importance of vaccination and liver health awareness. Dr. Agayeva is a strong advocate for the use of personalized medicine in the fight against viral hepatitis. Her extensive experience and leadership have significantly contributed to the advancement of hepatology and gastroenterology in Azerbaijan and beyond.",
-        ru: "Доктор Агаева получила медицинское образование в Азербайджанском медицинском университете и имеет более 35 лет опыта в области медицины. Она занимала значимые должности, включая заведующую отделением реанимации Республиканского токсикологического центра и доцента Азербайджанского государственного медицинского университета. Как президент Ассоциации гастроэнтерологии и гепатологии Азербайджана, доктор Агаева сыграла ключевую роль в развитии данной области в регионе. Ее исследования сосредоточены в основном на вирусных гепатитах B, C, D, метаболически ассоциированном жировом заболевании печени (МАЖБП) и циррозе печени. Она является автором более 30 научных статей и выступила с более чем 700 докладами как на национальном, так и на международном уровне. Доктор Агаева была признана за выдающийся вклад в изучение вирусных гепатитов и удостоена многочисленных наград и почестей, включая Медаль Азербайджана за выдающиеся достижения в области общественного здравоохранения, Президентскую медаль Азербайджана за достижения в области общественного здравоохранения и Премию фонда исследования цирроза печени Азербайджана. Доктор Агаева является членом Глобального совета по НАЖБП (неалкогольному стеатогепатиту), внося вклад в международные усилия по борьбе с этим заболеванием. Ее преданность гепатологии также проявляется в организации APASL Single Topic Conference по дельта-гепатиту в Баку, что подчеркивает ее стремление решать актуальные проблемы здоровья печени. Помимо клинической и научной деятельности, доктор Агаева активно занимается просветительской работой в области общественного здравоохранения, подчеркивая важность вакцинации и осведомленности о заболеваниях печени. Доктор Агаева является активным сторонником использования персонализированной медицины в борьбе с вирусными гепатитами. Ее обширный опыт и лидерские качества значительно способствовали развитию гепатологии и гастроэнтерологии как в Азербайджане, так и за его пределами.",
-        uz: "Doktor Agayeva Ozarbayjon Tibbiyot Universitetida tibbiyot bo‘yicha tahsil olgan va tibbiyot sohasida 35 yildan ortiq tajribaga ega. U muhim lavozimlarda ishlagan, jumladan, Ozarbayjon Respublikasi Toksikologiya Markazining Reanimatsiya bo‘limi rahbari va Ozarbayjon Davlat Tibbiyot Universitetining dotsenti bo‘lgan. Ozarbayjon Gastroenterologiya va Gepatologiya Assotsiatsiyasi prezidenti sifatida doktor Agayeva ushbu sohaning mintaqadagi rivojlanishida muhim rol o‘ynagan. Uning ilmiy tadqiqotlari asosan B, C, D virusli gepatiti, metabolik bog‘liq jigar yog‘lanishi kasalligi (MAFLD) va jigar sirrozi mavzulariga qaratilgan. U 30 dan ortiq ilmiy maqolalar muallifi bo‘lib, 700 martadan ortiq milliy va xalqaro ilmiy taqdimotlar qilgan. Doktor Agayeva virusli gepatitlar sohasidagi ulkan hissasi uchun ko‘plab mukofot va unvonlarga sazovor bo‘lgan, jumladan, Ozarbayjon Respublikasining Jamoat salomatligi bo‘yicha mukofoti, Ozarbayjon Prezidenti tomonidan taqdim etilgan Jamoat salomatligi bo‘yicha yuksak mukofot va Ozarbayjon Jigar Sirrozi Jamg‘armasining Ilmiy Tadqiqot Mukofoti. Doktor Agayeva Global NASH Kengashi a’zosi bo‘lib, alkogolsiz steatogepatit (NASH) bilan kurashish bo‘yicha xalqaro tashabbuslarga o‘z hissasini qo‘shmoqda. Shuningdek, u Boku shahrida Delta Gepatiti bo‘yicha APASL Single Topic Conference tashkillashtirishda faol ishtirok etib, jigar salomatligi muammolarini hal qilishga bo‘lgan sodiqligini namoyish etmoqda. Doktor Agayeva klinik va ilmiy faoliyatidan tashqari, jamoat salomatligi bo‘yicha ta’lim ishlarida ham faol ishtirok etib, emlash va jigar kasalliklari haqida xabardorlikni oshirish muhimligini targ‘ib qilmoqda. Doktor Agayeva virusli gepatitga qarshi kurashda shaxsiylashtirilgan tibbiyotdan foydalanishni faol qo‘llab-quvvatlaydi. Uning keng tajribasi va yetakchilik qobiliyatlari Ozarbayjon va butun dunyoda gepatologiya hamda gastroenterologiya sohalarining rivojlanishiga katta hissa qo‘shgan.",
-      },
-    },
-    {
-      id: "3",
       image: Speaker3,
       name: {
         en: "Shiv Kumar Sarin",
@@ -119,7 +100,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "4",
+      id: "3",
       image: Speaker4,
       name: {
         en: "Lubna Kamani",
@@ -138,7 +119,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "5",
+      id: "4",
       image: Speaker5,
       name: {
         en: "Necati Örmeci",
@@ -157,7 +138,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "6",
+      id: "5",
       image: Speaker6,
       name: {
         en: "Robert Gish",
@@ -176,7 +157,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "7",
+      id: "6",
       image: Speaker7,
       name: {
         en: "Yusif Alkhazov",
@@ -195,7 +176,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "8",
+      id: "7",
       image: Speaker8,
       name: {
         en: "Yogesh.K.Chawla",
@@ -214,7 +195,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "9",
+      id: "8",
       image: Speaker9,
       name: {
         en: "Francesco Negro",
@@ -233,26 +214,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "10",
-      image: Speaker10,
-      name: {
-        en: "Hala Zaid",
-        ru: "Хала Зайд",
-        uz: "Hala Zaid",
-      },
-      role: {
-        en: "Regional Director, MD",
-        ru: "Региональный директор, MD",
-        uz: "Mintaqaviy direktor, MD",
-      },
-      aboutSelf: {
-        en: "Dr. Hala Zaid is the Regional Director for ACCESS Health International in the MENA region, with over 33 years of experience in healthcare management, sector reform, and medical education. Formerly the Minister of Health and Population of Egypt, she led the successful Hepatitis C elimination program and the rollout of universal health insurance. Recognized as one of the 100 Most Influential African Women by Avance Media in 2020, Dr. Zaid now spearheads strategic initiatives at ACCESS Health International, driving healthcare innovation and improving access to quality care across the region.",
-        ru: "Доктор Хала Зайд является региональным директором ACCESS Health International в регионе MENA, имея более 33 лет опыта в управлении здравоохранением, реформировании сектора и медицинском образовании. Ранее она занимала должность министра здравоохранения и населения Египта, где возглавила успешную программу по ликвидации гепатита C и внедрение универсального медицинского страхования. В 2020 году доктор Зайд была признана одной из 100 самых влиятельных африканских женщин по версии Avance Media. Сейчас она возглавляет стратегические инициативы в ACCESS Health International, продвигая инновации в здравоохранении и улучшая доступ к качественной медицинской помощи в регионе.",
-        uz: "Doktor Hala Zaid — ACCESS Health International tashkilotining MENA mintaqasidagi mintaqaviy direktori, sog'liqni saqlashni boshqarish, sohani isloh qilish va tibbiyot ta'limi sohalarida 33 yildan ortiq tajribaga ega. Avvaliga Misr sog'liqni saqlash va aholi vaziri sifatida faoliyat ko'rsatgan, u muvaffaqiyatli gepatit C ni yo'q qilish dasturini boshqargan va umumiy tibbiy sug'urtani joriy etgan. 2020 yilda Avance Media tomonidan '100 ta eng ta'sirchan afrikalik ayol' ro'yxatiga kiritilgan doktor Zaid hozirda ACCESS Health Internationalda strategik tashabbuslarni boshqarib, mintaqada sog'liqni saqlashni yangilash va sifatli tibbiy yordamga bo'lgan kirishni yaxshilash bo'yicha ishlamoqda.",
-      },
-    },
-    {
-      id: "11",
+      id: "9",
       image: Speaker11,
       name: {
         en: "Maria Buti ",
@@ -271,7 +233,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "12",
+      id: "10",
       image: Speaker12,
       name: {
         en: "Homie Razavi",
@@ -290,7 +252,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "13",
+      id: "11",
       image: Speaker13,
       name: {
         en: "Mohamed Hassany",
@@ -309,7 +271,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "14",
+      id: "12",
       image: Speaker14,
       name: {
         en: "Cihan Yurdaydin",
@@ -328,7 +290,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "15",
+      id: "13",
       image: Speaker15,
       name: {
         en: "Saleem Kamili",
@@ -347,7 +309,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "16",
+      id: "14",
       image: Speaker16,
       name: {
         en: "A.Kadir Dokmeci",
@@ -366,7 +328,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "17",
+      id: "15",
       image: Speaker17,
       name: {
         en: "Maia Tsereteli",
@@ -385,7 +347,7 @@ import Book2 from "../assets/Books/Apasl_2.png";
       },
     },
     {
-      id: "18",
+      id: "16",
       image: Speaker18,
       name: {
         en: "Heiner Wedemeyer",
@@ -403,6 +365,25 @@ import Book2 from "../assets/Books/Apasl_2.png";
         uz: "Gastroenterologiya, gepatologiya, infeksion kasalliklar va endokrinologiya bo‘limi, Gannover Tibbiyot Maktabi (MHH)Carl-Neuberg-Straße 1, D-30625 Gannover, Germaniya. Gastroenterologiya, gepatologiya, infeksion kasalliklar va endokrinologiya bo‘limi rahbari va boshlig‘i, Gannover Tibbiyot Maktabi (W3). Tibbiyot doktorlik darajasi (Dr.med.) Gottingen Universitetida, dissertatsiya rahbari: Prof. Dr. Dr. Detlev Schild.Tibbiyot va musiqashunoslik bo‘yicha ta’lim olgan, Gottingen Universiteti. Davlat litsenziyali shifokor, 1996.",
       },
     },
+    {
+      id: "17",
+      image: Speaker19,
+      name: {
+        en: "Kulpash Kaliaskarova",
+        ru: "Kulpash Kaliaskarova",
+        uz: "Kulpash Kaliaskarova",
+      },
+      role: {
+        en: "MD, PhD.",
+        ru: "МД, PhD.",
+        uz: "MD, PhD.",
+      },
+      aboutSelf: {
+        en: "Professor of National Research Oncology Center President of  the Association of Kazakh Gastro&HepatoTransplant Group Chief gastroenterologist/hepatologist Ministry of Health Republic of Kazakhstan. Scientific director of  the center of IBD, Astana",
+        ru: "Профессор Национального научного онкологического центра Президент Ассоциации казахстанской группы гастро- и гепатотрансплантации Главный гастроэнтеролог/гепатолог Министерства здравоохранения Республики Казахстан Научный руководитель центра ВЗК, Астана",
+        uz: "Milliy ilmiy onkologiya markazi professori Qozog‘iston gastro- va gepatotransplantatsiya guruhi assotsiatsiyasi prezidenti Qozog‘iston Respublikasi Sog‘liqni saqlash vazirligi bosh gastroenterologi/gepatologi IBD markazining ilmiy rahbari, Astana",
+      },
+    }
   ],
   book: [
     {
