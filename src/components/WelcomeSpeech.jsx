@@ -44,7 +44,6 @@ export default function WelcomeSpeech() {
 
     fetchData();
   }, []);
-  
 
   return (
     <div className="WelcomeSpeech">
@@ -103,7 +102,12 @@ export default function WelcomeSpeech() {
               <p>{item?.title}</p>
             </div>
           ))
-        ) : null}
+        ) : (
+          <div className="container_skeleton">
+            <div className="skeleton"></div>
+            <div className="skeleton"></div>
+          </div>
+        )}
         <br />
       </div>
       {activeModal && (

@@ -61,7 +61,7 @@ export default function MeetTheKeyOrganizers() {
               </div>
             ))}
           </div>
-        ) : (
+        ) : organizersData.length > 0 ? (
           organizersData.map((item) => (
             <div className="meetTheKeyOrganizers_child-2_child" key={item.uid}>
               <div className="meetTheKeyOrganizers_child-2_child_speakerImg-1">
@@ -86,9 +86,21 @@ export default function MeetTheKeyOrganizers() {
               </div>
             </div>
           ))
+        ) : (
+          <div className="organizers_skeleton_container">
+            {Array.from({ length: 4 }).map((_, idx) => (
+              <div className="organizers_skeleton_item" key={idx}>
+                <div className="organizers_skeleton_img"></div>
+                <div className="organizers_skeleton_text">
+                  <div className="organizers_skeleton_title"></div>
+                  <div className="organizers_skeleton_role"></div>
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </div>
-      
+
       {activeModal && (
         <div className="modalOverlay">
           <div className="modalContent animate__animated animate__slideInDown">

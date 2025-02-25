@@ -69,7 +69,7 @@ export default function Speakers() {
               </div>
             ))}
           </div>
-        ) : (
+        ) : speakersData.length > 0 ? (
           speakersData.map((item) => (
             <div className="speakers_OlderCh-2_child" key={item.uid}>
               <div className="speakers_OlderCh-2_child_speakerImg-1">
@@ -94,6 +94,18 @@ export default function Speakers() {
               </div>
             </div>
           ))
+        ) : (
+          <div className="speakers_skeleton_container">
+            {Array.from({ length: 4 }).map((_, idx) => (
+              <div className="speakers_skeleton_item" key={idx}>
+                <div className="speakers_skeleton_img"></div>
+                <div className="speakers_skeleton_text">
+                  <div className="speakers_skeleton_title"></div>
+                  <div className="speakers_skeleton_role"></div>
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </div>
 
