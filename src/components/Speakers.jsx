@@ -1,37 +1,45 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import { useTranslation } from "react-i18next";
 import CirclePlus from "../assets/circle_plus.svg";
 import "../sass/speakers.scss";
 import "animate.css";
 import Logo from "../assets/Logo.png";
-import axios from "axios";
+
 export default function Speakers() {
   const { t } = useTranslation();
   const [activeModal, setActiveModal] = useState(null);
   const [loading, setLoading] = useState(true);
   const [speakersData, setSpeakersData] = useState([]);
+
+  // Recursive function to fetch all pages
+  const fetchAllPages = async (url, accumulatedData = []) => {
+    const response = await axios.get(url);
+    const { results, next } = response.data;
+    const allData = accumulatedData.concat(results);
+    if (next) {
+      return fetchAllPages(next, allData);
+    }
+    return allData;
+  };
+
   useEffect(() => {
-    const fetchOrganizers = async () => {
+    const fetchSpeakers = async () => {
       try {
-        const response = await axios.get(
+        const allSpeakers = await fetchAllPages(
           "https://apasl1.pythonanywhere.com/api/speaker/speakers_list/"
         );
-        if (response?.data) {
-          setSpeakersData(response.data.results);
-        } else {
-          setSpeakersData([]);
-        }
+        setSpeakersData(allSpeakers);
       } catch (error) {
-        console.error("Error fetching organizers:", error);
+        console.error("Error fetching speakers:", error);
         setSpeakersData([]);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchOrganizers();
+    fetchSpeakers();
   }, []);
-console.log(speakersData);
 
   const handleOpenModal = (id) => {
     setActiveModal(id);
@@ -51,7 +59,7 @@ console.log(speakersData);
       <div className="speakers_OlderCh-2">
         {loading ? (
           <div className="speakers_skeleton_container">
-            {Array.from({ length: 10 }).map((_, idx) => (
+            {Array.from({ length: 4 }).map((_, idx) => (
               <div className="speakers_skeleton_item" key={idx}>
                 <div className="speakers_skeleton_img"></div>
                 <div className="speakers_skeleton_text">
@@ -95,7 +103,6 @@ console.log(speakersData);
             <button className="closeButton" onClick={handleCloseModal}>
               ✕
             </button>
-
             {speakersData
               .filter((item) => item.uid === activeModal)
               .map((item) => (
