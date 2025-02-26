@@ -7,7 +7,7 @@ import Logo from "../assets/Logo.png";
 import { useTranslation } from "react-i18next";
 
 export default function MeetTheKeyOrganizers() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeModal, setActiveModal] = useState(null);
   const [loading, setLoading] = useState(true);
   const [organizersData, setOrganizersData] = useState([]);
@@ -16,7 +16,8 @@ export default function MeetTheKeyOrganizers() {
     const fetchOrganizers = async () => {
       try {
         const response = await axios.get(
-          "https://apasl1.pythonanywhere.com/api/organiser/organiser_list/"
+          `https://apasl1.pythonanywhere.com/api/organiser/organisers_list_${i18n.language}/`,
+          { headers: { "Accept-Language": i18n.language } }
         );
         if (response?.data) {
           setOrganizersData(response.data.results);
@@ -32,7 +33,7 @@ export default function MeetTheKeyOrganizers() {
     };
 
     fetchOrganizers();
-  }, []);
+  }, [i18n.language]);
 
   const handleOpenModal = (id) => {
     setActiveModal(id);
@@ -51,7 +52,7 @@ export default function MeetTheKeyOrganizers() {
       <div className="meetTheKeyOrganizers_child-2">
         {loading ? (
           <div className="organizers_skeleton_container">
-            {Array.from({ length: 4 }).map((_, idx) => (
+            {Array.from({ length: 2 }).map((_, idx) => (
               <div className="organizers_skeleton_item" key={idx}>
                 <div className="organizers_skeleton_img"></div>
                 <div className="organizers_skeleton_text">
@@ -88,7 +89,7 @@ export default function MeetTheKeyOrganizers() {
           ))
         ) : (
           <div className="organizers_skeleton_container">
-            {Array.from({ length: 4 }).map((_, idx) => (
+            {Array.from({ length: 2 }).map((_, idx) => (
               <div className="organizers_skeleton_item" key={idx}>
                 <div className="organizers_skeleton_img"></div>
                 <div className="organizers_skeleton_text">

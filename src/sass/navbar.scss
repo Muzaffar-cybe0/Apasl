@@ -55,10 +55,10 @@
       border: none;
     }
     a:hover {
-      color: #b8eaf6;
+      color: var(--color1);
     }
     button:hover {
-      color: #b8eaf6;
+      color: var(--color1);
     }
   }
   &_wrapper-3 {
@@ -172,10 +172,10 @@
         border: none;
       }
       a:hover {
-        color: #b8eaf6;
+        color: var(--color1);
       }
       button:hover {
-        color: #b8eaf6;
+        color: var(--color1);
       }
     }
     &_wrapper-3 {
@@ -511,7 +511,7 @@
   height: 350px;
   background: var(--color3);
   border: 2px solid var(--color2);
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: 99;
 }
 .navbar_child-2,

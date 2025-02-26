@@ -9,7 +9,7 @@ import { Trans, useTranslation } from "react-i18next";
 import axios from "axios";
 
 export default function WelcomeSpeech() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   const [activeModal, setActiveModal] = useState(null);
@@ -27,7 +27,8 @@ export default function WelcomeSpeech() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://apasl1.pythonanywhere.com/api/book/books_list/"
+          `https://apasl1.pythonanywhere.com/api/book/books_list_${i18n.language}/`,
+          { headers: { "Accept-Language": i18n.language } }
         );
         if (response?.data) {
           setData(response.data.results);
@@ -43,7 +44,7 @@ export default function WelcomeSpeech() {
     };
 
     fetchData();
-  }, []);
+  }, [i18n.language]);
 
   return (
     <div className="WelcomeSpeech">

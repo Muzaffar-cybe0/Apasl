@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "../sass/navbar.scss";
 import "../css/hamburgers.min.css";
 import Logo from "../assets/Logo.png";
-import EnglishFlag from "../assets/en_flag.jpg"; // Import English flag
-import RussianFlag from "../assets/ru_flag.jpg"; // Import Russian flag
-import UzbekFlag from "../assets/uz_flag.jpg"; // Import Uzbek flag
+import EnglishFlag from "../assets/en_flag.jpg"; 
+import RussianFlag from "../assets/ru_flag.jpg"; 
+import UzbekFlag from "../assets/uz_flag.jpg"; 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

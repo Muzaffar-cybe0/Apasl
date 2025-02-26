@@ -7,28 +7,27 @@ import "animate.css";
 import Logo from "../assets/Logo.png";
 
 export default function Speakers() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeModal, setActiveModal] = useState(null);
   const [loading, setLoading] = useState(true);
   const [speakersData, setSpeakersData] = useState([]);
 
-  // Recursive function to fetch all pages
-  const fetchAllPages = async (url, accumulatedData = []) => {
-    const response = await axios.get(url);
-    const { results, next } = response.data;
-    const allData = accumulatedData.concat(results);
-    if (next) {
-      return fetchAllPages(next, allData);
-    }
-    return allData;
-  };
-
   useEffect(() => {
     const fetchSpeakers = async () => {
+      setLoading(true);
       try {
-        const allSpeakers = await fetchAllPages(
-          "https://apasl1.pythonanywhere.com/api/speaker/speakers_list/"
-        );
+        let url = `https://apasl1.pythonanywhere.com/api/speaker/speaker_list_${i18n.language}/`;
+        let allSpeakers = [];
+
+       
+        while (url) {
+          const response = await axios.get(url, {
+            headers: { "Accept-Language": i18n.language },
+          });
+          const { results, next } = response.data;
+          allSpeakers = allSpeakers.concat(results);
+          url = next; // if next is null, loop ends
+        }
         setSpeakersData(allSpeakers);
       } catch (error) {
         console.error("Error fetching speakers:", error);
@@ -39,7 +38,7 @@ export default function Speakers() {
     };
 
     fetchSpeakers();
-  }, []);
+  }, [i18n.language]);
 
   const handleOpenModal = (id) => {
     setActiveModal(id);
@@ -59,7 +58,7 @@ export default function Speakers() {
       <div className="speakers_OlderCh-2">
         {loading ? (
           <div className="speakers_skeleton_container">
-            {Array.from({ length: 4 }).map((_, idx) => (
+            {Array.from({ length: 10 }).map((_, idx) => (
               <div className="speakers_skeleton_item" key={idx}>
                 <div className="speakers_skeleton_img"></div>
                 <div className="speakers_skeleton_text">
@@ -96,7 +95,7 @@ export default function Speakers() {
           ))
         ) : (
           <div className="speakers_skeleton_container">
-            {Array.from({ length: 4 }).map((_, idx) => (
+            {Array.from({ length: 10 }).map((_, idx) => (
               <div className="speakers_skeleton_item" key={idx}>
                 <div className="speakers_skeleton_img"></div>
                 <div className="speakers_skeleton_text">
