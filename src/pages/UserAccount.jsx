@@ -3,6 +3,8 @@ import { useAuth } from "../utils/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../sass/userAccount.scss";
 
+import User from "../assets/user.svg"
+
 const UserAccount = () => {
   const { user, updateUser, logout } = useAuth();
   const navigate = useNavigate();
@@ -11,6 +13,7 @@ const UserAccount = () => {
     name: user?.name || "",
     surname: user?.surname || "",
     email: user?.email || "",
+    image: user?.image || "", // User's profile picture
   });
 
   useEffect(() => {
@@ -43,37 +46,49 @@ const UserAccount = () => {
         </nav>
       </header>
       <main className="content">
-        <h2>Profile</h2>
-        {editing ? (
-          <form onSubmit={handleSubmit} className="profile-form">
-            <label>
-              Name:
-              <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-            </label>
-            <label>
-              Surname:
-              <input type="text" name="surname" value={formData.surname} onChange={handleChange} required />
-            </label>
-            <label>
-              Email:
-              <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-            </label>
-            <div className="form-buttons">
-              <button type="submit" className="save-btn save">Save</button>
-              <button type="button" onClick={() => setEditing(false)} className="cancel-btn cancel">Cancel</button>
-            </div>
-          </form>
-        ) : (
-          <div className="profile-details">
-            <p><strong>Name:</strong> {user?.name}</p>
-            <p><strong>Surname:</strong> {user?.surname}</p>
-            <p><strong>Email:</strong> {user?.email}</p>
-            <p><strong>Ticket Status:</strong> {user?.ticket ? "Purchased" : "Not purchased yet"}</p>
-            <p><strong>Date Bought:</strong> {user?.ticket?.date || "No time"}</p>
-            <p><strong>Ticket Price:</strong> {user?.ticket?.price ? `$${user.ticket.price}` : "No ticket"}</p>
-            <button onClick={() => setEditing(true)} className="edit-btn edit">Edit Profile</button>
+        <div className="content_child-1">
+          <h2>Profile</h2>
+          <div className="profile-picture">
+            <img src={formData?.image || User} alt="Profile" />
+            
           </div>
-        )}
+          {editing ? (
+            <form onSubmit={handleSubmit} className="profile-form">
+                <input type="file" name="image" value={formData.image} onChange={handleChange} placeholder="Image URL" />
+              <label>
+                Name:
+                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+              </label>
+              <label>
+                Surname:
+                <input type="text" name="surname" value={formData.surname} onChange={handleChange} required />
+              </label>
+              <label>
+                Email:
+                <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+              </label>
+              <div className="form-buttons">
+                <button type="submit" className="save-btn save">Save</button>
+                <button type="button" onClick={() => setEditing(false)} className="cancel-btn cancel">Cancel</button>
+              </div>
+            </form>
+          ) : (
+            <div className="profile-details">
+             
+              <p><strong>Name:</strong> {user?.name}</p>
+              <p><strong>Surname:</strong> {user?.surname}</p>
+              <p><strong>Email:</strong> {user?.email}</p>
+              <button onClick={() => setEditing(true)} className="edit-btn edit">Edit Profile</button>
+            </div>
+          )}
+        </div>
+
+        <div className="content_child-2">
+          <h2>Ticket Details</h2>
+          <p><strong>Ticket Status:</strong> {user?.ticket ? "Purchased" : "Not purchased yet"}</p>
+          <p><strong>Date Bought:</strong> {user?.ticket?.date || "No time"}</p>
+          <p><strong>Ticket Price:</strong> {user?.ticket?.price ? `$${user.ticket.price}` : "No ticket"}</p>
+        </div>
       </main>
       <footer className="footer">&copy; {new Date().getFullYear()}</footer>
     </div>
@@ -81,5 +96,3 @@ const UserAccount = () => {
 };
 
 export default UserAccount;
-
-

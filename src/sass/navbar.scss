@@ -56,9 +56,11 @@
     }
     a:hover {
       color: var(--color1);
+      cursor: pointer;
     }
     button:hover {
       color: var(--color1);
+      cursor: pointer;
     }
   }
   &_wrapper-3 {
@@ -172,9 +174,11 @@
         border: none;
       }
       a:hover {
+        cursor: pointer;
         color: var(--color1);
       }
       button:hover {
+        cursor: pointer;
         color: var(--color1);
       }
     }
