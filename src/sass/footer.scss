@@ -4,6 +4,7 @@
   --color3: #1e1e1e;
   --color4: #fff6e9;
 }
+
 .footer {
   width: 100%;
   background-color: var(--color3);
@@ -12,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+
   &-container {
     width: 100%;
     display: flex;
@@ -21,6 +23,7 @@
     gap: 10px;
     padding: 0px 50px;
   }
+
   &-columns {
     width: 100%;
     display: flex;
@@ -28,29 +31,35 @@
     align-items: center;
     gap: 60px;
   }
+
   &-column1 {
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
     gap: 50px;
+
     ul {
       display: flex;
       gap: 40px;
+
       li {
         color: var(--color2);
         font-size: 18px;
+
         button {
           font-size: 16px;
           color: var(--color2);
           background-color: transparent;
           border: none;
+
           &:hover {
             color: var(--color1);
           }
         }
       }
     }
+
     .social-icons {
       a {
         color: var(--color2);
@@ -59,6 +68,7 @@
         border: 1px solid var(--color2);
         padding: 1% 2%;
         border-radius: 50%;
+
         &:hover {
           color: var(--color1);
           background-color: var(--color2);
@@ -66,17 +76,30 @@
       }
     }
   }
+
   &-column2 {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
+
+    & button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      color: #fff;
+      text-align: left;
+      width: fit-content;
+      font-weight: 400;
+    }
+
     .subscription {
       display: flex;
       justify-content: center;
       align-items: flex-end;
       width: 100%;
+
       a {
         width: 100%;
         font-size: 16px;
@@ -85,12 +108,14 @@
         text-decoration: none;
         padding: 10px 0px;
         border-bottom: 1px solid var(--color2);
+
         &:hover {
           color: var(--color1);
           border-bottom: 1px solid var(--color1);
         }
       }
     }
+
     .footer-bottom {
       p {
         color: var(--color2);
@@ -99,7 +124,26 @@
       }
     }
   }
+
+  & .paymant {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & .paymant_logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      img {
+        width: 60px;
+      }
+    }
+  }
 }
+
+
 @media (max-width: 1024px) {
   .footer {
     width: 100%;
@@ -109,6 +153,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
     &-container {
       width: 100%;
       display: flex;
@@ -118,6 +163,7 @@
       gap: 10px;
       padding: 0px 50px;
     }
+
     &-columns {
       width: 100%;
       display: flex;
@@ -125,29 +171,35 @@
       align-items: center;
       gap: 60px;
     }
+
     &-column1 {
       display: flex;
       justify-content: center;
       align-items: left;
       flex-direction: column;
       gap: 50px;
+
       ul {
         display: flex;
         gap: 40px;
+
         li {
           color: var(--color2);
           font-size: 18px;
+
           button {
             font-size: 16px;
             color: var(--color2);
             background-color: transparent;
             border: none;
+
             &:hover {
               color: var(--color1);
             }
           }
         }
       }
+
       .social-icons {
         a {
           color: var(--color2);
@@ -156,6 +208,7 @@
           border: 1px solid var(--color2);
           padding: 1% 2%;
           border-radius: 50%;
+
           &:hover {
             color: var(--color1);
             background-color: var(--color2);
@@ -163,17 +216,20 @@
         }
       }
     }
+
     &-column2 {
       display: flex;
       justify-content: center;
       align-items: flex-end;
       flex-direction: column;
       gap: 50px;
+
       .subscription {
         display: flex;
         justify-content: center;
         align-items: flex-end;
         width: 100%;
+
         a {
           width: 100%;
           font-size: 16px;
@@ -182,12 +238,14 @@
           text-decoration: none;
           padding: 10px 0px;
           border-bottom: 1px solid var(--color2);
+
           &:hover {
             color: var(--color1);
             border-bottom: 1px solid var(--color1);
           }
         }
       }
+
       .footer-bottom {
         p {
           color: var(--color2);
@@ -198,6 +256,7 @@
     }
   }
 }
+
 @media (max-width: 800px) {
   .footer {
     width: 100%;
@@ -207,6 +266,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
     &-container {
       width: 100%;
       display: flex;
@@ -216,6 +276,7 @@
       gap: 10px;
       padding: 0px 30px;
     }
+
     &-columns {
       width: 100%;
       display: flex;
@@ -224,6 +285,7 @@
       flex-direction: column;
       gap: 60px;
     }
+
     &-column1 {
       width: 100%;
       display: flex;
@@ -232,23 +294,28 @@
       flex-direction: column;
       gap: 50px;
       padding: 0px 15px;
+
       ul {
         display: flex;
         gap: 40px;
+
         li {
           color: var(--color2);
           font-size: 18px;
+
           button {
             font-size: 16px;
             color: var(--color2);
             background-color: transparent;
             border: none;
+
             &:hover {
               color: var(--color1);
             }
           }
         }
       }
+
       .social-icons {
         a {
           color: var(--color1);
@@ -258,10 +325,11 @@
           border: 1px solid var(--color2);
           padding: 1% 2%;
           border-radius: 50%;
-         
+
         }
       }
     }
+
     &-column2 {
       width: 100%;
       display: flex;
@@ -269,11 +337,13 @@
       align-items: flex-start;
       flex-direction: column;
       gap: 50px;
+
       .subscription {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         width: 100%;
+
         a {
           width: 100%;
           font-size: 16px;
@@ -284,10 +354,12 @@
           border-bottom: 1px solid var(--color1);
         }
       }
+
       .footer-bottom {
         display: flex;
         justify-content: center;
         align-items: flex-start;
+
         p {
           color: var(--color2);
           font-size: 14px;
@@ -297,6 +369,7 @@
     }
   }
 }
+
 @media (max-width: 480px) {
   .footer {
     width: 100%;
@@ -306,6 +379,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
     &-container {
       width: 100%;
       display: flex;
@@ -315,6 +389,7 @@
       gap: 10px;
       padding: 0px 30px;
     }
+
     &-columns {
       width: 100%;
       display: flex;
@@ -323,6 +398,7 @@
       flex-direction: column;
       gap: 60px;
     }
+
     &-column1 {
       width: 100%;
       display: flex;
@@ -331,24 +407,29 @@
       flex-direction: column;
       gap: 50px;
       padding: 0px 15px;
+
       ul {
         display: flex;
         flex-direction: column;
         gap: 40px;
+
         li {
           color: var(--color2);
           font-size: 18px;
+
           button {
             font-size: 16px;
             color: var(--color2);
             background-color: transparent;
             border: none;
+
             &:hover {
               color: var(--color1);
             }
           }
         }
       }
+
       .social-icons {
         a {
           color: var(--color1);
@@ -358,10 +439,11 @@
           border: 1px solid var(--color2);
           padding: 2% 4%;
           border-radius: 50%;
-         
+
         }
       }
     }
+
     &-column2 {
       width: 100%;
       display: flex;
@@ -369,11 +451,13 @@
       align-items: flex-start;
       flex-direction: column;
       gap: 50px;
+
       .subscription {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         width: 100%;
+
         a {
           width: 100%;
           font-size: 16px;
@@ -384,10 +468,12 @@
           border-bottom: 1px solid var(--color1);
         }
       }
+
       .footer-bottom {
         display: flex;
         justify-content: center;
         align-items: flex-start;
+
         p {
           color: var(--color2);
           font-size: 14px;
