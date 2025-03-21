@@ -15,6 +15,7 @@ import BounceLoader from "react-spinners/BounceLoader";
 import UserAccount from "./pages/UserAccount";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
+import Payment from "./components/Payment";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -39,6 +40,7 @@ function App() {
         <Route path="/account/login" element={<LoginPage />} />
         <Route path="/account/signup" element={<SignUp />} />
         <Route path="/account" element={<UserAccount />} />
+        <Route path="/payment" element={<Payment />} />
       </>
     )
   );
@@ -57,4 +59,3 @@ function App() {
 }
 
 export default App;
-
