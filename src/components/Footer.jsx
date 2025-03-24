@@ -70,7 +70,9 @@ export default function Footer() {
             <div className="subscription">
               <a href="mailto:info@gmail.com">Send @gmail</a>
             </div>
-            <button onClick={() => setIsModalOpen(true)}>Ommaviy oferta</button>
+            <button onClick={() => setIsModalOpen(true)}>
+              {t("publicoffer")}
+            </button>
             <div className="footer-bottom">
               <p>© 2024 Exhibz. All rights reserved</p>
             </div>

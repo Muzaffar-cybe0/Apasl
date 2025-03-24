@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import "../sass/offermodal.scss";
 import { cookies } from "../data/cookes";
+import { useTranslation } from "react-i18next";
 
 // eslint-disable-next-line react/prop-types
 export default function OfferModal({ onClose }) {
   const [isChecked, setIsChecked] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
   console.log("hello");
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function OfferModal({ onClose }) {
         </div>
         <div className="modal-footer">
           <label style={{ color: !isScrolled ? "grey" : "black" }}>
-            O`qib chiqdim
+            {t("agreement")}
             <input
               type="checkbox"
               disabled={!isScrolled}
@@ -38,7 +40,7 @@ export default function OfferModal({ onClose }) {
             />
           </label>
           <button disabled={!isChecked} onClick={onClose}>
-            Yopish
+            {t("close")}
           </button>
         </div>
       </div>

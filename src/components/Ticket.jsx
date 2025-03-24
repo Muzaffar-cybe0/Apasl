@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import "../sass/ticket.scss";
 import "animate.css";
 import { useTranslation } from "react-i18next";
@@ -10,12 +11,13 @@ export default function Ticket() {
     fullname: "",
     email: "",
     phone: "",
+    count: 1,
   });
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // Clear error when user types
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const validateForm = () => {
@@ -23,16 +25,69 @@ export default function Ticket() {
     if (!formData.fullname.trim()) newErrors.fullname = "Full name is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
     if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    if (formData.count <= 0)
+      newErrors.count = "At least one ticket is required";
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Return true if no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const startPayment = async () => {
+    try {
+      const data = {
+        octo_shop_id: 27137,
+        octo_secret: "3be1f3d7-9a10-4e8a-af18-5ee82c428baa",
+        shop_transaction_id: "order_" + Date.now(),
+        auto_capture: true,
+        test: true,
+        init_time: new Date().toISOString().slice(0, 19).replace("T", " "),
+        user_data: {
+          user_id: formData.fullname,
+          phone: formData.phone,
+          email: formData.email,
+        },
+        total_sum: formData.count * 2594090, // Ticket price * count
+        currency: "UZS",
+        description: "TEST_PAYMENT",
+        basket: [
+          { count: formData.count, position_desc: "VIP", price: 2594090.0 },
+        ],
+        payment_methods: [
+          { method: "bank_card" },
+          { method: "uzcard" },
+          { method: "humo" },
+        ],
+        tsp_id: 18,
+        return_url: "octo.uz",
+        notify_url: "https://notify-url.uz",
+        language: "uz",
+        ttl: 15,
+      };
+
+      const response = await axios.post(
+        "https://secure.octo.uz/prepare_payment",
+        data,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      if (response.data.octo_pay_url) {
+        setActiveModal(false);
+        window.open(response.data.octo_pay_url, "_blank");
+      } else {
+        alert("Payment initialization failed. Please try again.");
+      }
+    } catch (error) {
+      alert("Error starting payment. Please try again.");
+      console.error("Error starting payment", error);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Proceed with payment
-      console.log("Payment processing...");
+      startPayment();
     }
   };
 
@@ -92,6 +147,16 @@ export default function Ticket() {
                 placeholder={t("ticketModal3")}
               />
               {errors.phone && <p className="error">{errors.phone}</p>}
+
+              <input
+                type="number"
+                name="count"
+                value={formData.count}
+                onChange={handleChange}
+                placeholder="Number of tickets"
+                min="1"
+              />
+              {errors.count && <p className="error">{errors.count}</p>}
 
               <button className="paymentBtn" type="submit">
                 {t("ticketModal4")}
