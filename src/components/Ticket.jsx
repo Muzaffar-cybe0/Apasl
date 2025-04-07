@@ -31,6 +31,13 @@ export default function Ticket() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+  // const getExchangeRate = async () => {
+  //   const res = await fetch(
+  //     "https://api.exchangerate.host/latest?base=USD&symbols=UZS"
+  //   );
+  //   const data = await res.json();
+  //   return data.rates.UZS;
+  // };
 
   const startPayment = async () => {
     try {
@@ -39,18 +46,18 @@ export default function Ticket() {
         octo_secret: "3be1f3d7-9a10-4e8a-af18-5ee82c428baa",
         shop_transaction_id: "order_" + Date.now(),
         auto_capture: true,
-        test: true,
+        // test: true,
         init_time: new Date().toISOString().slice(0, 19).replace("T", " "),
         user_data: {
           user_id: formData.fullname,
           phone: formData.phone,
           email: formData.email,
         },
-        total_sum: formData.count * 2594090, // Ticket price * count
+        total_sum: formData.count * 2574782, // Ticket price * count
         currency: "UZS",
         description: "TEST_PAYMENT",
         basket: [
-          { count: formData.count, position_desc: "VIP", price: 2594090.0 },
+          { count: formData.count, position_desc: "VIP", price: 2574782.0 },
         ],
         payment_methods: [
           { method: "bank_card" },
