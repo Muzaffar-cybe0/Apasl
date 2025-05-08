@@ -15,7 +15,7 @@ const resources = {
       bannerText2:
         "International Experience of National Programs for the elimination of viral hepatitis",
       bannerText3:
-        "Uzbekistan and Azerbaijan Association of Gastroenterology and Hepatology <1>june 4-5, 2025</1>",
+        "Association of Hepatologists of Uzbekistan and Association of Gastroenterology and Hepatology of Azerbaijan <1>june 4-5, 2025</1>",
       bannerText4: "buy ticket",
       associates1: "Ministry of Health of the Republican Uzbekistan",
       associates2:
@@ -83,7 +83,7 @@ const resources = {
       bannerText2:
         "Международный опыт национальных программ по ликвидации вирусного гепатита",
       bannerText3:
-        "Ассоциация гастроэнтерологии и гепатологии Узбекистана и Азербайджана <1>4-5 июня 2025</1>",
+        "Ассоциация гепатологов Узбекистана и Ассоциация гастроэнтерологов и гепатологов Азербайджана <1>4-5 июня 2025</1>",
       bannerText4: "Купить билет",
       associates1: "Министерство здравоохранения Республики Узбекистан",
       associates2:
@@ -153,7 +153,7 @@ const resources = {
       bannerText2:
         "Virusli gepatitni yo‘q qilish bo‘yicha milliy dasturlarning xalqaro tajribasi",
       bannerText3:
-        "O‘zbekiston va Ozarbayjon gastroenterologiya va gepatologiya assotsiatsiyasi <1>4-5 iyun, 2025</1>",
+        "O‘zbekiston gepatologlar assotsiatsiyasi va Ozarbayjon gastroenterologiya va gepatologiya assotsiatsiyasi <1>4-5 iyun, 2025</1>",
       bannerText4: "Chipta sotib olish",
       associates1: "O‘zbekiston Respublikasi Sog‘liqni saqlash vazirligi",
       associates2:

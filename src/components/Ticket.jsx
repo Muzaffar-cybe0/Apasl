@@ -43,7 +43,7 @@ export default function Ticket() {
     try {
       const data = {
         octo_shop_id: 27137,
-        octo_secret: "3be1f3d7-9a10-4e8a-af18-5ee82c428baa",
+        octo_secret: "55ede85e-b8e2-47ac-9071-e07059da582d",
         shop_transaction_id: "order_" + Date.now(),
         auto_capture: true,
         // test: true,
@@ -53,16 +53,14 @@ export default function Ticket() {
           phone: formData.phone,
           email: formData.email,
         },
-        total_sum: formData.count * 2574782, // Ticket price * count
-        currency: "UZS",
-        description: "TEST_PAYMENT",
-        basket: [
-          { count: formData.count, position_desc: "VIP", price: 2574782.0 },
-        ],
+        total_sum: formData.count * 200, // Ticket price * count
+        currency: "USD",
+        description: "Оплата",
+        basket: [{ count: formData.count, position_desc: "VIP", price: 200 }],
         payment_methods: [
           { method: "bank_card" },
-          { method: "uzcard" },
-          { method: "humo" },
+          // { method: "uzcard" },
+          // { method: "humo" },
         ],
         tsp_id: 18,
         return_url: "octo.uz",
