@@ -172,7 +172,7 @@ const resources = {
       ticket2: "Biletni oling",
       ticket3: "Bilet sotib olish",
       ticket4: "Bilet",
-      ticket5: "Borib to‘lov qilish mumkin.",
+      ticket5: "Joyida to‘lov qilish mumkin.",
       ticketModal1: "To‘liq ism-familiya",
       ticketModal2: "Elektron pochta",
       ticketModal3: "Telefon raqam",
