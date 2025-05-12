@@ -111,6 +111,7 @@ export default function Ticket() {
             <button className="btn" onClick={() => setActiveModal(true)}>
               {t("ticket3")}
             </button>
+            <p className="on-site-payment">{t("ticket5")}</p>
           </div>
         </div>
       </div>

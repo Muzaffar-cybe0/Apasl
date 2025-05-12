@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import "../sass/navbar.scss";
 import "../css/hamburgers.min.css";
 import Logo from "../assets/Logo.png";
-import EnglishFlag from "../assets/en_flag.jpg"; 
-import RussianFlag from "../assets/ru_flag.jpg"; 
-import UzbekFlag from "../assets/uz_flag.jpg"; 
-import { Link } from "react-router-dom";
+import EnglishFlag from "../assets/en_flag.jpg";
+import RussianFlag from "../assets/ru_flag.jpg";
+import UzbekFlag from "../assets/uz_flag.jpg";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
@@ -72,7 +72,12 @@ export default function Navbar() {
         <button onClick={() => scrollToSection("organizers")}>
           {t("navBtn5")}
         </button>
-        <button onClick={() => scrollToSection("schedules")}>
+        <button
+          onClick={() => {
+            window.location.href =
+              "https://docs.google.com/document/d/1AqQ2m6ACl2drEcern0OFHYTJ4fynBRiLCg4SdzoJOhk/edit?tab=t.0";
+          }}
+        >
           {t("navBtn6")}
         </button>
         <Link to="/account/login">{t("navBtn7")}</Link>
@@ -85,7 +90,9 @@ export default function Navbar() {
               alt={i18n.language || "en"} // Ensure default to English
               className="flag-img"
             />
-            <span style={{color:"#ecf9fc"}}>{i18n.language?.toUpperCase() || "EN"}</span>{" "}
+            <span style={{ color: "#ecf9fc" }}>
+              {i18n.language?.toUpperCase() || "EN"}
+            </span>{" "}
             {/* Ensure fallback */}
           </div>
           {isOpen && (
