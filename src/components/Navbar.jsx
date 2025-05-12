@@ -74,8 +74,10 @@ export default function Navbar() {
         </button>
         <button
           onClick={() => {
-            window.location.href =
-              "https://docs.google.com/document/d/1AqQ2m6ACl2drEcern0OFHYTJ4fynBRiLCg4SdzoJOhk/edit?tab=t.0";
+            window.open(
+              "https://docs.google.com/document/d/1AqQ2m6ACl2drEcern0OFHYTJ4fynBRiLCg4SdzoJOhk/edit?tab=t.0",
+              "_blank"
+            );
           }}
         >
           {t("navBtn6")}
