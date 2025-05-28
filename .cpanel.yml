@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - /bin/rm -rf /home/apastashkent/public_html/*
-    - /bin/cp -r /home/apastashkent/repositories/Apasl/build/* /home/apastashkent/public_html/
+    - /bin/rm -rf /home/apasltashkent/public_html/*
+    - /bin/cp -r /home/apasltashkent/repositories/Apasl/build/* /home/apasltashkent/public_html/
