@@ -1,4 +1,9 @@
+---
 deployment:
   tasks:
-    - /bin/rm -rf /home/apasltashkent/public_html/*
-    - /bin/cp -r /home/apasltashkent/repositories/Apasl/build/* /home/apasltashkent/public_html/
+    - cd /home/apasltashkent/repositories/Apasl/
+    - npm install
+    - npm run build
+    - export DEPLOYPATH=/home/apasltashkent/public_html/
+    - /bin/rm -rf $DEPLOYPATH*
+    - /bin/cp -R build/* $DEPLOYPATH
