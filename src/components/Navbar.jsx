@@ -75,7 +75,7 @@ export default function Navbar() {
         <button
           onClick={() => {
             window.open(
-              "https://docs.google.com/document/d/10R1BmE8CQupaxKeib6kWfIyvnEZZ2-mU/edit?usp=sharing&ouid=105540860954126668096&rtpof=true&sd=true",
+              "https://drive.google.com/file/d/1hdEWEH7gHNY0yx5bJ9FRoIMUzn7fo6LN/view?usp=sharing",
               "_blank"
             );
           }}
