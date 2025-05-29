@@ -5,8 +5,11 @@ import Logo from "../assets/Logo.png";
 import EnglishFlag from "../assets/en_flag.jpg";
 import RussianFlag from "../assets/ru_flag.jpg";
 import UzbekFlag from "../assets/uz_flag.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import DocumentViewer from "./DocumentViewer";
+import scheduleDoc from "../data/schedule/schedule.docx";
+import axios from "axios";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -14,6 +17,9 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   const scrollListenerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [showDocumentViewer, setShowDocumentViewer] = useState(false);
+  const [scheduleFile, setScheduleFile] = useState(null);
+  const [scheduleType, setScheduleType] = useState("docx");
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -36,6 +42,34 @@ export default function Navbar() {
     };
   }, [i18n]);
 
+  // Schedule faylni backenddan olish
+  useEffect(() => {
+    const fetchSchedule = async () => {
+      try {
+        const response = await axios.get(
+          `https://apasl1.pythonanywhere.com/api/schedule/${i18n.language}/`,
+          { headers: { "Accept-Language": i18n.language } }
+        );
+        if (response?.data?.file) {
+          setScheduleFile(response.data.file);
+          // Fayl turini aniqlash
+          setScheduleType(response.data.file.endsWith(".pdf") ? "pdf" : "docx");
+        } else {
+          // Agar backend'da fayl bo'lmasa local faylni ishlatamiz
+          setScheduleFile(scheduleDoc);
+          setScheduleType("docx");
+        }
+      } catch {
+        // console.error("Schedule faylni yuklashda xatolik:", error);
+        // Xatolik bo'lsa ham local faylni ishlatamiz
+        setScheduleFile(scheduleDoc);
+        setScheduleType("docx");
+      }
+    };
+
+    fetchSchedule();
+  }, [i18n.language]);
+
   const handleMenu = () => setMenu((p) => !p);
 
   const scrollToSection = (id) => {
@@ -52,81 +86,92 @@ export default function Navbar() {
       ? RussianFlag
       : UzbekFlag;
 
+  // Schedule tugmasi uchun handler
+  const handleScheduleClick = () => {
+    setShowDocumentViewer(true);
+  };
+
   return (
-    <div className={`navbar ${sticky ? "sticky" : ""}`}>
-      <div className="navbar_child-1">
-        <Link to="/home">
-          <img src={Logo} alt="logo" />
-        </Link>
+    <>
+      <div className={`navbar ${sticky ? "sticky" : ""}`}>
+        <div className="navbar_child-1">
+          <Link to="/home">
+            <img src={Logo} alt="logo" />
+          </Link>
+        </div>
+
+        <div className={`navbar_child-2 ${menu ? "menuShow" : ""}`}>
+          <Link to="/home">{t("navBtn1")}</Link>
+          <button onClick={() => scrollToSection("sponsors")}>
+            {t("navBtn2")}
+          </button>
+          <button onClick={() => scrollToSection("about")}>
+            {t("navBtn3")}
+          </button>
+          <button onClick={() => scrollToSection("speakers")}>
+            {t("navBtn4")}
+          </button>
+          <button onClick={() => scrollToSection("organizers")}>
+            {t("navBtn5")}
+          </button>
+          <button onClick={handleScheduleClick}>{t("navBtn6")}</button>
+          <Link to="/account/login">{t("navBtn7")}</Link>
+        </div>
+        <div className="navbar_wrapper-3">
+          <div className={`language-dropdown ${isOpen ? "open" : ""}`}>
+            <div
+              className="selected-language"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <img
+                src={languageFlag}
+                alt={i18n.language || "en"} // Ensure default to English
+                className="flag-img"
+              />
+              <span style={{ color: "#ecf9fc" }}>
+                {i18n.language?.toUpperCase() || "EN"}
+              </span>{" "}
+              {/* Ensure fallback */}
+            </div>
+            {isOpen && (
+              <div className="dropdown-menu">
+                <div
+                  className="dropdown-item"
+                  onClick={() => changeLanguage("en")}
+                >
+                  <img src={EnglishFlag} alt="English" className="flag-img" />
+                  English
+                </div>
+                <div
+                  className="dropdown-item"
+                  onClick={() => changeLanguage("ru")}
+                >
+                  <img src={RussianFlag} alt="Russian" className="flag-img" />
+                  Русский
+                </div>
+                <div
+                  className="dropdown-item"
+                  onClick={() => changeLanguage("uz")}
+                >
+                  <img src={UzbekFlag} alt="Uzbek" className="flag-img" />
+                  Uzbek
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="navbar_wrapper-3_child-2">
+            <i className="fa-solid fa-bars" onClick={handleMenu}></i>
+          </div>
+        </div>
       </div>
 
-      <div className={`navbar_child-2 ${menu ? "menuShow" : ""}`}>
-        <Link to="/home">{t("navBtn1")}</Link>
-        <button onClick={() => scrollToSection("sponsors")}>
-          {t("navBtn2")}
-        </button>
-        <button onClick={() => scrollToSection("about")}>{t("navBtn3")}</button>
-        <button onClick={() => scrollToSection("speakers")}>
-          {t("navBtn4")}
-        </button>
-        <button onClick={() => scrollToSection("organizers")}>
-          {t("navBtn5")}
-        </button>
-        <button
-          onClick={() => {
-            window.open(
-              "https://drive.google.com/file/d/1hdEWEH7gHNY0yx5bJ9FRoIMUzn7fo6LN/view?usp=sharing",
-              "_blank"
-            );
-          }}
-        >
-          {t("navBtn6")}
-        </button>
-        <Link to="/account/login">{t("navBtn7")}</Link>
-      </div>
-      <div className="navbar_wrapper-3">
-        <div className={`language-dropdown ${isOpen ? "open" : ""}`}>
-          <div className="selected-language" onClick={() => setIsOpen(!isOpen)}>
-            <img
-              src={languageFlag}
-              alt={i18n.language || "en"} // Ensure default to English
-              className="flag-img"
-            />
-            <span style={{ color: "#ecf9fc" }}>
-              {i18n.language?.toUpperCase() || "EN"}
-            </span>{" "}
-            {/* Ensure fallback */}
-          </div>
-          {isOpen && (
-            <div className="dropdown-menu">
-              <div
-                className="dropdown-item"
-                onClick={() => changeLanguage("en")}
-              >
-                <img src={EnglishFlag} alt="English" className="flag-img" />
-                English
-              </div>
-              <div
-                className="dropdown-item"
-                onClick={() => changeLanguage("ru")}
-              >
-                <img src={RussianFlag} alt="Russian" className="flag-img" />
-                Русский
-              </div>
-              <div
-                className="dropdown-item"
-                onClick={() => changeLanguage("uz")}
-              >
-                <img src={UzbekFlag} alt="Uzbek" className="flag-img" />
-                Uzbek
-              </div>
-            </div>
-          )}
-        </div>
-        <div className="navbar_wrapper-3_child-2">
-          <i className="fa-solid fa-bars" onClick={handleMenu}></i>
-        </div>
-      </div>
-    </div>
+      <DocumentViewer
+        isOpen={showDocumentViewer}
+        onClose={() => setShowDocumentViewer(false)}
+        fileUrl={scheduleFile}
+        fileType={scheduleType}
+        title={t("schedule")}
+      />
+    </>
   );
 }
