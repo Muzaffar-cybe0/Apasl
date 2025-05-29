@@ -42,25 +42,43 @@ export default function Navbar() {
     };
   }, [i18n]);
 
-  // Schedule faylni backenddan olish
+  // Schedule fayllarni backenddan olish
   useEffect(() => {
     const fetchSchedule = async () => {
       try {
+        // Til bo'yicha schedule ro'yxatini olish
         const response = await axios.get(
-          `https://apasl1.pythonanywhere.com/api/schedule/${i18n.language}/`,
+          `https://apasl1.pythonanywhere.com/api/schedule/schedules_list_${i18n.language}/`,
           { headers: { "Accept-Language": i18n.language } }
         );
-        if (response?.data?.file) {
-          setScheduleFile(response.data.file);
-          // Fayl turini aniqlash
-          setScheduleType(response.data.file.endsWith(".pdf") ? "pdf" : "docx");
+
+        if (response?.data?.results?.length > 0) {
+          // Birinchi schedule faylini olish
+          const schedule = response.data.results[0];
+
+          // Schedule detalni olish
+          const detailResponse = await axios.get(
+            `https://apasl1.pythonanywhere.com/api/schedule/schedules_detail_${i18n.language}/${schedule.uid}/`
+          );
+
+          if (detailResponse?.data?.file) {
+            setScheduleFile(detailResponse.data.file);
+            // Fayl turini aniqlash
+            setScheduleType(
+              detailResponse.data.file.endsWith(".pdf") ? "pdf" : "docx"
+            );
+          } else {
+            // Agar backend'da fayl bo'lmasa local faylni ishlatamiz
+            setScheduleFile(scheduleDoc);
+            setScheduleType("docx");
+          }
         } else {
-          // Agar backend'da fayl bo'lmasa local faylni ishlatamiz
+          // Ro'yxat bo'sh bo'lsa local faylni ishlatamiz
           setScheduleFile(scheduleDoc);
           setScheduleType("docx");
         }
-      } catch {
-        // console.error("Schedule faylni yuklashda xatolik:", error);
+      } catch (error) {
+        console.error("Schedule faylni yuklashda xatolik:", error);
         // Xatolik bo'lsa ham local faylni ishlatamiz
         setScheduleFile(scheduleDoc);
         setScheduleType("docx");
