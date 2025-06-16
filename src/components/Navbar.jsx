@@ -133,6 +133,12 @@ export default function Navbar() {
             {t("navBtn5")}
           </button>
           <button onClick={handleScheduleClick}>{t("navBtn6")}</button>
+          <Link
+            to="https://drive.google.com/drive/folders/17cavm51xH1_b1T4peaqxZo_2Hh0gqCmp?usp=drive_link"
+            target="_blank"
+          >
+            Presentations
+          </Link>
           <Link to="/account/login">{t("navBtn7")}</Link>
         </div>
         <div className="navbar_wrapper-3">

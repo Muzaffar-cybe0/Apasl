@@ -80,3 +80,368 @@
   color: #666;
   font-size: 18px;
 }
+
+.pptx-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f8f9fa;
+
+  .pptx-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 40px 20px;
+    text-align: center;
+
+    .pptx-icon-section {
+      margin-bottom: 30px;
+
+      i {
+        font-size: 120px;
+        color: var(--color1);
+        opacity: 0.8;
+      }
+    }
+
+    .pptx-content {
+      max-width: 600px;
+      width: 100%;
+
+      h3 {
+        color: var(--color3);
+        font-family: "Roboto", sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      h4 {
+        color: var(--color1);
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+        line-height: 1.4;
+      }
+
+      .pptx-description {
+        color: var(--color3);
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+        margin: 0 0 30px 0;
+      }
+
+      .pptx-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+
+        .download-btn,
+        .view-online-btn {
+          padding: 12px 25px;
+          border-radius: 5px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          border: none;
+
+          i {
+            font-size: 16px;
+          }
+
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+
+        .download-btn.primary {
+          background: var(--color1);
+          color: white;
+
+          &:hover {
+            background: #cc0011;
+          }
+        }
+
+        .view-online-btn {
+          background: #0077b6;
+          color: white;
+
+          &:hover {
+            background: #005f8a;
+          }
+        }
+      }
+
+      .pptx-file-info {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        .info-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 0;
+          border-bottom: 1px solid #eee;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .label {
+            color: var(--color3);
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          .value {
+            color: #666;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            text-align: right;
+
+            &.status {
+              color: var(--color1);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .pptx-instructions {
+        background: var(--color2);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: left;
+
+        h5 {
+          color: var(--color3);
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 0 0 15px 0;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 20px;
+
+          li {
+            color: var(--color3);
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    .pptx-fallback {
+      padding: 20px 15px;
+
+      .pptx-icon-section i {
+        font-size: 80px;
+      }
+
+      .pptx-content {
+        h3 {
+          font-size: 24px;
+        }
+
+        h4 {
+          font-size: 18px;
+        }
+
+        .pptx-actions {
+          flex-direction: column;
+          align-items: center;
+
+          .download-btn,
+          .view-online-btn {
+            width: 100%;
+            max-width: 250px;
+            justify-content: center;
+          }
+        }
+
+        .pptx-file-info .info-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+
+          .value {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pptx-fallback-simple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+
+  .pptx-content {
+    text-align: center;
+    max-width: 500px;
+
+    .pptx-icon {
+      margin-bottom: 20px;
+
+      i {
+        font-size: 80px;
+        color: #e60013;
+      }
+    }
+
+    h3 {
+      color: #1e1e1e;
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0 0 15px 0;
+    }
+
+    p {
+      color: #666;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      margin: 0 0 30px 0;
+      line-height: 1.5;
+    }
+
+    .pptx-options {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+
+      .option-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        min-width: 120px;
+        font-family: "Roboto", sans-serif;
+
+        i {
+          font-size: 24px;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        &.download {
+          background: #e60013;
+          color: white;
+
+          &:hover {
+            background: #cc0011;
+          }
+        }
+
+        &.view-online {
+          background: #0077b6;
+          color: white;
+
+          &:hover {
+            background: #005f8a;
+          }
+        }
+      }
+    }
+
+    .pptx-tips {
+      background: #ecf9fc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: left;
+
+      h4 {
+        color: #1e1e1e;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+
+        li {
+          color: #666;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          line-height: 1.6;
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pptx-content {
+      .pptx-icon i {
+        font-size: 60px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .pptx-options {
+        flex-direction: column;
+        align-items: center;
+
+        .option-btn {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}

@@ -73,6 +73,47 @@ export default function DocumentViewer({
                 }}
               />
             </Worker>
+          ) : fileType === "pptx" ? (
+            <div className="pptx-fallback-simple">
+              <div className="pptx-content">
+                <div className="pptx-icon">
+                  <i className="fas fa-file-powerpoint"></i>
+                </div>
+                <h3>{title}</h3>
+                <p>
+                  PPTX faylni ko&apos;rish uchun quyidagi variantlardan
+                  foydalaning:
+                </p>
+
+                <div className="pptx-options">
+                  <a href={fileUrl} download className="option-btn download">
+                    <i className="fas fa-download"></i>
+                    <span>Yuklab olish</span>
+                  </a>
+
+                  <a
+                    href={`https://docs.google.com/viewer?url=${encodeURIComponent(
+                      window.location.origin + fileUrl
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="option-btn view-online"
+                  >
+                    <i className="fas fa-eye"></i>
+                    <span>Online ko&apos;rish</span>
+                  </a>
+                </div>
+
+                <div className="pptx-tips">
+                  <h4>Ko&apos;rish usullari:</h4>
+                  <ul>
+                    <li>Faylni yuklab olib PowerPoint da oching</li>
+                    <li>&quot;Online ko&apos;rish&quot; tugmasini bosing</li>
+                    <li>Google Drive ga yuklab ko&apos;ring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           ) : (
             <div ref={containerRef} className="docx-container" />
           )}
@@ -86,6 +127,6 @@ DocumentViewer.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   fileUrl: PropTypes.string.isRequired,
-  fileType: PropTypes.oneOf(["pdf", "docx"]).isRequired,
+  fileType: PropTypes.oneOf(["pdf", "docx", "pptx"]).isRequired,
   title: PropTypes.string.isRequired,
 };
