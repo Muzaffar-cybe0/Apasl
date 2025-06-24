@@ -7,6 +7,7 @@ import Ticket from "../components/Ticket";
 // import Schedules from "../components/Schedules";
 import WelcomeSpeech from "../components/WelcomeSpeech";
 import MeetTheKeyOrganizers from "../components/MeetTheKeyOrganizers";
+import ResponsiveYouTubePlayer from "../components/ResponsiveYouTubePlayer";
 
 export default function Home() {
   return (
@@ -14,10 +15,12 @@ export default function Home() {
       <Banner />
       <Associates />
       <WelcomeSpeech />
+      <ResponsiveYouTubePlayer />
       <EventOutComes />
       <MeetTheKeyOrganizers />
       <Outlet />
       <Ticket />
+
       {/* <h1 style={{textAlign:"center"}}>The Program is under Development...</h1> */}
       {/* <Schedules/> */}
     </div>
