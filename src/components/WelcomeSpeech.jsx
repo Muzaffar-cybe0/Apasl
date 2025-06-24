@@ -1,16 +1,15 @@
 import "../sass/welcomeSpeech.scss";
 import "animate.css";
 import { useEffect, useState } from "react";
-import { Viewer, Worker } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { Trans, useTranslation } from "react-i18next";
 import axios from "axios";
+import DocumentViewer from "./DocumentViewer";
 
 export default function WelcomeSpeech() {
   const { t, i18n } = useTranslation();
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   const [activeModal, setActiveModal] = useState(null);
   const handleOpenModal = (id) => {
@@ -112,35 +111,13 @@ export default function WelcomeSpeech() {
         <br />
       </div>
       {activeModal && (
-        <div className="WelcomeSpeech_child-3">
-          <div className="WelcomeSpeech_child-3_modalContent animate__animated animate__slideInDown">
-            <button
-              className="WelcomeSpeech_child-3_closeButton"
-              onClick={handleCloseModal}
-            >
-              ✕
-            </button>
-            {Array.isArray(data)
-              ? data
-                  .filter((item) => item.uid === activeModal)
-                  .map((item) => (
-                    <div
-                      key={item.uid}
-                      className="WelcomeSpeech_child-3_modalContent-child"
-                    >
-                      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                        <div className="pdf_div">
-                          <Viewer
-                            fileUrl={item.pdf}
-                            plugins={[defaultLayoutPluginInstance]}
-                          />
-                        </div>
-                      </Worker>
-                    </div>
-                  ))
-              : null}
-          </div>
-        </div>
+        <DocumentViewer
+          isOpen={true}
+          onClose={handleCloseModal}
+          fileUrl={data.find((item) => item.uid === activeModal)?.pdf}
+          fileType="pdf"
+          title="Document"
+        />
       )}
     </div>
   );

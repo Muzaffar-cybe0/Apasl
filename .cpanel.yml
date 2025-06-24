@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - cd /home/apasltashkent/repositories/Apasl/
+    - /opt/cpanel/ea-nodejs18/bin/npm install
+    - /opt/cpanel/ea-nodejs18/bin/npm run build
+    - export DEPLOYPATH=/home/apasltashkent/public_html/
+    - /bin/rm -rf $DEPLOYPATH*
+    - /bin/cp -R dist/* $DEPLOYPATH

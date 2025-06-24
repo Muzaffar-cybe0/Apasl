@@ -16,6 +16,7 @@ import UserAccount from "./pages/UserAccount";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
 import Payment from "./components/Payment";
+// import PresentationPage from "./pages/PresentationPage";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -41,6 +42,7 @@ function App() {
         <Route path="/account/signup" element={<SignUp />} />
         <Route path="/account" element={<UserAccount />} />
         <Route path="/payment" element={<Payment />} />
+        {/* <Route path="/presentations" element={<PresentationPage />} /> */}
       </>
     )
   );
